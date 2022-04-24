@@ -1,0 +1,144 @@
+@use "./Variables.scss"as V;
+
+@keyframes slidein {
+    0% {
+        display: none;
+        opacity: 0;
+        transform: translateX(15px);
+    }
+
+    100% {
+        width: 100px;
+        display: flex;
+        opacity: 1;
+        color: #fff;
+        transform: translateX(0px);
+    }
+}
+
+
+ns-x-insights {
+    display: block;
+    width: 100%;
+
+    --ns-insights-majorTitle-Fontsize: 30pt;
+    --ns-insights-subcontent-Fontsize: 18pt;
+    --ns-insight-viewmore-Fontsize: 12pt;
+
+    --ns-vw-card-title-fontsize: 18pt;
+    --ns-vw-card-description-fontsize: 14pt;
+    --ns-vw-card-insight-like: 12pt;
+}
+
+
+ns-x-insights .ponaco-splitview-5 {
+    width: 100%;
+    height: fit-content;
+
+    .vw-1 {
+        width: 100%;
+        height: inherit;
+        font-family: V.$ns-common-font;
+
+        .vw-1-wrapper {
+
+            .sec-1 {
+                h1 {
+                    margin-left: 30px;
+                    font-size: var(--ns-insights-majorTitle-Fontsize);
+                }
+
+                margin-bottom: 10px;
+            }
+
+            .vw-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .vw-content-1 {
+                    p {
+                        margin-left: 30px;
+                        font-size: var(--ns-insights-subcontent-Fontsize);
+                    }
+                }
+
+                .content-view-redirect {
+                    @include V.common_btn();
+                    margin-right: 30px;
+                    font-size: var(--ns-insight-viewmore-Fontsize);
+                }
+            }
+        }
+
+        .vw-content-2-cards {
+            width: 100%;
+            height: fit-content;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            .vw-content-cards-wrapper {
+                width: 100%;
+
+                .wrapper-2 {
+                    height: fit-content;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    justify-items: center;
+
+                    .vw-card {
+                        position: relative;
+                        margin: 50px 0px 50px 0px;
+
+                        width: 600px;
+                        height: 600px;
+
+                        .v-picture-container {
+                            width: inherit;
+                            height: 400px;
+                            background-image: url("./Imgs/simple/vision.jpg");
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                        }
+
+                        .v-label-container {
+                            height: 35px;
+                            font-size: var(--ns-vw-card-title-fontsize);
+                            margin-bottom: 8px;
+                            margin-left: 20px;
+                            margin-top: 15px;
+                        }
+
+                        .v-description-container {
+                            margin-left: 20px;
+                            height: 50px;
+                            font-size: var(--ns-vw-card-description-fontsize);
+                            word-wrap: break-word;
+                        }
+
+                        .v-insight-like {
+                            position: absolute;
+                            bottom: 0px;
+                            width: 100%;
+                            height: 50px;
+                            display: flex;
+                            justify-content: right;
+                            font-size: var(--ns-vw-card-insight-like);
+
+                            .wrapper{
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+
+
+}

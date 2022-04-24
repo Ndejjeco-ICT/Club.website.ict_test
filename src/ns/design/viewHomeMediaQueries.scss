@@ -1,0 +1,216 @@
+/*
+    Banner BreakPoints
+*/
+//Banner BreakPoint_1
+//window.innerWidth <= 752px
+@media (max-width: 832px) {
+
+    ns-x-banner .ponaco-splitview-1 {
+        .wx-component-user-section {
+            .welcome-note-section {
+                .note-1 {
+                    font-size: 40pt;
+                }
+
+                .note-2 {
+                    font-size: 14pt;
+                }
+
+                ns-enroll-button>div {
+                    font-size: 11pt;
+                }
+            }
+        }
+    }
+}
+
+//Banner BreakPoint_2
+@media (max-width: 651px) {
+
+    ns-x-banner .ponaco-splitview-1 {
+        .wx-component-user-section {
+            .welcome-note-section {
+                .note-1 {
+                    font-size: 30pt;
+                    width: 400px;
+                }
+
+                .note-2 {
+                    font-size: 12pt;
+                }
+
+                ns-enroll-button>div {
+                    font-size: 10pt;
+                }
+            }
+        }
+    }
+}
+
+//Banner BreakPoint_3
+@media (max-width: 515px) {
+
+    ns-x-banner .ponaco-splitview-1 {
+        .wx-component-user-section {
+            .welcome-note-section {
+                margin-left: 36px;
+
+                .note-1 {
+                    font-size: 20pt;
+                    width: 300px;
+                }
+
+                .note-2 {
+                    font-size: 11pt;
+                }
+
+                ns-enroll-button>div {
+                    font-size: 9pt;
+                    height: 40px;
+                    width: 140px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*
+
+    Pride,Benefit Snap Point : 620px
+*/
+// window.innerWidth <= 640px
+@media (max-width : 690px) {
+
+    ns-x-pride .ponaco-splitview-2 {
+        .wrapper {
+            display: block;
+
+            .grid-x-box {
+
+                .content-box {
+                    margin-top: 80px;
+
+                    .content-image-item {
+                        width: 100%;
+                        font-size: 35pt;
+                    }
+                }
+            }
+        }
+
+    }
+
+    ns-x-benefits .ponaco-splitview-3 {
+        .wx-component-3 {
+            .splitview {
+                display: block;
+
+                .splitview2 {
+                    .split-view-contents {
+                        margin-top: 20px;
+                    }
+
+                    .major-content {
+                        .content-redirect {
+                            height: 40px;
+                            width: 140px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+
+
+
+}
+
+@media (max-width : 853px) {
+    ns-x-insights .ponaco-splitview-5 {
+        .vw-1 {
+
+            .vw-content-2-cards {
+
+                .vw-content-cards-wrapper {
+
+                    .wrapper-2 {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .vw-card {
+                            margin: 20px 0px 20px 0px;
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+/*
+Snap points for the font size, Pride,benefits and insights
+*/
+
+@media (max-width : 925px) {
+
+    ns-x-pride {
+        --ns-pride-title-font-size: 20pt;
+        --ns-grid-title-font-size: 1.3rem;
+        --ns-grid-description-font-size: 11pt;
+        --ns-icon-size: 25pt;
+    }
+
+    ns-x-benefits {
+        --ns-maintitle-font-size: 20pt;
+        --ns-description-font-size: 11pt;
+        --ns-viewmore-font-size: 11pt;
+    }
+
+    ns-x-insights {
+        --ns-insights-majorTitle-Fontsize: 20pt;
+        --ns-insights-subcontent-Fontsize: 15pt;
+        --ns-insight-viewmore-Fontsize: 11pt;
+
+        --ns-vw-card-title-fontsize: 15pt;
+        --ns-vw-card-description-fontsize: 13pt;
+        --ns-vw-card-insight-like: 11pt;
+    }
+
+
+}
+
+/*
+Snap Points for the Quote
+*/
+
+@media (max-width : 976px) {
+    ns-x-quote {
+        --ns-major-Fontsize: 65pt;
+        --ns-minor-Fontsize: 14pt;
+    }
+}
+
+@media (max-width : 863px) {
+    ns-x-quote {
+        --ns-major-Fontsize: 55pt;
+        --ns-minor-Fontsize: 14pt;
+
+    }
+}
+
+@media (max-width:667px) {
+    ns-x-quote {
+        --ns-major-Fontsize: 45pt;
+        --ns-minor-Fontsize: 14pt;
+        --ns-content-size: 487px;
+
+    }
+}

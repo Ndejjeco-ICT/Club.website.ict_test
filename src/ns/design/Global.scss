@@ -1,0 +1,38 @@
+/**
+    Common Style In All Should Be Added Globally
+**/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+}
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    user-select: none;
+    overflow-x: hidden;
+}
+ns-root {
+    width: 100%;
+
+
+    #main-content {
+        width: inherit;
+        height: inherit;
+
+        #basic-page {
+            height: fit-content;
+            [ns-route=active]{
+                display: block;
+
+            }
+            [ns-route=inactive]{
+                display: none;
+            }
+          
+        }
+    }
+}

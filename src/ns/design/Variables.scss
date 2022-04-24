@@ -1,0 +1,52 @@
+@font-face {
+    font-family: Wixy;
+    src: url("./fonts/WixMadeforTextVF_W_Wght.8022447a.woff2") format("woff");
+}
+
+$ns-layout-color : #00a4e0;
+$ns-common-font : Wixy;
+
+/**
+     Common Mixins
+**/
+
+@mixin common_btn {
+    @include button();
+    @include center();
+    background-color: $ns-layout-color;
+    border: 1px solid $ns-layout-color;
+    font-weight: 350;
+    color: #fff;
+    transition: all .5s;
+    &:hover{
+        color: #000;
+        background-color: unset;
+    }
+}
+
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin button {
+    height: 50px;
+    width: 160px;
+    border-radius: 3px;
+}
+
+@mixin flex-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

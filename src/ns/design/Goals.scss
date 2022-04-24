@@ -1,0 +1,114 @@
+@use "./Variables.scss" as V;
+
+
+@keyframes slideFromTheLeft {
+    0%{
+        display: none;
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        display: block;
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+ns-x-benefits {
+    display: block;
+    width: 100%;
+
+    --ns-maintitle-font-size : 30pt;
+    --ns-description-font-size : 12pt;
+    --ns-viewmore-font-size : 12pt;
+}
+
+ns-x-benefits .ponaco-splitview-3 {
+    margin: 100px 0px 100px 0;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-image: url("./Imgs/john-towner-JgOeRuGD_Y4-unsplash.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    .wx-component-3 {
+        width: 100%;
+        height: fit-content;
+        font-family: V.$ns-common-font;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .splitview {
+            margin: 0px 0px 0px 00px;
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            animation: slideFromTheLeft 2s forwards;
+           
+            .splitview1 {
+                margin: 0px 30px 0px 0px;
+                width: 100%;
+                .split-view-contents {
+                    height: inherit;
+                    margin-left: 30px;
+                    margin-right: 10px;
+
+                    .content-section-title {
+                        font-size: var(--ns-maintitle-font-size);
+                        font-weight: 325;
+                        margin-bottom: 20px;
+                    }
+
+                    .content-section-area {
+                        word-wrap: break-word;
+                        font-size: var(--ns-description-font-size);
+                        max-width: 500px;
+                    }
+                }
+
+            }
+
+            .splitview2 {
+                height: fit-content;
+                .split-view-contents {
+                    margin-top: 350px;
+                    // display: flex;
+                    margin-left: 30px;
+                }
+
+                .major-content {
+                    width: 80%;
+                    border-top: 1px solid V.$ns-layout-color;
+                    margin-top: 20px;
+                    font-size: var(--ns-description-font-size);
+
+                    >div {
+                        margin: 25px 0px 20px 0px;
+                    }
+
+                    .content-redirect {
+                        @include V.button();
+                        @include V.center();
+                        cursor: pointer;
+                        border: 1px solid V.$ns-layout-color;
+                        background-color: V.$ns-layout-color;
+                        color: #fff;
+                        transition: all .5s;
+                        font-weight: 300;
+                        font-size: var(--ns-viewmore-font-size);
+
+                        &:hover {
+                            background-color: unset;
+                            color: #000;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+}

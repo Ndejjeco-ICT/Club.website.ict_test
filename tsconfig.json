@@ -1,0 +1,22 @@
+//Typescript Configuration Used for Development Purposes By Webpack ts-loader
+{
+    "compilerOptions"  : {
+        "target" : "es2020",
+        "moduleResolution" : "classic",
+        "sourceMap"  : true,
+        "experimentalDecorators" : true,
+        "noImplicitReturns" : true,
+        "noImplicitOverride"  : true,
+        "allowUnreachableCode" : false,
+        "strict" : true,
+        "exactOptionalPropertyTypes": false,
+        "useUnknownInCatchVariables": false,
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl" : "./src",
+        "paths" : {
+            "ns/*" : [
+                "./src/ns"
+            ]
+        },
+    }
+}

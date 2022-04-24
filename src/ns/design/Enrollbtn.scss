@@ -1,0 +1,12 @@
+@use "./Variables" as V;
+
+ns-enroll-button {
+    display: block;
+    .enroll-ns-button{
+        transition: all .5s;
+        @include V.common_btn();
+        &:active{
+            width: 165px;
+        }
+    }
+}

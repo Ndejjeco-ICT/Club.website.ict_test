@@ -1,0 +1,130 @@
+@use "./Variables.scss" as V;
+ns-header {
+    display: block;
+    position: relative;
+    top: 0px;
+    background-color: #e7e7e727;
+    --ns-header-font-size : 10pt;
+
+    .wx-component-header-section{
+        font-family: V.$ns-common-font;
+        width: 100%;
+        height: 130px;
+        // background-color: rgba(245, 245, 245, 0.041);
+        backdrop-filter: blur(5px);
+        font-size: var(--ns-header-font-size);
+        transition: height .5s ease;
+        //header-component-section
+        .wx-header-component-area {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position: relative;
+           
+
+            .wx-badge-wrapper {
+                margin: 15px 0px 0px 30px;
+                height: 50px;
+                width: 500px;
+                display: grid;
+                grid-template-columns: 100px 400px;
+                #badge-icon {
+                    margin-left: 20px;
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    svg{
+                        width: 100px;
+                        height: 50px;
+                    }
+                }
+
+                .badge-title {
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    color: rgb(0, 0, 0);
+                    width: 100%;
+                    transition: all .5s;
+                }
+            }
+            ns-enroll-button {
+                margin: 15px 30px 0px 0px;
+                cursor: pointer;
+            }
+           
+
+        }
+        .wx-bars {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color:#000000;
+            font-size: 15px;
+          
+        }
+
+
+
+       
+        //navigation-component-section
+        .wx-navigation-bar-half-area {
+            margin-top: 0px;
+            width: 100%;
+            height: 100px;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            /*Main navigation bar wrapper area*/
+            .navigation-bar-wrapper {
+                display: grid;
+                margin: 20px 30px 0px 0px;
+                grid-template-rows: 40px 50px;
+
+                .main-navigation-bar {
+                    width: auto;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+
+                    ul.navigation-items {
+                        margin: 0px;
+                        padding: 0px;
+                        display: flex;
+
+                        li {
+                            font-size: var(--ns-header-font-size);
+                            margin: 0px 30px 5px 30px;
+                            list-style: none;
+                            border-bottom: 1px solid #00000000;
+                            transition: all .4s ease;
+                            a {
+                                text-decoration: none;
+                            }
+                            &:hover {
+                                cursor: pointer;
+                                border-bottom: 1px solid #000;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+

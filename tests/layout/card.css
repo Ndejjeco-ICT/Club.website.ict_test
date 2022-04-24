@@ -1,0 +1,33 @@
+
+.content-card {
+
+    width: 500px;
+    height: 500px;
+    background-image: url("./3a710a0547c6a33ac100.jpg");
+    background-size: 500px 500px;
+    color: #fff;
+    font-family: "Segoe UI";
+
+}
+.content-card-wrap-mask {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    background-color: black;
+
+}
+
+/*
+    the window.innerWidth <= 750px;
+    max-width:750px
+*/
+/*
+    the window.innerWidth >= 750px;
+    min-width:750px
+*/
+@media (min-width : 750px){
+    .content-card-wrap-mask {
+        background-color: rgb(173, 15, 15);
+    
+    }
+}
