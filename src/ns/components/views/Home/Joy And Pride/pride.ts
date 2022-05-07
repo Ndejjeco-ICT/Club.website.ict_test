@@ -37,7 +37,7 @@ Template_.innerHTML = `
         <div class="grid-box-4 grid-x-box">
             <div class="content-area-4 content-box">
                 <div class="content-image-item">
-                <i class="fa-solid fa-users"></i>
+                    <i class="fa-solid fa-users"></i>
                 </div>
                 <h2> Professional Mentors </h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.

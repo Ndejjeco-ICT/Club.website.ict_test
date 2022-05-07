@@ -34,7 +34,7 @@ $ns-common-font : Wixy;
 @mixin button {
     height: 50px;
     width: 160px;
-    border-radius: 3px;
+    border-radius: 10px;
 }
 
 @mixin flex-box {

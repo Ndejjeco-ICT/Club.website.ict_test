@@ -8,11 +8,11 @@ Template_.innerHTML = `
 <div class="vw-1">
     <div class="vw-1-wrapper">
         <div class="sec-1">
-            <h1>Insights</h1>
+            <h1>What's Happening...</h1>
         </div>
         <div class="vw-content">
             <div class="vw-content-1">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur adipisicing elit.</p>
+                <p>Get to Know And Enjoy What's Happening deep in the Heart of Ndejje.</p>
             </div>
             <div class="content-view-redirect">View More</div>
         </div>

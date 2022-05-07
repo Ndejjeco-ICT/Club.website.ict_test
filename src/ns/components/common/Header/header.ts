@@ -1,9 +1,18 @@
 import { IWebComponents } from "ns/typings/schw"; 
 import { addDisposableEventListener } from "ns/common/domListener";
 import { WebMainInstance} from "ns/components/root/root";
-
+import {IMediaScrollPositions,MediaScreenManagerControl} from "ns/base/MediaQueries/mediaQueries";
+import { LinksManagerSystem } from "ns/dom/links/linksManager";
+import { NavigationHooksManagerControl } from "ns/dom/NavigationHooks/NavigationHooks";
+import {MainRoutes} from "ns/base/Router/Router"
 
 export function _navigateToBasePage() {
+    const __activeRouteLink = document.querySelector(".active-link");
+    __activeRouteLink!.classList.remove("active-link");
+
+    const __incomingRouterLink = document.querySelector("#Home-nav-control a")! as HTMLDivElement
+    __incomingRouterLink.classList.add("active-link");
+
     WebMainInstance.FrameRouter.NavigateToRoute("home", { data: "" });
 }
 
@@ -19,54 +28,73 @@ Template_.innerHTML = `
 
     
 <div class="wx-component-header-section" role="heading">
-<div class="wx-header-component-area">
-    <div class="wx-badge-wrapper">
-        <div id="badge-icon">
-            <div id="badge-svg-container">
-                ${BagdeSvgContent}
+    <div class="wx-header-component-area">
+        <div class="wx-badge-wrapper">
+            <div id="badge-icon">
+                
+            </div>
+            <div class="badge-title">Ndejje Senior Secondary School</div>
+        </div>
+
+        <div class="wx-navigation-bar-half-area">
+            <div class="navigation-bar-wrapper">
+                <div class="main-navigation-bar">
+                    <ul class="navigation-items">
+                        <li id="Home-nav-control">
+                            <a class="active-link" href-"#">Home</a>
+                        </li>
+                        <li id="blog-nav-control">
+                            <a href-"#">Blog</a>
+                        </li>
+                        <li id="about-nav-control">
+                            <a href-"#">About us</a>
+                        </li>
+                        <li id="academics-nav-control">
+                            <a href-"#">Academics</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="badge-title">NDEJJE SENIOR SECONDARY SCHOOL</div>
+        <div class="accord-options">
+            <div class="control-options">
+                <div class="facebook-link" title="Join us On Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+
+                <div class="instagram-link" title="Follow us on Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+
+                <div class="twitter-link" title="Follow us on Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class="theme-manager" title="Change theme">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+        </div>
     </div>
-    <ns-enroll-button></ns-enroll-button>
    
 </div>
 
-<div class="wx-bars">
-    <i class="fa-solid fa-bars"></i>
-</div>
 
-<div class="wx-navigation-bar-half-area">
-    <div class="navigation-bar-wrapper">
-        <div class="main-navigation-bar">
-            <ul class="navigation-items">
-                <li id="Home-nav-control">
-                    <span>Home</span>
-                </li>
-                <li id="blog-nav-control">
-                    <span>Blog</span>
-                </li>
-                <li id="about-nav-control">
-                    <span>About us</span>
-                </li>
-                <li id="academics-nav-control">
-                    <span>Academics</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+
+
 
 </div>
 
 
 `
 
+
+
+
 export class HeaderComponent extends HTMLElement implements IWebComponents {
 
     /**
      * Get neccessary elements
      */
+    private _HeaderComponent:HTMLDivElement|null = null;
     private _badgeIcon: HTMLDivElement|null  = null;
 
     //links
@@ -74,6 +102,13 @@ export class HeaderComponent extends HTMLElement implements IWebComponents {
     private _blogNavControl: HTMLDivElement | null = null;
     private _aboutNavControl: HTMLDivElement | null = null;;
     private _academicsNavControl: HTMLDivElement | null= null;
+
+    //control options
+    private _facebook_link:HTMLDivElement|null = null;
+    private _instagram_link:HTMLDivElement|null = null;
+    private _twitter_link:HTMLDivElement|null = null;
+    private _themeChanger_link:HTMLDivElement|null = null;
+
 
 
     constructor() {
@@ -86,6 +121,8 @@ export class HeaderComponent extends HTMLElement implements IWebComponents {
     initializeHeaderComponent() {
         this.attachNeccessaryElementHandles();
         this.attachEventListenersToElements();
+        this._listenForScrollAction()
+        this._attachSocialLinkksSystem();
     }
 
     attachNeccessaryElementHandles() {
@@ -94,6 +131,14 @@ export class HeaderComponent extends HTMLElement implements IWebComponents {
         this._blogNavControl = this.getElement("blog-nav-control");
         this._aboutNavControl = this.getElement("about-nav-control");
         this._academicsNavControl = this.getElement("academics-nav-control")
+        this._HeaderComponent  = this.querySelector(".wx-component-header-section");
+
+        this._facebook_link = this.querySelector(".facebook-link");
+        this._instagram_link = this.querySelector(".instagram-link");
+        this._twitter_link = this.querySelector(".twitter-link");
+        this._themeChanger_link  = this.querySelector(".theme-manager");
+
+
     };
 
     attachEventListenersToElements() {
@@ -106,18 +151,90 @@ export class HeaderComponent extends HTMLElement implements IWebComponents {
         }
         
     };
+
+    _attachSocialLinkksSystem(){
+        if(this._facebook_link && this._instagram_link && this._twitter_link){
+            addDisposableEventListener(this._facebook_link,"click",this.__linkFaceBook.bind(this));
+            addDisposableEventListener(this._instagram_link,"click",this.__linkInstagram.bind(this));
+            addDisposableEventListener(this._twitter_link,"click",this.__linkTwitter.bind(this));
+        }
+    };
+
+    __linkFaceBook(){
+        LinksManagerSystem.LinkToFaceBook()
+    }
+    __linkInstagram(){
+        LinksManagerSystem.LinkToInstagram();
+    }
+    __linkTwitter(){
+        LinksManagerSystem.LinkToTwitter()
+    }
+    _fixTheNavigationHeaderComponent(_fix:boolean){
+        if(_fix){
+            if(this._HeaderComponent){
+                this._HeaderComponent.style.position = "fixed"
+            }
+        }else{
+            if(this._HeaderComponent){
+                this._HeaderComponent.style.position = ""
+            }
+        }
+    }
+    _listenForScrollAction(){
+        MediaScreenManagerControl.mediaWindowScreenDidScroll.subscribe((_positions_)=>{
+            if(_positions_.Y >= 300){
+                this._fixTheNavigationHeaderComponent(true)
+            }else if(_positions_.Y == 0 ){
+                this._fixTheNavigationHeaderComponent(false)
+            }
+        })
+    }
     
+
+  
+
     _navigateToBlogView() {
+        this._removeAndReplaceActivityState("blog");
         WebMainInstance.FrameRouter.NavigateToRoute("blog", { data: "" });
     };
     _navigateToAboutView() {
+        this._removeAndReplaceActivityState("about");
         WebMainInstance.FrameRouter.NavigateToRoute("about", { data: "" });
         
     };
     _navigateToAcademicsView() {
+        this._removeAndReplaceActivityState("academics");
         WebMainInstance.FrameRouter.NavigateToRoute("academics", { data: "" });
         
+    };
+
+    _setActive(route:MainRoutes){
+        switch(route){
+            case "about":
+                this._aboutNavControl!.querySelector("a")!.classList.add("active-link");
+            break;
+
+            case "home":
+                this._homeNavControl!.querySelector("a")!.classList.add("active-link");
+            break;
+
+            case "academics":
+                this._academicsNavControl!.querySelector("a")!.classList.add("active-link");
+            break;
+
+            case "blog":
+                this._blogNavControl!.querySelector("a")!.classList.add("active-link");
+            break;
+        }
     }
+    _removeAndReplaceActivityState(newRoute:MainRoutes){
+        const __activeRouteLink = this.querySelector(".active-link");
+        __activeRouteLink!.classList.remove("active-link");
+
+        this._setActive(newRoute)
+        
+    }
+
    
 
     getElement(_string:string):HTMLDivElement {

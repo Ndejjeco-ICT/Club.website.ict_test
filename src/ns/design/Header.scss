@@ -1,33 +1,33 @@
-@use "./Variables.scss" as V;
+@use "./Variables.scss"as V;
+
 ns-header {
     display: block;
     position: relative;
+    z-index: 1000000;
     top: 0px;
-    background-color: #e7e7e727;
-    --ns-header-font-size : 10pt;
+    --ns-header-font-size: 10pt;
+    --ns-text-color : #fff;
 
-    .wx-component-header-section{
+    .wx-component-header-section {
         font-family: V.$ns-common-font;
         width: 100%;
-        height: 130px;
+        height: 70px;
         // background-color: rgba(245, 245, 245, 0.041);
-        backdrop-filter: blur(5px);
         font-size: var(--ns-header-font-size);
         transition: height .5s ease;
+        // backdrop-filter: blur(8px);
+
         //header-component-section
         .wx-header-component-area {
             width: 100%;
-            height: 50px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            position: relative;
-           
-
+            height: fit-content;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            backdrop-filter: blur(8px);
+            background-color: rgba(0,0,0,0.3);
             .wx-badge-wrapper {
-                margin: 15px 0px 0px 30px;
-                height: 50px;
-                width: 500px;
+                height: 70px;
+                width: 100px;
                 display: grid;
                 grid-template-columns: 100px 400px;
                 #badge-icon {
@@ -38,28 +38,109 @@ ns-header {
                     justify-content: center;
                     align-items: center;
                     cursor: pointer;
-                    svg{
-                        width: 100px;
-                        height: 50px;
-                    }
+                    background-size: contain;
+                    background-image: url("./Imgs/logo-banner.png");
+                    background-repeat: no-repeat;
+
+                    // svg {
+                    //     width: 100px;
+                    //     height: 50px;
+                    // }
                 }
 
                 .badge-title {
-                    height: 50px;
+                    color: var(--ns-text-color);
+                    text-transform: uppercase;
+                    height: 70px;
+                    width: fit-content;
                     display: flex;
                     align-items: center;
-                    color: rgb(0, 0, 0);
                     width: 100%;
                     transition: all .5s;
                 }
             }
-            ns-enroll-button {
-                margin: 15px 30px 0px 0px;
-                cursor: pointer;
+
+            //navigation-component-section
+        
+            .wx-navigation-bar-half-area {
+                width: 550px;
+                height: 70px;
+                .navigation-bar-wrapper{
+                    height: inherit;
+                    width: inherit;
+                    .main-navigation-bar{
+                        transition: all .5s;
+                        width: inherit;
+                        height: inherit;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+                        ul.navigation-items {
+                            width: fit-content;
+                            margin: 0px;
+                            padding: 0px;
+                            display: flex;
+                            li{
+                                cursor: pointer;
+                                font-size: 11pt;
+                                margin: 20px 30px 20px 30px;
+                                list-style-type: none;
+                                a.active-link {
+                                    color: V.$ns-layout-color;
+                                    border-bottom-color: V.$ns-layout-color;
+                                }
+                                a{
+                                    color: var(--ns-text-color);
+                                    font-weight: 100;
+                                    border-bottom: 2px solid transparent;
+                                    transition: all .5s;
+                                    text-decoration: none;
+                                    &:hover{
+                                      border-bottom: 2px solid V.$ns-layout-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
-           
+            .accord-options {
+                display: flex;
+                        align-items: center;
+                        justify-content: center;
+                .control-options {
+                    display: flex;
+                    >div {
+                        color: var(--ns-text-color);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 14pt;
+                        width: 50px;
+                        height: 50px;
+                        cursor: pointer;
+                        transition: all .5s;
+                        &:hover{
+                            color: V.$ns-layout-color;
+                        }
+                    }
+                    .theme-manager {
+                        margin-left: 20px;
+                        &:hover {
+                            color: #000000;
+                        }
+
+                    }
+                }
+                .control-bars{
+                    display: none;
+
+                }
+            }
 
         }
+
         .wx-bars {
             position: absolute;
             top: 20px;
@@ -69,62 +150,15 @@ ns-header {
             display: none;
             align-items: center;
             justify-content: center;
-            color:#000000;
+            color: #000000;
             font-size: 15px;
-          
+
         }
 
 
 
-       
-        //navigation-component-section
-        .wx-navigation-bar-half-area {
-            margin-top: 0px;
-            width: 100%;
-            height: 100px;
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
 
-            /*Main navigation bar wrapper area*/
-            .navigation-bar-wrapper {
-                display: grid;
-                margin: 20px 30px 0px 0px;
-                grid-template-rows: 40px 50px;
 
-                .main-navigation-bar {
-                    width: auto;
-                    height: 50px;
-                    display: flex;
-                    align-items: center;
-
-                    ul.navigation-items {
-                        margin: 0px;
-                        padding: 0px;
-                        display: flex;
-
-                        li {
-                            font-size: var(--ns-header-font-size);
-                            margin: 0px 30px 5px 30px;
-                            list-style: none;
-                            border-bottom: 1px solid #00000000;
-                            transition: all .4s ease;
-                            a {
-                                text-decoration: none;
-                            }
-                            &:hover {
-                                cursor: pointer;
-                                border-bottom: 1px solid #000;
-                            }
-                            
-                        }
-                    }
-                }
-            }
-        }
 
     }
 }
-
-

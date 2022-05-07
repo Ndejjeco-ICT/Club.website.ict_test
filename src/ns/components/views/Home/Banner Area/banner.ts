@@ -13,7 +13,7 @@ export class BannerAreaComponent extends HTMLElement implements IWebComponents {
                 <div class="wx-component-user-section">
                     <div class="welcome-note-section">
                         <div class="note-1">Ndejje Senior Secondary School</div>
-                        <div class="note-2">No Pain No Pains.</div>
+                        <div class="note-2">Sharing And Educating Humanity.</div>
                         <ns-enroll-button></ns-enroll-button>
                     </div>
                 </div>
@@ -33,7 +33,7 @@ export class BannerAreaComponent extends HTMLElement implements IWebComponents {
 
     createFlowAnimation() {
         if (this._commonWelcomeComponentSection) {
-            
+        
         }
     }
 
