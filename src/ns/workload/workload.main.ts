@@ -41,7 +41,6 @@ import "ns/components/common/Footer/footer"
 import "ns/components/views/Home/Banner Area/banner";
 import "ns/components/views/Home/Joy And Pride/pride";
 import "ns/components/views/Home/Goals And Benefits/goalsB";
-//Inisghts should be added earlier
 import "ns/components/views/Home/Insights/Insights.strings"
 import "ns/components/views/Home/Insights/Insights";
 import "ns/components/views/Home/Quote/quote"

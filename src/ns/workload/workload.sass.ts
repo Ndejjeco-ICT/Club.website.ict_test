@@ -16,6 +16,8 @@ import "@design/Pride.scss"
 import "@design/Goals.scss";
 import "@design/Insights.scss"
 import "@design/Quote.scss"
+import "@design/mission.scss"
+
 
 //detached components
 import "@design/BImage.scss"
@@ -23,3 +25,4 @@ import "@design/overflowNav.scss"
 
 //mediaQueries
 import "@design/viewHomeMediaQueries.scss"
+

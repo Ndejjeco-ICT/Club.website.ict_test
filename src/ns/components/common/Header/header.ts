@@ -121,7 +121,7 @@ export class HeaderComponent extends HTMLElement implements IWebComponents {
     initializeHeaderComponent() {
         this.attachNeccessaryElementHandles();
         this.attachEventListenersToElements();
-        this._listenForScrollAction()
+        // this._listenForScrollAction()
         this._attachSocialLinkksSystem();
     }
 
