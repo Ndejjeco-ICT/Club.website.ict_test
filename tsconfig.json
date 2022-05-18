@@ -4,6 +4,7 @@
         "target" : "es2020",
         "moduleResolution" : "classic",
         "sourceMap"  : true,
+        "allowJs": true,
         "experimentalDecorators" : true,
         "noImplicitReturns" : true,
         "noImplicitOverride"  : true,
@@ -18,5 +19,6 @@
                 "./src/ns"
             ]
         },
-    }
+    },
+    "exclude" : ["gulpfile.js","gulp.build.js"]
 }

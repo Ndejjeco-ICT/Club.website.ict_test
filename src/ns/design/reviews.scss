@@ -1,0 +1,73 @@
+@use "./Variables.scss" as V;
+
+.review-main-component {
+    margin-bottom: 100px;
+
+    .main-review-container {
+        min-width: 80%;
+        border: solid 1px blue;
+        margin: auto;
+        width: 70%;
+        padding: 7%;
+
+        .split-layout-containers {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 0.5fr 1fr;
+            grid-template-rows: 100%;
+            
+
+            .split-container-1 {
+                border: 1px solid green;
+                border-radius: 6%;
+                //background-image: url('../design/Imgs/martin-shreder-5Xwaj9gaR0g-unsplash.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: contain;
+
+                img {
+                    width: 200px;
+                    height: 100px;
+                    border-radius: 10%;
+                }
+            }
+
+            .split-container-2 {
+                h2 {
+                    font-size: 32pt;
+                    text-align: right;
+                }
+
+                .student-quote {
+                    p {
+                        font-size: 23pt;
+                        margin: 20px 0 5px 30px;
+                        text-align: right;
+                    }
+                }
+
+                .carosell-navigation {
+                    margin: 5% 50% 0 50%;
+                    display: grid;
+                    grid-template-columns: 30px 30px 30px;
+                    grid-template-rows: 1fr;
+
+                    .carosell-1 {
+                        width: 20px;
+                        height: 20px;
+                        border: solid 1px #000;
+                        border-radius: 100%;
+                        background-color: #000;
+                        margin: 0 5px 0 5px;
+                    }
+
+                    .carosell-2 {
+                        background-color: #fff;
+                        border: solid 2px #000;
+                    }
+                }
+            }
+        }
+    }
+}

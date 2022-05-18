@@ -44,7 +44,9 @@ import "ns/components/views/Home/Goals And Benefits/goalsB";
 //Inisghts should be added earlier
 import "ns/components/views/Home/Insights/Insights.strings"
 import "ns/components/views/Home/Insights/Insights";
-import "ns/components/views/Home/Quote/quote"
+import "ns/components/views/Home/Quote/quote";
+import "ns/components/views/Home/FAQ Section/FAQ";
+import "ns/components/views/Home/Reviews/review"
 import "ns/components/views/Home/view.home";
 
 

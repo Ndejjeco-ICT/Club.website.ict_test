@@ -1,4 +1,4 @@
-import { IWebComponents } from "ns/typings/schw"; 
+import { IWebComponents } from "ns/typings/schw";
 import { LifeCycleEvents, Lifecycle } from "ns/common/lifecycle";
 import { addDisposableEventListener } from "ns/common/domListener";
 import { _navigateToBasePage } from "ns/components/common/Header/header";
@@ -7,61 +7,56 @@ import { _navigateToBasePage } from "ns/components/common/Header/header";
 
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
-<footer class="component-footer">
-<div class="component-footer-wrapper">
-    <div class="component-section-1 section-comp">
-        <div class="xtr-1 xtr-w">
-            <div class="wrapper">
-                <div class="tr1 school-badge-title">Ndejje Senior Secondary School</div>
-                <div class="tr2">No Pains No Gains</div>
+<div class="ponaco-footer">
+    <div class="ponaco-main-component">
+        <div class="tab-section-1">
+            <h2>Ndejje Senior Secondary School</h2>
+            <p>No pains no gains</p>
+        </div>
+        <hr>
+
+        <div class="content-splitview">
+            <div class="splitview-1">
+                <h2>Quick Links</h2>
+                <p>Academic resources</p>
+                <p>How to apply</p>
+                <p>FAQ</p>
+            </div>
+            <div class="splitview-1">
+                <h2>Academic</h2>
+                <p>Admissions</p>
+                <p>Academic Affairs</p>
+                <p>Staff Directory</p>
+            </div>
+            <div class="splitview-1">
+                <h2>Get in touch</h2>
+                <p>Contact Ndejje</p>
+                <p>Maps and directions</p>
+                <p>Jobs</p>
+            </div>
+            <div class="splitview-2">
+                <div class="accord-options">
+                <div class="control-options">
+                    <div class="facebook-link" title="Join us On Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+    
+                    <div class="instagram-link" title="Follow us on Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+    
+                    <div class="twitter-link" title="Follow us on Twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
-        <div class="xtr-2 xtr-w">
-            <div class="wrapper">
-                <div class="tr1">Join The Community</div>
-                <ns-enroll-button></ns-enroll-button>
-            </div>
-        </div>
+
+        <div class="copyrighted">&copy Ndejje Senior Secondary School</div>
     </div>
-    <div class="component-section-2 section-comp">
-        <div class="xtr-1 xtr-component">
-            <div class="content-wrapper">
-                <div class="xtr-component-title">Info</div>
-                <div class="xtr-data-wrapper">
-                    <span class="x-number item">772410852</span>
-                    <span class="x-email item">ndejje@gmail.com</span>
-                </div>
-            </div>
-        </div>
-        <div class="xtr-2 xtr-component">
-            <div class="content-wrapper">
-                <div class="xtr-component-title">Address</div>
-                <div class="xtr-data-wrapper">
-                    <span class="x-address-1 item">P.O.Box 193</span>
-                    <span class="x-address-2 item">Bombo, Uganda</span>
-                </div>
-            </div>
-        </div>
-        <div class="xtr-3 xtr-component">
-            <div class="content-wrapper">
-                <div class="xtr-component-title">Follow</div>
-                <div class="xtr-data-wrapper">
-                    <span class="x-fl-link x-fl-facebook item"
-                        title="Follow us on Facebook">Facebook</span>
-                    <span class="x-fl-link x-fl-instagram item"
-                        title="Follow us on Instagram">Instagram</span>
-                </div>
-            </div>
-        </div>
-        <div class="control-component">&UpArrow;</div>
-    </div>
+
 </div>
-<div class="component-footer-copyright">
-    <div class="wrapper">
-    &copy 2022 Ndejje Senior Secondary School
-    </div>
-</div>
-</footer>
 `
 
 export class FooterComponent extends HTMLElement implements IWebComponents {
@@ -96,12 +91,12 @@ export class FooterComponent extends HTMLElement implements IWebComponents {
             addDisposableEventListener(this._schControlComponent, "click", this._scrollToTopLevel.bind(this));
         }
     }
-    
+
     _linkToFaceBookHandle() {
-        
+
     };
     _linkToInstagramHandle() {
-        
+
     }
     _scrollToTopLevel() {
         window.scrollTo({
@@ -110,7 +105,7 @@ export class FooterComponent extends HTMLElement implements IWebComponents {
             behavior: "smooth"
         })
     }
-    
+
 }
 
 customElements.define("ns-footer", FooterComponent);

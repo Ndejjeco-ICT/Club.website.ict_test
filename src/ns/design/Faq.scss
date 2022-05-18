@@ -1,0 +1,62 @@
+@use "./Variables.scss"as V;
+
+.main-faqcomponent {
+    background-color: #d1d1d1;
+    padding: 15% 0 15% 0;
+    font-family: V.$ns-common-font;
+
+    .main-content-layout {
+        h2 {
+            font-size: 35pt;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .content-slider {
+            .info-slider-1 {
+                margin: auto;
+                border-bottom: 1px solid #000;
+                padding: 15px 0 15px 0;
+                width: 90%;
+
+                .initial-display-1 {
+                    p {
+                        text-align: center;
+                        font-size: 20pt;
+                    }
+                }
+
+                .slider-expand-section {
+                    display: none;
+                    p {
+                        font-size: 20pt;
+                        text-align: center;
+                    }
+                }
+
+                .slider-expand-section:hover {
+                    display: block;
+                    position: relative;
+                    top: auto;
+                    margin: 10px;
+                    padding: 10px;
+                }
+
+
+                &:hover {
+                    border: none;
+
+                    .slider-expand-section {
+                        display: block;
+                        position: relative;
+                        top: auto;
+                        margin: 20px;
+                        padding: 10px;
+                        background-color: #000;
+                        color: #d1d1d1;
+                    }
+                }
+            }
+        }
+    }
+}

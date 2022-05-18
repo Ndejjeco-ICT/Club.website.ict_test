@@ -12,6 +12,8 @@ export class HomeView extends HTMLElement implements IWebComponents {
             <ns-x-benefits></ns-x-benefits>
             <ns-x-insights></ns-x-insights>
             <ns-x-quote></ns-x-quote>
+            <ns-x-reviews></ns-x-reviews>
+            <ns-x-Faq></ns-x-Faq>
         `
     }
     connectedCallback() {
