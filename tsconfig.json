@@ -2,7 +2,7 @@
 {
     "compilerOptions"  : {
         "target" : "es2020",
-        "moduleResolution" : "classic",
+        "moduleResolution" : "Classic",
         "sourceMap"  : true,
         "experimentalDecorators" : true,
         "noImplicitReturns" : true,
@@ -12,6 +12,7 @@
         "exactOptionalPropertyTypes": false,
         "useUnknownInCatchVariables": false,
         "forceConsistentCasingInFileNames": true,
+        "allowSyntheticDefaultImports": true,
         "baseUrl" : "./src",
         "paths" : {
             "ns/*" : [

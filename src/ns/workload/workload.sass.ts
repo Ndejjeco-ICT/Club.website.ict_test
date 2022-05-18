@@ -25,4 +25,5 @@ import "@design/overflowNav.scss"
 
 //mediaQueries
 import "@design/viewHomeMediaQueries.scss"
+import "@design/edu.scss"
 

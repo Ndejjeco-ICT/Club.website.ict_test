@@ -2,7 +2,7 @@
   "compilerOptions": {
       "module" : "es2020",
       "target"  : "amd",
-      "moduleResolution" : "classic",
+      "moduleResolution" : "Classic",
       "experimentalDecorators" : true,
       "noImplicitReturns" : true,
       "noImplicitOverride"  : true,

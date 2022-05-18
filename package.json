@@ -12,6 +12,7 @@
     "serve": "webpack serve --config webpack.config.js"
   },
   "devDependencies": {
+    "@types/animejs": "^3.1.4",
     "@webcomponents/webcomponentsjs": "^2.6.0",
     "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",

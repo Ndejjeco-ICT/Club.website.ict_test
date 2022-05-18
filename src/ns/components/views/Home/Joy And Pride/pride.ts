@@ -1,5 +1,5 @@
 import { IWebComponents } from "ns/typings/schw";
-
+import { MediaScreenManagerControl, IMediaScrollPositions } from "ns/base/MediaQueries/mediaQueries";
 
 const _svgDataContent = `
 <svg 
@@ -32,7 +32,6 @@ Template_.innerHTML = `
 
 export class PrideComponent extends HTMLElement implements IWebComponents {
 
-
     constructor() {
         super();
         this.appendChild(Template_.content.cloneNode(true));
@@ -44,10 +43,10 @@ export class PrideComponent extends HTMLElement implements IWebComponents {
     private init() {
         this._createFlowAnimation()
     }
-   
+
     _createFlowAnimation() {
-        
+
     }
-    
+
 }
 customElements.define("ns-x-pride", PrideComponent);

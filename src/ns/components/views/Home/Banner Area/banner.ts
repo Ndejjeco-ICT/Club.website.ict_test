@@ -1,4 +1,5 @@
 import { IWebComponents } from "ns/typings/schw";
+import { AnimationProvider } from "ns/common/Animations";
 
 
 export class BannerAreaComponent extends HTMLElement implements IWebComponents {
@@ -33,7 +34,9 @@ export class BannerAreaComponent extends HTMLElement implements IWebComponents {
 
     createFlowAnimation() {
         if (this._commonWelcomeComponentSection) {
-        
+            setTimeout(()=>{
+                AnimationProvider.executeInterfaceAnimation("WELCOME_COMPONENT")
+            },500)
         }
     }
 

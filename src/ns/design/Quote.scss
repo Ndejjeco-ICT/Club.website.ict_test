@@ -1,13 +1,14 @@
 @use "./Variables.scss" as V;
 
 @keyframes slideFromAbove {
-    0%{
+    0% {
         visibility: hidden;
         opacity: 0;
         transform: translateY(100px);
     }
-    100%{
-       visibility: visible;
+
+    100% {
+        visibility: visible;
         opacity: 1;
         transform: translateY(0px);
     }
@@ -16,14 +17,16 @@
 ns-x-quote {
     display: block;
     width: 100%;
-    --ns-major-Fontsize : 75pt;
-    --ns-minor-Fontsize : 15pt;
+    --ns-major-Fontsize: 65pt;
+    --ns-minor-Fontsize: 15pt;
     --ns-content-size: 800px;
 }
 
 ns-x-quote .ponaco-splitview-6 {
     margin: 0 0 0px 0;
+
     .wx-component-6 {
+        border: 1px solid red;
         width: 100%;
         height: var(--ns-content-size);
         // background-image: url("../resources/vision.jpg");
@@ -31,11 +34,13 @@ ns-x-quote .ponaco-splitview-6 {
         background-attachment: fixed;
         background-repeat: no-repeat;
         @include V.center();
+
         .main-content-holder {
-            width: fit-content; 
-            font-family : V.$ns-common-font;
-    
+            width: fit-content;
+            font-family: V.$ns-common-font;
+
             .x-content-1 {
+                border: 1px solid red;
                 font-weight: 350;
                 font-size: var(--ns-major-Fontsize);
                 max-width: 950px;
@@ -44,27 +49,32 @@ ns-x-quote .ponaco-splitview-6 {
                 margin-right: 20px;
                 margin-bottom: 20px;
                 animation: slideFromAbove 1.5s forwards;
-            //    color: rgb(233, 233, 233);
-                &::before{
+
+                //    color: rgb(233, 233, 233);
+                &::before {
                     content: '"';
                 }
-                &::after{
+
+                &::after {
                     content: '".';
                 }
             }
+
             .x-content-2 {
                 // animation: slideFromAbove 1.5s forwards;
                 text-align: center;
                 font-weight: 500;
                 font-size: var(--ns-minor-Fontsize);
-                &::before{
+
+                &::before {
                     content: "~";
                 }
-                &::after{
+
+                &::after {
                     content: "~";
                 }
             }
         }
     }
-    
+
 }

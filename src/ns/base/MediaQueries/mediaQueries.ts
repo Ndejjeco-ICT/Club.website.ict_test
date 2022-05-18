@@ -49,7 +49,7 @@ export class MediaScreenManager implements IMediaScreenManager {
         addDisposableEventListener(window, "resize", (e) => {
             const dimensions: IMediaScreenDimensions = {
                 width: window.innerWidth,
-                height: window.innerWidth,
+                height: window.innerHeight,
             }
             //throttle event to prevent lagging of website;
             setTimeout(() => {

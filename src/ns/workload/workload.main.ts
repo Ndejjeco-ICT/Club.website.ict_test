@@ -44,6 +44,7 @@ import "ns/components/views/Home/Goals And Benefits/goalsB";
 import "ns/components/views/Home/Insights/Insights.strings"
 import "ns/components/views/Home/Insights/Insights";
 import "ns/components/views/Home/Quote/quote"
+import "ns/components/views/Home/edu/edu"
 import "ns/components/views/Home/view.home";
 
 
