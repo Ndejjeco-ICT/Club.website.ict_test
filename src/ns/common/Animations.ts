@@ -1,4 +1,5 @@
 import {createInstance} from "ns/base/instanceCreators/instanceCreators"
+//@ts-ignore
 import anime from "animejs";
 
 
