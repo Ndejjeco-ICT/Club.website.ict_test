@@ -1,4 +1,4 @@
-@use "./Variables.scss"as V;
+@use "./Variables.scss" as V;
 
 @keyframes slidein {
     0% {
@@ -20,123 +20,126 @@
 ns-x-insights {
     display: block;
     width: 100%;
-
-    --ns-insights-majorTitle-Fontsize: 30pt;
-    --ns-insights-subcontent-Fontsize: 16pt;
-    --ns-insight-viewmore-Fontsize: 12pt;
-
-    --ns-vw-card-title-fontsize: 18pt;
-    --ns-vw-card-description-fontsize: 11pt;
-    --ns-vw-card-insight-like: 12pt;
 }
 
 
 ns-x-insights .ponaco-splitview-5 {
+    font-family: V.$ns-common-font;
+
+    border: 2px solid red;
     width: 100%;
     height: fit-content;
 
-    .vw-1 {
+    .wx-insights-component {
         width: 100%;
-        height: inherit;
-        font-family: V.$ns-common-font;
 
-        .vw-1-wrapper {
+        .main-wrapper {
 
-            .sec-1 {
-                h1 {
-                    margin-left: 30px;
-                    font-size: var(--ns-insights-majorTitle-Fontsize);
-                }
-
-                margin-bottom: 10px;
-            }
-
-            .vw-content {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-                .vw-content-1 {
-                    p {
-                        color: rgba(0, 0, 0, 0.63);
-                        margin-left: 30px;
-                        font-size: var(--ns-insights-subcontent-Fontsize);
-                    }
-                }
-
-                .content-view-redirect {
-                    @include V.common_btn();
-                    margin-right: 30px;
-                    font-size: var(--ns-insight-viewmore-Fontsize);
-                }
-            }
-        }
-
-        .vw-content-2-cards {
             width: 100%;
-            height: fit-content;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
 
-            .vw-content-cards-wrapper {
-                width: 100%;
+            .content-title {
+                font-size: 40pt;
+                .content-title-wrapper {
+                    margin-left: 40px;
+                }
+                margin-bottom: 20px;
+            }
 
-                .wrapper-2 {
+            .cards-container {
+                .card-wrapper-1 {
                     height: fit-content;
+                    margin-bottom: 50px;
+                }
+                .card-wrapper-2 {
+                    width: fit-content;
                     display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: 1fr 1fr;
-                    justify-items: center;
+                    grid-template-columns: 600px 600px;
+                    grid-template-rows: 480px 480px;
+                    grid-gap: 50px;
+                    margin: auto;
 
-                    .vw-card {
-                        position: relative;
-                        margin: 50px 0px 50px 0px;
 
-                        width: 600px;
-                        height: 600px;
+                    .card-x-component {
+                        .card-content {
+                            display: block;
 
-                        .v-picture-container {
-                            width: inherit;
-                            height: 400px;
-                            background-image: url("./Imgs/simple/vision.jpg");
-                            background-repeat: no-repeat;
-                            background-size: cover;
-                        }
+                            width: fit-content;
+                            border: 2px solid maroon;
+                            text-decoration: none;
 
-                        .v-label-container {
-                            height: 35px;
-                            font-size: var(--ns-vw-card-title-fontsize);
-                            margin-bottom: 8px;
-                            margin-left: 20px;
-                            margin-top: 15px;
-                        }
+                            .card-content-wrapper {
+                                position: relative;
+                                border: 2px solid black;
+                                width: 600px;
+                                height: 480px;
 
-                        .v-description-container {
-                            margin-left: 20px;
-                            height: 50px;
-                            font-size: var(--ns-vw-card-description-fontsize);
-                            word-wrap: break-word;
-                        }
+                                >div {
+                                    position: absolute;
+                                }
 
-                        .v-insight-like {
-                            position: absolute;
-                            bottom: 0px;
-                            width: 100%;
-                            height: 50px;
-                            display: flex;
-                            justify-content: right;
-                            font-size: var(--ns-vw-card-insight-like);
+                                .card-content-image {
+                                    width: 100%;
+                                    height: 480px;
+                                    font-size: 30pt;
+                                    color: red;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
 
-                            .wrapper{
-                                display: flex;
+                                .card-content-info {
+                                    bottom: 0px;
+
+                                    .ctrinfo {
+                                        margin: 0px 20px 0px 20px;
+                                    }
+
+                                    .x-title-1 {
+                                        font-size: 22pt;
+                                        margin-bottom: 8px;
+
+                                    }
+
+                                    .x-title-2 {
+                                        margin-bottom: 10px;
+                                        font-size: 13pt;
+                                    }
+
+                                    .x-title-btn {
+                                        margin-bottom: 10px;
+
+                                        .x-btn-wrapper {
+                                            display: grid;
+                                            grid-template-columns: 50px auto;
+
+                                            .sl-button {
+                                                font-size: 13pt;
+                                                border-radius: 50%;
+                                                display: flex;
+                                                align-items: center;
+                                                justify-content: center;
+                                                width: 40px;
+                                                height: 40px;
+                                                border: 1px solid black;
+                                            }
+
+                                            .sl-text {
+                                                height: 40px;
+                                                display: flex;
+                                                align-items: center;
+                                            }
+                                        }
+                                    }
+                                }
+
                             }
                         }
                     }
+
                 }
 
             }
+
 
         }
     }

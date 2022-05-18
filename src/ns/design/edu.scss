@@ -1,0 +1,30 @@
+@use "./Variables.scss"as V;
+
+
+
+ns-x-edu {
+    display: block;
+    font-family:V.$ns-common-font;
+}
+
+ns-x-edu .ponaco-component-edu {
+
+    width: 100%;
+    height: 300px;
+    border: 2px solid red;
+
+}
+
+.ponaco-component-edu .wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    border: 2px solid purple;
+    .info {
+        padding: 20px 20px 20px 20px;
+        font-size: 65pt;
+        border: 5px solid black;
+    }
+}

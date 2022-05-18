@@ -1,5 +1,8 @@
 @use "./Variables.scss"as V;
 
+//Welcome Note Animation 
+
+
 
 
 
@@ -26,6 +29,8 @@ ns-x-banner .ponaco-splitview-1 {
             margin-top: 150px;
             padding-left: 30px;
             margin-left: 30px;
+            opacity: 0;
+            transform: translateX(-100px);
 
             .note-1 {
                 color: #fff;

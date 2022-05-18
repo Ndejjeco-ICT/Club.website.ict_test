@@ -1,13 +1,9 @@
-import { IWebComponents } from "ns/typings/schw";
-
-const Template_ = document.createElement("template");
-Template_.innerHTML = `
 <div class="ponaco-splitview-5">
     <div class="wx-insights-component">
         <div class="main-wrapper">
             <div class="content-title">
                 <div class="content-title-wrapper">
-                    Uniqueness of Ndejje  S.S.S
+                    Ndejje Flows
                 </div>
             </div>
             <div class="cards-container">
@@ -95,23 +91,3 @@ Template_.innerHTML = `
         </div>
     </div>
 </div>
-
-`
-
-export class InsightsComponent extends HTMLElement implements IWebComponents {
-
-    constructor() {
-        super();
-        this.appendChild(Template_.content.cloneNode(true))
-    }
-    connectedCallback(){
-
-
-
-    }
-
-
-}
-
-
-customElements.define("ns-x-insights", InsightsComponent);

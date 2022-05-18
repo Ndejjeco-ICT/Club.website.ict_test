@@ -1,13 +1,14 @@
-@use "./Variables.scss" as V;
+@use "./Variables.scss"as V;
 
 
 @keyframes slideFromTheLeft {
-    0%{
+    0% {
         display: none;
         opacity: 0;
         transform: translateX(-100px);
     }
-    100%{
+
+    100% {
         display: block;
         opacity: 1;
         transform: translateX(0px);
@@ -16,99 +17,187 @@
 
 ns-x-benefits {
     display: block;
-    width: 100%;
-
-    --ns-maintitle-font-size : 30pt;
-    --ns-description-font-size : 12pt;
-    --ns-viewmore-font-size : 12pt;
+    --ns-x-height: 700px;
+    font-family: V.$ns-common-font;
 }
 
 ns-x-benefits .ponaco-splitview-3 {
-    margin: 100px 0px 100px 0;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    // background-image: url("./Imgs/john-towner-JgOeRuGD_Y4-unsplash.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    height: var(--ns-x-height);
+    width: 100%;
 
     .wx-component-3 {
-        width: 100%;
-        height: fit-content;
-        font-family: V.$ns-common-font;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        height: inherit;
+        width: inherit;
 
-        .splitview {
-            margin: 0px 0px 0px 00px;
-            display: grid;
-            grid-template-columns: 2fr 2fr;
-            animation: slideFromTheLeft 2s forwards;
-           
-            .splitview1 {
-                margin: 0px 30px 0px 0px;
+        .split-view {
+            width: 100%;
+            height: inherit;
+            border: 2px solid #000;
+
+            .ctr-component-container {
                 width: 100%;
-                .split-view-contents {
+                height: inherit;
+                border: 2px solid #ff0000;
+
+                .ctr-component-wrapper {
+                    width: 100%;
                     height: inherit;
-                    margin-left: 30px;
-                    margin-right: 10px;
-
-                    .content-section-title {
-                        font-size: var(--ns-maintitle-font-size);
-                        font-weight: 325;
-                        margin-bottom: 20px;
-                    }
-
-                    .content-section-area {
-                        word-wrap: break-word;
-                        font-size: var(--ns-description-font-size);
-                        max-width: 500px;
-                    }
-                }
-
-            }
-
-            .splitview2 {
-                height: fit-content;
-                .split-view-contents {
-                    margin-top: 350px;
-                    // display: flex;
-                    margin-left: 30px;
-                }
-
-                .major-content {
-                    width: 80%;
-                    border-top: 1px solid V.$ns-layout-color;
-                    margin-top: 20px;
-                    font-size: var(--ns-description-font-size);
+                    display: grid;
+                    grid-template-columns: 3fr 2fr;
 
                     >div {
-                        margin: 25px 0px 20px 0px;
+                        border: 1px solid black;
                     }
 
-                    .content-redirect {
-                        @include V.button();
-                        @include V.center();
-                        cursor: pointer;
-                        border: 1px solid V.$ns-layout-color;
-                        background-color: V.$ns-layout-color;
-                        color: #fff;
-                        transition: all .5s;
-                        font-weight: 300;
-                        font-size: var(--ns-viewmore-font-size);
 
-                        &:hover {
-                            background-color: unset;
-                            color: #000;
+                    .conic-section-1 {
+                        border: 2px solid blue;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: center;
+
+                        .ctx-pictures-wrapper {
+
+
+                            width: 700px;
+
+                            >div {
+                                border: 1px solid rgb(150, 19, 202);
+                            }
+
+                            display: grid;
+                            grid-template-rows: 300px 300px;
+
+                            .ctx-additive-pics {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+
+                                >div {
+                                    border: 1px solid rgb(150, 19, 202);
+
+                                }
+                            }
+
+
+                            .cn-pic-box {
+
+                                position: relative;
+
+                                >div {
+                                    position: absolute;
+                                }
+
+                                .cn-picture-container {
+                                    border: 2px double red;
+                                    width: 100%;
+                                    height: 300px;
+                                    background-repeat: no-repeat;
+                                    background-size: cover;
+                                    z-index: 1;
+                                    font-size: 30pt;
+                                    color: red;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+
+                                .cn-info-container::after {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    top: 0;
+                                    left: 0;
+                                    background: rgba(0, 0, 0, 0.979);
+                                    opacity: 0;
+                                    transition: all 1s;
+                                    -webkit-transition: all 1s;
+                                }
+
+                                .cn-info-container {
+                                    opacity: 0.9;
+                                    height: 130px;
+                                    width: 100%;
+                                    bottom: 0px;
+                                    z-index: 2;
+                                    cursor: pointer;
+                                    display: flex;
+                                    align-items: flex-end;
+
+
+
+                                    .cn-info-wrapper {
+                                        margin-left: 30px;
+                                        width: fit-content;
+
+                                        .cn-short-title {
+                                            font-size: 15pt;
+                                            margin-bottom: 11px;
+                                            color: rgba(0, 0, 0, 0.801);
+                                        }
+
+                                        .cn-short-title-2 {
+                                            color: #000;
+                                            font-size: 22pt;
+                                            margin-bottom: 11px;
+
+                                        }
+                                    }
+                                }
+
+                            }
                         }
                     }
+
+                    .conic-section-2 {
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+                        justify-content: center;
+                        border: 2px solid maroon;
+
+                        .wrapper {
+                            .content-wrapper {
+                                margin-left: 30px;
+
+                                .cr-title {
+                                    font-size: 40pt;
+                                    font-weight: bold;
+                                }
+
+                                .cr-description {
+                                    margin-top: 10px;
+                                    color: rgba(0, 0, 0, 0.781);
+                                    word-wrap: break-word;
+                                    width: 400px;
+                                    font-size: 15pt;
+                                }
+
+                                .cr-xmore {
+                                    margin-top: 20px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border: 1px solid rebeccapurple;
+                                    height: 50px;
+                                    width: 160px;
+                                    border-radius: 10px;
+                                }
+
+                            }
+
+
+                        }
+
+                    }
+
+
+
+
+
                 }
 
             }
         }
-
     }
 }

@@ -10,7 +10,7 @@ export class QuoteComponent extends HTMLElement implements IWebComponents {
         <div class="ponaco-splitview-6">
             <div class="wx-component-6">
                 <div class="main-content-holder">
-                    <div class="x-content-1">The future belongs to those who believe in there dreams</div>
+                    <div class="x-content-1">Time has a wonderful way of showing us what matters</div>
                     <div class="x-content-2">Dr. Charles Kahigiriza</div>
                 </div>
             </div>

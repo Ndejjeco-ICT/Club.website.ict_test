@@ -1,76 +1,91 @@
-@use "./Variables.scss" as V;
-
-@keyframes slideFromAbove {
-    0%{
-        display: none;
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    100%{
-        display: block;
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
+@use "./Variables.scss"as V;
 
 ns-x-pride {
+
     display: block;
     width: 100%;
-
-    --ns-pride-title-font-size:30pt;
-    --ns-grid-title-font-size:1.5rem;
-    --ns-grid-description-font-size:12pt;
-    --ns-icon-size:35pt;
 }
 
-ns-x-pride .ponaco-splitview-2 {
-    background-color: rgba(255, 255, 255, 0.904);
-    height: fit-content;
-    @include V.center();
+ns-x-pride .pride-x-component {
+    height: 700px;
+    width: inherit;
+
+    display: flex;
+    flex-direction: column;
     font-family: V.$ns-common-font;
-    margin : 50px 0px 100px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .wrapper {
-        height: fit-content;
-        display: grid;
-        grid-row-gap: 30px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    .container {
+        border: 2px solid red;
 
-        .grid-box-1{
-            .content-area-1{
-                font-size: var(--ns-pride-title-font-size);
-                font-weight: 300;
-                text-transform: capitalize;
-                margin: 50px 0px 0px 20px;
-            }
-            border-right: 1px solid #0000004d;
+        .welcome-text {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
+            .welcome-text-wrapper {
+                font-size: 70pt;
+                font-weight: bolder;
 
-        }
-        .grid-box-3{
-            border-right: 1px solid #00000044;
-        }
-
-        .grid-x-box{
-            
-            .content-box{
-                margin: 70px 30px 0px 30px;
-                .content-image-item{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 100px;
-                    height: 100px;
-                    color: V.$ns-layout-color;
-                    font-size: var(--ns-icon-size);
+                &::after {
+                    content: ". ";
                 }
-                h2{font-size: var(--ns-grid-title-font-size);}
-                p { font-size: var(--ns-grid-description-font-size);}
+
+                &::before {
+                    content: " .";
+                }
             }
+        }
+
+        .welcome-text-2 {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .svg-container-wrapper {
+                color: V.$ns-layout-color;
+                font-size: 55pt;
+
+            }
+        }
+
+        .control-button-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 80px;
+
+            .expl-button-container {
+                cursor: pointer;
+                border: 2px solid V.$ns-layout-color;
+                color: #fff;
+                transition: all .5s;
+                background-color: V.$ns-layout-color;
+                @include V.center();
+                @include V.button();
+
+                &:hover {
+                    background-color: unset;
+                    color: #fff;
+                    text-decoration: underline;
+                    line-height: 10px;
+                }
+
+                &:active {
+                    transform: scale(0.8);
+                }
+            }
+
         }
 
     }
+
 
 }
