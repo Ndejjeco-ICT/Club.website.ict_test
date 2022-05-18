@@ -1,6 +1,7 @@
 @use "./Variables.scss" as V;
 
 .review-main-component {
+    font-family: V.$ns-common-font;
     margin-bottom: 100px;
 
     .main-review-container {
