@@ -4,7 +4,7 @@ const Template_ = document.createElement("template");
 Template_ .innerHTML = `
 <div class="ponaco-component-edu">
     <div class="wrapper">
-        <div class="info">Education is the Key.</div>
+        <div class="info">Education  the Key.</div>
     </div>
 </div>
 `
