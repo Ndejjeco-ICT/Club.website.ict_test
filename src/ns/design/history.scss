@@ -1,0 +1,45 @@
+@use "./Variables.scss"as V;
+
+.historyComponent {
+    font-family: V.$ns-common-font;
+
+    .main-historysection-container {
+        .split-layout-divider {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+
+            .section-content-1 {
+                h2 {
+                    font-size: 20pt;
+                }
+
+                p {
+                    font-size: 15pt;
+                }
+            }
+
+            .section-content-2 {
+                .mini-divider {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    grid-template-rows: auto auto auto;
+                    grid-column-gap: 40px;
+
+
+                    .content-a {
+                        p {
+                            font-size: 20pt;
+                        }
+                    }
+
+                    .content-b {
+                        p {
+                            font-size: 15pt;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
