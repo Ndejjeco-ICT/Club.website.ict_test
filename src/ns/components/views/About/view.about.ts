@@ -7,7 +7,10 @@ export class AboutView extends HTMLElement implements IWebComponents {
     constructor() {
         super();
         this.innerHTML = `
-
+        <ns-x-welcomenote></ns-x-welcomenote>
+        <ns-x-glance></ns-x-glance>
+        <ns-x-xgoal></ns-x-xgoal>
+        <ns-x-staffview></ns-x-staffview>
 
         `
     }
@@ -19,4 +22,4 @@ export class AboutView extends HTMLElement implements IWebComponents {
     }
 }
 
-customElements.define("ns-home-view", AboutView);
+customElements.define("ns-about-view", AboutView);

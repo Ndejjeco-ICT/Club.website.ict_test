@@ -50,6 +50,13 @@ import "ns/components/views/Home/FAQ Section/FAQ"
 import "ns/components/views/Home/view.home";
 
 
+//AboutView
+import "ns/components/views/About/WelcomeNote/welcomeNote";
+import "ns/components/views/About/Glance/glance";
+import "ns/components/views/About/XGoal/xgoal";
+import "ns/components/views/About/StaffView/staffview"
+import "ns/components/views/About/view.about"
+
 /**
  * Provider comes last
  */
