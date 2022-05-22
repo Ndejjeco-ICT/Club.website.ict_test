@@ -18,7 +18,8 @@ import "@design/Insights.scss"
 import "@design/Quote.scss"
 import "@design/Faq.scss"
 import "@design/reviews.scss"
-import "@design/mission.scss"
+import "@design/mission.scss";
+import "@design/corevalues.scss";
 
 
 //detached components
