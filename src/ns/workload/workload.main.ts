@@ -57,6 +57,7 @@ import "ns/components/views/About/XGoal/xgoal";
 import "ns/components/views/About/StaffView/staffview";
 import "ns/components/views/About/Core Values/corevalues";
 import "ns/components/views/About/view.about"
+import "ns/components/views/About/VidInterview/VidInterview"
 
 /**
  * Provider comes last
