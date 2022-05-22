@@ -2,12 +2,9 @@
   "compilerOptions": {
       "module" : "es2020",
       "target"  : "amd",
-<<<<<<< HEAD
       "allowJs": true,
       "moduleResolution" : "classic",
-=======
       "moduleResolution" : "Classic",
->>>>>>> f046b72566754bb2cffee4291a1c600d32602faa
       "experimentalDecorators" : true,
       "noImplicitReturns" : true,
       "noImplicitOverride"  : true,
