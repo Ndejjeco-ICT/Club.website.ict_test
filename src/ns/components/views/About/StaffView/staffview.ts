@@ -21,13 +21,29 @@ Template_.innerHTML = `
                 </div>
                 <div class="tr-view-2">
                     <div class="tr-view-2-wrapper">
-                        <div class="tr-content"></div>
+                        <div class="tr-content">
+                            <div class="tr-content-wrapper">
+                                <div class="tr-members-wrapper">
+                                    <ns-x-member></ns-x-member>
+                                    <ns-x-member></ns-x-member>
+                                    <ns-x-member></ns-x-member>
+                                    <ns-x-member></ns-x-member>
+                                    <ns-x-member></ns-x-member>
+                                    <ns-x-member></ns-x-member>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tr-content-2">
+                            <div class="selective-btn">View More</div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 `;
 
