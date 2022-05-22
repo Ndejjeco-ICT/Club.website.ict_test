@@ -1,0 +1,31 @@
+@use "./Variables.scss"as V;
+
+ns-x-xgoal {
+    display: block;
+
+}
+
+ns-x-xgoal .xb-goal-component {
+    font-family: V.$ns-common-font;
+
+    width: 100%;
+    .tr-title-area-wrapper {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 50pt;
+    }
+    .tr-description-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;;
+        font-size: 16pt;
+    
+        .tr-description-container{
+            text-align: center;
+            width: 90%;
+        }
+    }
+}

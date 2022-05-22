@@ -1,0 +1,71 @@
+@use "./Variables.scss" as V;
+
+ns-x-glance {
+    display: block;
+}
+
+ns-x-glance .xb-glance-component {
+    width: 100%;
+    height: fit-content;
+}
+
+ns-x-glance .xb-glance-component {
+    font-family: V.$ns-common-font;
+
+    .xb-wrapper {
+        width: 100%;
+        height: auto;
+
+        .tr-title-area-wrapper {
+            width: 100%;
+            height: 250px;
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+
+            .tr-title-container {
+                font-size: 20pt;
+            }
+        }
+
+        .tr-splitview {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+
+            .tr-view-1 {
+                border-right: 1px solid gray;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .tr-view-1-wrapper {
+                    display: grid;
+                    grid-template-rows: 120px 120px 120px;
+
+                    .tr-data-cpr {
+                        .cl-title {
+                            font-size: 20pt;
+                        }
+                        .cl-figure { 
+                            font-size: 15pt;
+                        }
+                    }
+                }
+            }
+            .tr-view-2 {
+                width: fit-content;
+                .tr-view-2-wrapper {
+                    width: 500px;
+                    .cl-picture-container {
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}

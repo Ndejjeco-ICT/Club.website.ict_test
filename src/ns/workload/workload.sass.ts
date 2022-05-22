@@ -29,3 +29,10 @@ import "@design/overflowNav.scss"
 import "@design/viewHomeMediaQueries.scss"
 import "@design/edu.scss"
 
+
+import "@design/WelcomeNote.scss";
+import  "@design/Glance.scss"
+import "@design/Xgoal.scss"
+import "@design/StaffView.main.scss";
+import "@design/StaffView.main.scss";
+import "@design/StaffView.Member.scss"

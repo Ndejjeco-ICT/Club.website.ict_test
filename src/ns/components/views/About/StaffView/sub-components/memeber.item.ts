@@ -7,9 +7,9 @@ Template_.innerHTML = `
         <div class="xb-picture-container">
         </div>
         <div class="xb-content">
-            <div class="xb-ct-1 xb-name"></div>
-            <div class="xb-ct-1 xb-post"></div>
-            <div class="xb-ct-1 xb-link"></div>
+            <div class="xb-ct-1 xb-name">Mr Kalema Pius</div>
+            <div class="xb-ct-2 xb-post">Cool Guy</div>
+            <div class="xb-ct-3 xb-link">__@Ig</div>
         </div>
     </div>
 </div>`

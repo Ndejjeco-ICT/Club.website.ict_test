@@ -1,0 +1,30 @@
+ns-x-member {
+    display: block;
+}
+
+ns-x-member .xb-cl-memeber {
+    width: 100%;
+
+    .xb-cl-wrapper {
+        width: 200px;
+        height: 200px;
+        .xb-picture-container {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+        .xb-content {
+            display: grid;
+            grid-template-rows: 50px 50px 50px;
+            .xb-ct-1 {
+                font-size: 18pt;
+            }
+            .xb-ct-2 {
+                font-size: 15pt;
+            }
+            .xb-ct-3 {
+                font-size: 15pt;
+            }
+        }
+    }
+}

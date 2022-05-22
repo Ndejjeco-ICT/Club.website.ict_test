@@ -1,0 +1,34 @@
+@use "./Variables.scss" as V;
+
+ns-x-welcomenote {
+    display: block;
+}
+
+ns-x-welcomenote .xb-about-component {
+    width: 100%;
+    height: 500px;
+}
+
+ns-x-welcomenote .xb-about-component {
+    font-family: V.$ns-common-font;
+
+    .xb-wrapper {
+        width: inherit;
+
+        .tr-title {
+            .wrapper{
+                font-size: 60pt;
+                width: 300px
+            }
+        }
+        .tr-x-line {
+            background-color: black;
+            height: 30px;
+            width: 300px;
+        }
+        .tr-x-description {
+            font-size: 30pt;
+        }
+    }
+
+}
