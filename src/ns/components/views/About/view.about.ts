@@ -11,6 +11,7 @@ export class AboutView extends HTMLElement implements IWebComponents {
         <ns-x-glance></ns-x-glance>
         <ns-x-xgoal></ns-x-xgoal>
         <ns-x-staffview></ns-x-staffview>
+        <ns-x-vidinterview></ns-x-vidinterview>
 
         `
     }
