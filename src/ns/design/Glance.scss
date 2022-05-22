@@ -16,23 +16,7 @@ ns-x-glance .xb-glance-component {
         width: 100%;
         height: auto;
 
-        .tr-title-area-wrapper {
-            width: 100%;
-            height: 100px;
-            border: 1px solid red;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-
-
-            .tr-title-container {
-                font-weight: bold;
-                font-size: 30pt;
-            }
-        }
-
-        .tr-splitview {
+        .tr-split-view {
             display: grid;
             grid-template-columns: 1fr 1fr;
 
@@ -48,20 +32,39 @@ ns-x-glance .xb-glance-component {
                     grid-template-rows: 120px 120px 120px;
 
                     .tr-data-cpr {
-                        .cl-title {
-                            font-size: 20pt;
+                        width: 500px;
+                        display: flex;
+                        align-items: center;
+                        .cpr-wrapper {
+                            .cl-title {
+                                font-size: 25pt;
+                                .cl-title-wrapper{
+                                    margin-bottom: 5px;
+                                }
+                            }
+                            .cl-figure { 
+                                color: rgba(0, 0, 0, 0.753);
+                                font-size: 18pt;
+                            }
                         }
-                        .cl-figure { 
-                            font-size: 15pt;
-                        }
+                        
                     }
                 }
             }
             .tr-view-2 {
-                width: fit-content;
                 .tr-view-2-wrapper {
                     width: 500px;
+                    .cl-title-area {
+                        margin-left: 50px;
+                        font-size: 30pt;
+                    }
                     .cl-picture-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        height: 400px;
+                        width: 600px;
+                        margin-left: 50px;
                         background-size: cover;
                         background-repeat: no-repeat;
                     }
