@@ -24,7 +24,6 @@ Template_.innerHTML = `
             </div>
         <ns-footer></ns-footer>
         <div class="ns-sub-components">
-            <div class="banner-image"></div>
             <div class="overflow-navigation-bar" style="display : none;">
                 <div class="overflow-nav-close-control">&times;</div>
                 <div class="navigation-items">
