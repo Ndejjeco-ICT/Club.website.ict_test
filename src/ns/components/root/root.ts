@@ -24,9 +24,7 @@ Template_.innerHTML = `
         </div>
     <ns-footer></ns-footer>
     <div class="ns-sub-components">
-        <div class="dialog-host">
-            <ns-d-staffdialog></ns-d-staffdialog>
-        </div>
+        
     </div>
 </div>
 `

@@ -1,4 +1,4 @@
-@use "./Variables.scss"as V;
+@use "./Variables.scss" as V;
 
 .historyComponent {
     font-family: V.$ns-common-font;
@@ -26,42 +26,52 @@
             }
 
             .section-content-2 {
-                .mini-divider {
+                .section-divider {
                     display: grid;
-                    grid-template-columns: auto auto;
+                    grid-template-columns: auto auto auto;
                     grid-template-rows: auto auto auto;
                     grid-column-gap: 40px;
 
-                    .content-class-a {
-                        border: 1px solid red;
-                        padding-bottom: 100px;
+                    .content-left {
+                        .content-class-a {
+                            padding-bottom: 100px;
 
-                        p {
-                            font-size: 15pt;
+                            p {
+                                font-size: 15pt;
+                            }
+                        }
+
+                        .content-class-x {
+                            padding-bottom: 100px;
+                            p {
+                                font-size: 15pt;
+                            }
                         }
                     }
 
-                    .content-class-b {
-                        padding: 50px 0;
-                        border: 1px solid green;
-                        p {
-                            font-size: 15pt;
-                        }
+                    .line-divider {
+                        width: 10px;
+                        height: 100%;
+                        border: 2px solid #000;
                     }
 
-                    .content-class-x {
-                        border: 1px solid blue;
-                        p {
-                            font-size: 15pt;
-                        }
-                    }
+                    .content-right {
+                        .content-class-b {
+                            padding: 50px 0;
 
-                    .content-class-y {
-                        border: 1px solid yellow;
-                        padding: 50px 0;
-                        p {
-                            font-size: 15pt;
+                            p {
+                                font-size: 15pt;
+                            }
                         }
+
+                        .content-class-y {
+                            padding: 50px 0;
+
+                            p {
+                                font-size: 15pt;
+                            }
+                        }
+
                     }
                 }
             }
