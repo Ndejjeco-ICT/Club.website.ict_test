@@ -33,14 +33,12 @@ ns-x-staffview .xb-staffview {
 
             .tr-view-1 {
                 width: 100%;
-                border: 2px solid red;
 
                 .tr-view-1-wrapper {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
 
                     .cl-view-1 {
-                        border: 2px solid red;
 
                         height: 500px;
                         display: flex;
@@ -48,22 +46,34 @@ ns-x-staffview .xb-staffview {
                         justify-content: center;
 
                         .cl-picture-container {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
                             height: 280px;
                             width: 280px;
-                            border: 1px solid red;
+                            border: 1px solid black;
                             border-radius: 50%;
                         }
                     }
 
                     .cl-view-2 {
-                        border: 2px solid blue;
                         height: 500px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
 
                         .cl-content-text-holder {
-                            margin: 30px 30px 30px 30px;
+                            margin: 70px 30px 30px 30px;
+                            .ty-1 {
+                                font-size: 35pt;
+                            }
+                            .ty-2 {
+                                color: rgba(0, 0, 0, 0.795);
+                                margin-top: 20px;
+                                font-size: 13pt;
+                            }
+                            .ty-3 {
+                                color: rgba(0, 0, 0, 0.795);
+                                margin-top: 20px;
+                                font-size: 13pt;
+                            }
                         }
                     }
                 }
@@ -72,7 +82,6 @@ ns-x-staffview .xb-staffview {
             .tr-view-2 {
                 height: fit-content;
                 width: 100%;
-                border: 3px solid black;
                 .tr-content {
                     margin-top: 100px;
                     width: 100%;
@@ -92,7 +101,6 @@ ns-x-staffview .xb-staffview {
                 }
 
                 .tr-content-2 {
-                    border: 1px solid red;
                     height: 100px;
                     display: flex;
                     flex-direction: row;

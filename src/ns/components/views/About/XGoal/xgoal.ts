@@ -8,7 +8,7 @@ Template_.innerHTML = `
             <div class="tr-title-container">Our Vision</div>
         </div>
         <div class="tr-description-wrapper">
-            <div class="tr-description-container">Lorem ipsum dolor sit amet consectetur adipisicin ipsum dolor sit amet consectetur adipisicin</div>
+            <div class="tr-description-container">A Christ – centered school nurturing holistically component citizens for development and prosperity.</div>
         </div>
     </div>
 </div>

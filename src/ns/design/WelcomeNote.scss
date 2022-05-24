@@ -6,15 +6,23 @@ ns-x-welcomenote {
 
 ns-x-welcomenote .xb-about-component {
     width: 100%;
-    height: 250px;
+    height: 350px;
 }
 
 ns-x-welcomenote .xb-about-component {
     font-family: V.$ns-common-font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     .xb-wrapper {
-        width: inherit;
+        width: fit-content;
         margin-left: 50px;
+        border-left: 4px solid black;
+        height: 180px;
+        padding-left: 15px;
+
         .tr-title {
+            width: fit-content;
             .wrapper{
                 font-size: 55pt;
                 width: 500px;
@@ -22,14 +30,14 @@ ns-x-welcomenote .xb-about-component {
             }
         }
         .tr-x-line {
-            background-color: black;
+            background-color: unset;
             height: 2px;
             width: 300px;
         }
         .tr-x-description {
             color: rgba(0, 0, 0, 0.61);
-            margin-top: 20px;
-            font-size:15pt;
+            margin-top: 10px;
+            font-size:18pt;
         }
     }
 
