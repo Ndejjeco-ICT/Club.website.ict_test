@@ -5,7 +5,7 @@ Template_.innerHTML = `
 <div class="xb-goal-component">
     <div class="xb-wrapper">
         <div class="tr-title-area-wrapper">
-            <div class="tr-title-container">Our Goal</div>
+            <div class="tr-title-container">Our Vision</div>
         </div>
         <div class="tr-description-wrapper">
             <div class="tr-description-container">Lorem ipsum dolor sit amet consectetur adipisicin ipsum dolor sit amet consectetur adipisicin</div>

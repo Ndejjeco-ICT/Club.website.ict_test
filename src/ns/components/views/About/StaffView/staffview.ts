@@ -5,7 +5,7 @@ Template_.innerHTML = `
 <div class="xb-staffview">
     <div class="xb-wrapper">
         <div class="tr-title-area-wrapper">
-            <div class="tr-title-container">Staff Members</div>
+            <div class="tr-title-container">Our Staff Members</div>
         </div>
         <div class="tr-container-elements">
             <div class="tr-container-wrapper">
@@ -30,6 +30,8 @@ Template_.innerHTML = `
                                     <ns-x-member></ns-x-member>
                                     <ns-x-member></ns-x-member>
                                     <ns-x-member></ns-x-member>
+                                    <ns-x-member></ns-x-member>
+                                    <ns-x-member></ns-x-member>
                                 </div>
                             </div>
                         </div>
@@ -43,7 +45,6 @@ Template_.innerHTML = `
         </div>
     </div>
 </div>
-
 
 `;
 
