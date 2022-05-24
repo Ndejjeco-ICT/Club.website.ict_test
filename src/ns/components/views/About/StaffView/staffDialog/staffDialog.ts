@@ -5,7 +5,7 @@ Template_.innerHTML = `
 <div class="xb-dialog-component">
     <div class="cb-dashboard-control">
         <div class="title-area">
-            <div class="title-area-wrapper"></div>
+            <div class="title-area-wrapper">More of Our Staff Members</div>
         </div>
         <div class="close-control-wrapper">
             <div class="close-control">&times;</div>
@@ -28,6 +28,7 @@ Template_.innerHTML = `
         </div>
     </div>
 </div>
+
 
 `;
 
