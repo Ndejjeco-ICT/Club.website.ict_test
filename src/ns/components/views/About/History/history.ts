@@ -14,28 +14,37 @@ export class HistorySectionComponent extends HTMLElement implements IWebComponen
                 <div class="section-content-1">
                     <h2>History Of the School</h2>
                     <p>View the history of the school</p>
+                    <button>Read more</button>
                 </div>
     
                 <div class="section-content-2">
                     <div class="mini-divider">
-                        <div class="content-a">
+                        <div class="content-class-a">
                             <p>1987</p>
                         </div>
-                        <div class="content-b">
+
+                        <div class="content-class-b">
                             Lorem ipsum dolor, sit amet
                             suscipit quam praesentium ab mollitia aspernatur dicta.
                         </div>
-                        <div class="content-a">
-                            <p>1987</p>
+                        <div class="content-class-x">
+                            <p>1985</p>
                         </div>
-                        <div class="content-b">
+                        <div class="content-class-y">
                             Lorem ipsum dolor, sit amet
                             suscipit quam praesentium ab mollitia aspernatur dicta.
                         </div>
-                        <div class="content-a">
+                        <div class="content-class-a">
                             <p>1987</p>
                         </div>
-                        <div class="content-b">
+                        <div class="content-class-b">
+                            Lorem ipsum dolor, sit amet
+                            suscipit quam praesentium ab mollitia aspernatur dicta.
+                        </div>
+                        <div class="content-class-x">
+                            <p>1987</p>
+                        </div>
+                        <div class="content-class-y">
                             Lorem ipsum dolor, sit amet
                             suscipit quam praesentium ab mollitia aspernatur dicta.
                         </div>
