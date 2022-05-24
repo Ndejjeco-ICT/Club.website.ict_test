@@ -58,8 +58,10 @@ import "ns/components/views/About/StaffView/staffview";
 import "ns/components/views/About/StaffView/sub-components/memeber.item";
 import "ns/components/views/About/StaffView/staffDialog/staffDialog"
 import "ns/components/views/About/Core Values/corevalues";
-import "ns/components/views/About/view.about"
 import "ns/components/views/About/VidInterview/VidInterview"
+import "ns/components/views/About/History/history";
+import "ns/components/views/About/view.about";
+
 
 /**
  * Provider comes last

@@ -13,7 +13,7 @@ export class AboutView extends HTMLElement implements IWebComponents {
         <ns-x-staffview></ns-x-staffview>
         <ns-x-corevalues></ns-x-corevalues>
         <ns-x-vidinterview></ns-x-vidinterview>
-
+        <ns-x-history></ns-x-history>
         `
     }
     connectedCallback() {
