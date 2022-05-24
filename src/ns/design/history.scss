@@ -4,6 +4,7 @@
     font-family: V.$ns-common-font;
 
     .main-historysection-container {
+
         .split-layout-divider {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -11,11 +12,16 @@
 
             .section-content-1 {
                 h2 {
-                    font-size: 20pt;
+                    font-size: 30pt;
                 }
 
                 p {
+                    margin-bottom: 30px;
                     font-size: 15pt;
+                }
+
+                button {
+                    @include V.common_btn();
                 }
             }
 
@@ -26,14 +32,33 @@
                     grid-template-rows: auto auto auto;
                     grid-column-gap: 40px;
 
+                    .content-class-a {
+                        border: 1px solid red;
+                        padding-bottom: 100px;
 
-                    .content-a {
                         p {
-                            font-size: 20pt;
+                            font-size: 15pt;
                         }
                     }
 
-                    .content-b {
+                    .content-class-b {
+                        padding: 50px 0;
+                        border: 1px solid green;
+                        p {
+                            font-size: 15pt;
+                        }
+                    }
+
+                    .content-class-x {
+                        border: 1px solid blue;
+                        p {
+                            font-size: 15pt;
+                        }
+                    }
+
+                    .content-class-y {
+                        border: 1px solid yellow;
+                        padding: 50px 0;
                         p {
                             font-size: 15pt;
                         }
