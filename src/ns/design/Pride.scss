@@ -7,8 +7,9 @@ ns-x-pride {
 }
 
 ns-x-pride .pride-x-component {
-    height: 700px;
+    height: 400px;
     width: inherit;
+    background-color: V.$ns-layout-color ;
 
     display: flex;
     flex-direction: column;
@@ -18,7 +19,6 @@ ns-x-pride .pride-x-component {
     justify-content: center;
 
     .container {
-
        
 
         .welcome-text {
@@ -27,6 +27,8 @@ ns-x-pride .pride-x-component {
             display: flex;
             align-items: center;
             justify-content: center;
+            color: #000;
+
 
             .welcome-text-wrapper {
                 font-size: 70pt;
@@ -44,14 +46,16 @@ ns-x-pride .pride-x-component {
 
         .welcome-text-2 {
             width: 100%;
-            height: 150px;
+            height: 140px;
             display: flex;
             align-items: center;
             justify-content: center;
+            color: #fff;
 
             .svg-container-wrapper {
-                color: V.$ns-layout-color;
+                color: #fff;
                 font-size: 55pt;
+                font-weight: 300;
 
             }
         }
@@ -61,7 +65,7 @@ ns-x-pride .pride-x-component {
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 80px;
+            height: 70px;
 
             .expl-button-container {
                 cursor: pointer;

@@ -7,6 +7,7 @@ ns-header {
     top: 0px;
     --ns-header-font-size: 10pt;
     --ns-text-color : #fff;
+    --ns-navigation-color : #134bc4;
 
     .wx-component-header-section {
         font-family: V.$ns-common-font;
@@ -89,17 +90,17 @@ ns-header {
                                 margin: 20px 30px 20px 30px;
                                 list-style-type: none;
                                 a.active-link {
-                                    color: V.$ns-layout-color;
-                                    border-bottom-color: V.$ns-layout-color;
+                                    color: var(--ns-navigation-color);
+                                    border-bottom-color:var(--ns-navigation-color);
                                 }
                                 a{
                                     color: var(--ns-text-color);
-                                    font-weight: 100;
+                                    font-weight: 450;
                                     border-bottom: 2px solid transparent;
                                     transition: all .5s;
                                     text-decoration: none;
                                     &:hover{
-                                      border-bottom: 2px solid V.$ns-layout-color;
+                                      border-bottom: 2px solid var(--ns-navigation-color);
                                     }
                                 }
                             }

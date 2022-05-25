@@ -5,7 +5,7 @@ Template_.innerHTML = `
 <div class="xb-cl-memeber">
     <div class="xb-cl-wrapper">
         <div class="xb-picture-container">
-            <div class="xb-picture-container-wrapper">__image__</div>
+            <div class="xb-picture-container-wrapper"></div>
         </div>
         <div class="xb-content">
             <div class="xb-content-wrapper">

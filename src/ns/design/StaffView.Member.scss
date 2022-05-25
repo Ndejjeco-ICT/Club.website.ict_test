@@ -18,7 +18,10 @@ ns-x-member .xb-cl-memeber {
             align-items: center;
             justify-content: center;
             .xb-picture-container-wrapper {
-                border: 1px solid blue;
+                background-size: cover;
+                background-repeat: no-repeat;
+               background-image: url("./Imgs/new/staffview/staffmembers/DSCN0861.JPG");
+                filter: sepia(50%);
                 border-radius: 50%;
                 width: 120px;
                 height: 120px;

@@ -16,7 +16,7 @@ Template_.innerHTML = `
                         <div class="card-x-component">
                             <div class="card-content">
                                 <div class="card-content-wrapper">
-                                    <div class="card-content-image"></div>
+                                    <div class="card-content-image cg-1"></div>
                                     <div class="card-content-info">
                                         <div class="x-title-1 ctrinfo">Relating And Knowing Other Students</div>
                                         <div class="x-title-2 ctrinfo">Many Students have suffered a social boundary
@@ -35,7 +35,7 @@ Template_.innerHTML = `
                         <div class="card-x-component">
                             <div class="card-content">
                                 <div class="card-content-wrapper">
-                                    <div class="card-content-image"></div>
+                                    <div class="card-content-image cg-2"></div>
                                     <div class="card-content-info">
                                         <div class="x-title-1 ctrinfo">Relating And Knowing Other Students</div>
                                         <div class="x-title-2 ctrinfo">Many Students have suffered a social boundary
@@ -54,7 +54,7 @@ Template_.innerHTML = `
                         <div class="card-x-component">
                             <div class="card-content">
                                 <div class="card-content-wrapper">
-                                    <div class="card-content-image"></div>
+                                    <div class="card-content-image cg-3"></div>
                                     <div class="card-content-info">
                                         <div class="x-title-1 ctrinfo">Relating And Knowing Other Students</div>
                                         <div class="x-title-2 ctrinfo">Many Students have suffered a social boundary
@@ -73,7 +73,7 @@ Template_.innerHTML = `
                         <div class="card-x-component">
                             <div class="card-content">
                                 <div class="card-content-wrapper">
-                                    <div class="card-content-image"></div>
+                                    <div class="card-content-image cg-4"></div>
                                     <div class="card-content-info">
                                         <div class="x-title-1 ctrinfo">Relating And Knowing Other Students</div>
                                         <div class="x-title-2 ctrinfo">Many Students have suffered a social boundary
@@ -89,6 +89,44 @@ Template_.innerHTML = `
                                 </div>
                             </div>
                         </div>
+                        <div class="card-x-component">
+                        <div class="card-content">
+                            <div class="card-content-wrapper">
+                                <div class="card-content-image cg-5"></div>
+                                <div class="card-content-info">
+                                    <div class="x-title-1 ctrinfo">Relating And Knowing Other Students</div>
+                                    <div class="x-title-2 ctrinfo">Many Students have suffered a social boundary
+                                        because of the
+                                        great wall of school which destroys there social life.</div>
+                                    <div class="x-title-btn">
+                                        <div class="x-btn-wrapper ctrinfo">
+                                            <div class="sl-button">&RightArrow;</div>
+                                            <div class="sl-text">Read More From Interact Club.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-x-component">
+                    <div class="card-content">
+                        <div class="card-content-wrapper">
+                            <div class="card-content-image cg-6"></div>
+                            <div class="card-content-info">
+                                <div class="x-title-1 ctrinfo">Relating And Knowing Other Students</div>
+                                <div class="x-title-2 ctrinfo">Many Students have suffered a social boundary
+                                    because of the
+                                    great wall of school which destroys there social life.</div>
+                                <div class="x-title-btn">
+                                    <div class="x-btn-wrapper ctrinfo">
+                                        <div class="sl-button">&RightArrow;</div>
+                                        <div class="sl-text">Read More From Interact Club.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                     </div>
                 </div>
             </div>
