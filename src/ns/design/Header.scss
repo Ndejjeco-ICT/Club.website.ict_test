@@ -12,6 +12,8 @@ ns-header {
         font-family: V.$ns-common-font;
         width: 100%;
         height: 70px;
+        position: absolute;
+        top: 0px;
         // background-color: rgba(245, 245, 245, 0.041);
         font-size: var(--ns-header-font-size);
         transition: height .5s ease;

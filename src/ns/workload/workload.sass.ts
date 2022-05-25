@@ -40,3 +40,4 @@ import "@design/StaffView.main.scss";
 import "@design/StaffView.Member.scss"
 import "@design/StaffView.dialog.scss"
 import "@design/dialogHost.scss"
+import "@design/VidInterview.scss"

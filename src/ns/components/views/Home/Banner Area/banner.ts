@@ -1,6 +1,6 @@
 import { IWebComponents } from "ns/typings/schw";
 import { AnimationProvider } from "ns/common/Animations";
-
+import { XTR1Observer } from "ns/dom/Observers/xtrH.observer";
 
 export class BannerAreaComponent extends HTMLElement implements IWebComponents {
 
@@ -26,17 +26,29 @@ export class BannerAreaComponent extends HTMLElement implements IWebComponents {
     };
     init() {
         this.createComponentAttachment();
-        this.createFlowAnimation()
+        this.createFlowAnimationInstructor()
     }
     createComponentAttachment() {
         this._commonWelcomeComponentSection = this.querySelector(".welcome-note-section")
     };
-
-    createFlowAnimation() {
-        if (this._commonWelcomeComponentSection) {
-            setTimeout(()=>{
-                AnimationProvider.executeInterfaceAnimation("WELCOME_COMPONENT")
-            },500)
+    animationResetInstructor(){
+        if(this._commonWelcomeComponentSection){
+            this._commonWelcomeComponentSection.style.opacity = "0";
+            this._commonWelcomeComponentSection.style.transform = "translateX(-100px)";
+        }
+    }
+   
+    createFlowAnimationInstructor() {
+        if(this._commonWelcomeComponentSection){
+            new XTR1Observer({
+                discreteElement : this._commonWelcomeComponentSection,
+                callbackFunction : ()=>{
+                    AnimationProvider.executeInterfaceAnimation("WELCOME_COMPONENT")
+                },
+                resetCallback : () =>{
+                    this.animationResetInstructor()
+                }
+            })
         }
     }
 

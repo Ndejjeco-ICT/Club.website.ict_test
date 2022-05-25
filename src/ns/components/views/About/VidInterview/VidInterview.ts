@@ -3,6 +3,9 @@ import { IWebComponents } from "ns/typings/schw";
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
 <div class="xb-vid-interview">
+    <div class="xb-title-area">
+        <div class="wrapper">Hear From Our Students.</div>
+    </div>
     <div class="xb-wrapper">
         <div class="xb-content-container">
             <div class="vid-cover-poster">
@@ -11,7 +14,7 @@ Template_.innerHTML = `
                         <div class="xty-ctrl"></div>
                     </div>
                     <div class="xty-video-control">
-                        <video src="" controls></video>
+                        <video src="" controls id="interview-video"></video>
                     </div>
                 </div>
             </div>

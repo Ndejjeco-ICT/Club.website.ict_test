@@ -34,7 +34,7 @@ export class AnimationsRun implements INSANimationsRun{
             targets : ".pride-x-component .container",
             opacity : [0,1],
             translateY : [100,0],
-            duration : 1,
+            duration : 3,
         });
     };
 

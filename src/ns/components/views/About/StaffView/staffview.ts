@@ -5,7 +5,7 @@ Template_.innerHTML = `
 <div class="xb-staffview">
     <div class="xb-wrapper">
         <div class="tr-title-area-wrapper">
-            <div class="tr-title-container">Staff Members</div>
+            <div class="tr-title-container">Meet Our Staff Members</div>
         </div>
         <div class="tr-container-elements">
             <div class="tr-container-wrapper">
@@ -43,7 +43,6 @@ Template_.innerHTML = `
                             <div class="selective-btn">View More</div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

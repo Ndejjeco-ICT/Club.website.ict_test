@@ -16,7 +16,7 @@ Template_.innerHTML = `
                         <div class="card-x-component">
                             <div class="card-content">
                                 <div class="card-content-wrapper">
-                                    <div class="card-content-image">__image__</div>
+                                    <div class="card-content-image"></div>
                                     <div class="card-content-info">
                                         <div class="x-title-1 ctrinfo">Relating And Knowing Other Students</div>
                                         <div class="x-title-2 ctrinfo">Many Students have suffered a social boundary
@@ -35,7 +35,7 @@ Template_.innerHTML = `
                         <div class="card-x-component">
                             <div class="card-content">
                                 <div class="card-content-wrapper">
-                                    <div class="card-content-image">__image__</div>
+                                    <div class="card-content-image"></div>
                                     <div class="card-content-info">
                                         <div class="x-title-1 ctrinfo">Relating And Knowing Other Students</div>
                                         <div class="x-title-2 ctrinfo">Many Students have suffered a social boundary
@@ -54,7 +54,7 @@ Template_.innerHTML = `
                         <div class="card-x-component">
                             <div class="card-content">
                                 <div class="card-content-wrapper">
-                                    <div class="card-content-image">__image__</div>
+                                    <div class="card-content-image"></div>
                                     <div class="card-content-info">
                                         <div class="x-title-1 ctrinfo">Relating And Knowing Other Students</div>
                                         <div class="x-title-2 ctrinfo">Many Students have suffered a social boundary
@@ -73,7 +73,7 @@ Template_.innerHTML = `
                         <div class="card-x-component">
                             <div class="card-content">
                                 <div class="card-content-wrapper">
-                                    <div class="card-content-image">__image__</div>
+                                    <div class="card-content-image"></div>
                                     <div class="card-content-info">
                                         <div class="x-title-1 ctrinfo">Relating And Knowing Other Students</div>
                                         <div class="x-title-2 ctrinfo">Many Students have suffered a social boundary
@@ -100,9 +100,16 @@ Template_.innerHTML = `
 
 export class InsightsComponent extends HTMLElement implements IWebComponents {
 
+
     constructor() {
         super();
         this.appendChild(Template_.content.cloneNode(true))
+    }
+    _createHoverOperation(){
+        const _allXtitles = this.querySelectorAll(".x-title-1");
+        _allXtitles.forEach((_elements)=>{
+            
+        })
     }
     connectedCallback(){
 

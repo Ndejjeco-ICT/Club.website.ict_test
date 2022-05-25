@@ -2,11 +2,13 @@
 
 ns-x-staffview {
     display: block;
+    height: fit-content;
 }
 
 ns-x-staffview .xb-staffview {
     width: 100%;
-    height: auto;
+    height: 1500px;
+    margin-bottom: 100px;
 }
 
 ns-x-staffview .xb-staffview {
@@ -19,7 +21,7 @@ ns-x-staffview .xb-staffview {
         justify-content: center;
         margin-bottom: 20px;
         .tr-title-container {
-            font-size: 30pt;
+            font-size: 40pt;
         }
     }
 

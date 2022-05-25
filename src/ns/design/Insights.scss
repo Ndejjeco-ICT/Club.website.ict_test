@@ -26,7 +26,6 @@ ns-x-insights {
 ns-x-insights .ponaco-splitview-5 {
     font-family: V.$ns-common-font;
 
-    border: 2px solid red;
     width: 100%;
     height: fit-content;
 
@@ -39,9 +38,11 @@ ns-x-insights .ponaco-splitview-5 {
 
             .content-title {
                 font-size: 40pt;
+
                 .content-title-wrapper {
                     margin-left: 40px;
                 }
+
                 margin-bottom: 20px;
             }
 
@@ -50,6 +51,7 @@ ns-x-insights .ponaco-splitview-5 {
                     height: fit-content;
                     margin-bottom: 50px;
                 }
+
                 .card-wrapper-2 {
                     width: fit-content;
                     display: grid;
@@ -64,12 +66,10 @@ ns-x-insights .ponaco-splitview-5 {
                             display: block;
 
                             width: fit-content;
-                            border: 2px solid maroon;
                             text-decoration: none;
 
                             .card-content-wrapper {
                                 position: relative;
-                                border: 2px solid black;
                                 width: 600px;
                                 height: 480px;
 
@@ -81,10 +81,12 @@ ns-x-insights .ponaco-splitview-5 {
                                     width: 100%;
                                     height: 480px;
                                     font-size: 30pt;
-                                    color: red;
                                     display: flex;
                                     align-items: center;
                                     justify-content: center;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-image: url("./Imgs/aziz-acharki-gXndgCS-CGo-unsplash.jpg");
                                 }
 
                                 .card-content-info {
@@ -95,12 +97,23 @@ ns-x-insights .ponaco-splitview-5 {
                                     }
 
                                     .x-title-1 {
+                                        font-weight: 450;
+                                        color: #fff;
                                         font-size: 22pt;
                                         margin-bottom: 8px;
+                                        cursor: pointer;
+                                        transition: all .5s;
+                                    
+                                    }
 
+                                    .x-title-1:hover {
+                                        transform: translateY(-10px);
                                     }
 
                                     .x-title-2 {
+                                        display: none;
+                                        color: #fff;
+                                        font-weight: 300;
                                         margin-bottom: 10px;
                                         font-size: 13pt;
                                     }
@@ -120,11 +133,14 @@ ns-x-insights .ponaco-splitview-5 {
                                                 justify-content: center;
                                                 width: 40px;
                                                 height: 40px;
-                                                border: 1px solid black;
+                                                color: #fff;
+                                                border: 1px solid #fff;
                                             }
 
                                             .sl-text {
-                                                height: 40px;
+                                                color: #fff;
+                                                font-weight: 300;
+                                                height: 45px;
                                                 display: flex;
                                                 align-items: center;
                                             }

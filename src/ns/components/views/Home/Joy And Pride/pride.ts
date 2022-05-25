@@ -1,5 +1,8 @@
 import { IWebComponents } from "ns/typings/schw";
 import { MediaScreenManagerControl, IMediaScrollPositions } from "ns/base/MediaQueries/mediaQueries";
+import { RevealAnimationElement } from "ns/dom/RevealAnimation/revealAnimation";
+import { AnimationProvider } from "ns/common/Animations";
+
 
 const _svgDataContent = `
 <svg 
@@ -31,9 +34,10 @@ Template_.innerHTML = `
 `
 
 export class PrideComponent extends HTMLElement implements IWebComponents {
-
+    private _prideContainer:HTMLDivElement|null
     constructor() {
         super();
+        this._prideContainer = null;
         this.appendChild(Template_.content.cloneNode(true));
 
     }
@@ -41,11 +45,22 @@ export class PrideComponent extends HTMLElement implements IWebComponents {
         this.init();
     }
     private init() {
-        this._createFlowAnimation()
+        this._createFlowAnimationInstructor()
     }
 
-    _createFlowAnimation() {
-
+    _createComponentAttachmnent(){
+        this._prideContainer = this.querySelector(".pride-x-component .container")
+    }
+    _createFlowAnimationInstructor() {
+        if(this._prideContainer){
+            // new RevealAnimationElement({
+            //     element : this._prideContainer,
+            //     revealHeight : 150,
+            //     __animationCallback__ : ()=> {
+            //         AnimationProvider.executeInterfaceAnimation("PRIDE_COMPONENT")
+            //     }
+            // })   
+        }
     }
 
 }

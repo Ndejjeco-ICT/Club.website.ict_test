@@ -12,7 +12,7 @@ Template_.innerHTML = `
                     <div class="conic-section-1">
                         <div class="ctx-pictures-wrapper">
                             <div class="ctx-pic-1 cn-pic-box">
-                                <div class="cn-picture-container">__image__</div>
+                                <div class="cn-picture-container"></div>
                                 <div class="cn-info-container">
                                     <div class="cn-info-wrapper">
                                         <div class="cn-short-title">Practice</div>
@@ -22,7 +22,7 @@ Template_.innerHTML = `
                             </div>
                             <div class="ctx-additive-pics">
                                 <div class="ctx-pic-2 cn-pic-box">
-                                    <div class="cn-picture-container">__image__</div>
+                                    <div class="cn-picture-container"></div>
                                     <div class="cn-info-container">
                                         <div class="cn-info-wrapper">
                                             <div class="cn-short-title">Practice</div>
@@ -31,7 +31,7 @@ Template_.innerHTML = `
                                     </div>
                                 </div>
                                 <div class="ctx-pic-3 cn-pic-box">
-                                    <div class="cn-picture-container">__image__</div>
+                                    <div class="cn-picture-container"></div>
                                     <div class="cn-info-container">
                                         <div class="cn-info-wrapper">
                                             <div class="cn-short-title">Practice</div>
