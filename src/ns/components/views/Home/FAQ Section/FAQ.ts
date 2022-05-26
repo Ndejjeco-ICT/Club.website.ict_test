@@ -16,6 +16,7 @@ export class FaqComponent extends HTMLElement implements IWebComponents {
                 <div class="info-slider-1">
                     <div class="initial-display-1">
                         <p>Where can I find the headquaters of Ndejje SSS?</p>
+                        <i class="fa-solid fa-angle-down"></i>
                     </div>
                     <div class="slider-expand-section">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste assumenda facilis,
@@ -26,6 +27,7 @@ export class FaqComponent extends HTMLElement implements IWebComponents {
                 <div class="info-slider-1">
                     <div class="initial-display-1">
                         <p>What is the school fees per term?</p>
+                        <i class="fa-solid fa-angle-down"></i>
                     </div>
     
                     <div class="slider-expand-section">
@@ -37,6 +39,7 @@ export class FaqComponent extends HTMLElement implements IWebComponents {
                 <div class="info-slider-1">
                     <div class="initial-display-1">
                         <p>How can I contact the school for any queries?</p>
+                        <i class="fa-solid fa-angle-down"></i>
                     </div>
                     <div class="slider-expand-section">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste assumenda facilis,

@@ -1,4 +1,4 @@
-@use "./Variables.scss"as V;
+@use "./Variables.scss" as V;
 
 .main-faqcomponent {
     background-color: #d1d1d1;
@@ -28,6 +28,7 @@
 
                 .slider-expand-section {
                     display: none;
+
                     p {
                         font-size: 20pt;
                         text-align: center;
