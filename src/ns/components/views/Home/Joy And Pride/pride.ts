@@ -53,13 +53,13 @@ export class PrideComponent extends HTMLElement implements IWebComponents {
     }
     _createFlowAnimationInstructor() {
         if(this._prideContainer){
-            // new RevealAnimationElement({
-            //     element : this._prideContainer,
-            //     revealHeight : 150,
-            //     __animationCallback__ : ()=> {
-            //         AnimationProvider.executeInterfaceAnimation("PRIDE_COMPONENT")
-            //     }
-            // })   
+            new RevealAnimationElement({
+                element : this._prideContainer,
+                revealHeight : 250,
+                __animationCallback__ : ()=> {
+                    AnimationProvider.executeInterfaceAnimation("PRIDE_COMPONENT")
+                }
+            })   
         }
     }
 
