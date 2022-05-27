@@ -40,7 +40,7 @@ export class RevealAnimationElement {
         let _currentWindowHeight  = window.innerHeight;
         let _elementdistanceFromTop = this._element.getBoundingClientRect().top;
         if(_elementdistanceFromTop < _currentWindowHeight - this._revealHeight){
-            console.log("didReachCondition",this._element,this.)
+            console.log("didReachCondition",this._element)
             this._element.setAttribute("will-animate","")
             this.__runFlowAnimation()
         }else{

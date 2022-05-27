@@ -63,6 +63,21 @@ import "ns/components/views/About/History/history";
 import "ns/components/views/About/view.about";
 
 
+//Academics View
+import "ns/components/views/Academics/studentsLife/life"
+import "ns/components/views/Academics/academicsquote/academicsquote"
+import "ns/components/views/Academics/Awards/awards"
+import "ns/components/views/Academics/Awards/sub-components/award.component"
+import "ns/components/views/Academics/community/community"
+import "ns/components/views/Academics/cultureGallery/culturegallery"
+import "ns/components/views/Academics/cultureGallery/sub-components/image.component";
+import "ns/components/views/Academics/Dos Quote/DosQuote";
+import "ns/components/views/Academics/News/news";
+import "ns/components/views/Academics/News/sub-components/new.item.component";
+import "ns/components/views/Academics/academicsWelcomeNote/academicsWelcomeNote";
+
+
+
 /**
  * Provider comes last
  */
