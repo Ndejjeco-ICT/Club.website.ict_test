@@ -1,0 +1,37 @@
+ns-x-acdmw {
+    display: block;
+}
+
+ns-x-acdmw .xb-academics-component {
+    font-family: V.$ns-common-font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .xb-wrapper {
+        width: fit-content;
+        margin-left: 50px;
+        border-left: 4px solid black;
+        height: 180px;
+        padding-left: 15px;
+
+        .tr-title {
+            width: fit-content;
+            .wrapper{
+                font-size: 55pt;
+                width: 500px;
+                font-weight: 300;
+            }
+        }
+        .tr-x-line {
+            background-color: unset;
+            height: 2px;
+            width: 300px;
+        }
+        .tr-x-description {
+            color: rgba(0, 0, 0, 0.61);
+            margin-top: 10px;
+            font-size:18pt;
+        }
+    }
+}
+

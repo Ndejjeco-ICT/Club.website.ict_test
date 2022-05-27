@@ -26,4 +26,4 @@ export class Community extends HTMLElement implements IWebComponents {
 };
 
 
-customElements.define("ns-x-life",Community)
+customElements.define("ns-x-community",Community)

@@ -1,0 +1,26 @@
+@use "./Variables.scss" as V;
+
+ns-x-awarditem {
+    display: block;
+}
+
+ns-x-awarditem .xb-award-item {
+    font-family: V.$ns-common-font;
+    width: 250px;
+    height: 250px;
+    border: 1px solid gray;
+
+    .xb-wrapper-container {
+        width: inherit;
+        height: inherit;
+        .xb-icon-container {
+            height: 125px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .xb-content-section {
+            height: 125px;
+        }
+    }
+}

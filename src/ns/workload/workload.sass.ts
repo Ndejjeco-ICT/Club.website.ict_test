@@ -41,3 +41,16 @@ import "@design/StaffView.Member.scss"
 import "@design/StaffView.dialog.scss"
 import "@design/dialogHost.scss"
 import "@design/VidInterview.scss"
+
+//Academics
+
+import "@design/academicsQuote.scss";
+import "@design/academicsWelcomeNote.scss";
+import "@design/studentslife.scss";
+import "@design/life&Culture.scss";
+import "@design/cultureImageComponent.scss";
+import "@design/academicsAwards.scss";
+import "@design/academicsAwardsItem.scss";
+
+
+

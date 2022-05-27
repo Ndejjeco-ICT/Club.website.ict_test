@@ -19,27 +19,6 @@ Template_.innerHTML = `
             <ns-x-gimage></ns-x-gimage>
             <ns-x-gimage></ns-x-gimage>
             <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
         </div>
     </div>
 </div>

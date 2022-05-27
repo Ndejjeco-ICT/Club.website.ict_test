@@ -16,8 +16,7 @@ Template_.innerHTML = `
                     <div class="split-wrapper"></div>
                 </div>
             </div>
-            <div class="xb-split-view-2 split-component">
-                <div class="xb-split-component"></div>
+            <div class="xb-split-view-2 split-component"
                 <div class="xb-split-component">
                     <div class="split-wrapper"></div>
                 </div>

@@ -1,0 +1,26 @@
+@use "./Variables.scss" as V;
+
+
+ns-x-awards {
+    display: block;
+}
+
+ns-x-awards .xb-awards-component {
+    font-family: V.$ns-common-font;
+    width: 100%;
+    height: auto;
+
+    .xb-title-area-component {
+        width: 100%;
+        .xb-title-container {
+            font-size: 20pt;
+        }
+    }
+    .xb-wrapper {
+        width: 100%;
+        .xb-main-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+        }
+    }
+}
