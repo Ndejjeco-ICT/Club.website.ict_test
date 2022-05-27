@@ -2,7 +2,6 @@ import {IWebComponents} from "ns/typings/schw"
 
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
-
 <div class="xb-uniform-design-component">
     <div class="xb-title container">
         <div class="xb-title-area-wrapper">Our Uniform design</div>
@@ -13,19 +12,25 @@ Template_.innerHTML = `
                 <div class="xb-content-manager">
                     <div class="xb-split-view">
                         <div class="xb-split-view-1">
-                            <div class="xb-content-1"></div>
+                            <div class="xb-content-1 xb-pic">
+                                <div class="xb-picture-container"></div>
+                            </div>
                             <div class="xb-content-2"></div>
                         </div>
                         <div class="xb-split-view-2">
-                            <div class="xb-content-1"></div>
-                            <div class="xb-content-2"></div>
+                            <div class="xb-content-1">
+                            </div>
+                            <div class="xb-content-2 xb-pic">
+                                <div class="xb-picture-container"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>`
+</div>
+`
 
 class uniformdesign extends HTMLElement implements IWebComponents{
     constructor(){

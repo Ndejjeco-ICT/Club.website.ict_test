@@ -7,6 +7,6 @@
 - join the community%
 - awards%
 - big voices%
-- uniform design
+- uniform design%
 - news
 - dos quote
