@@ -6,7 +6,7 @@ ns-x-life {
 
 ns-x-life .xb-component-wrapper {
     width: 100%;
-    height: 600px;
+    height: 700px;
     font-family: V.$ns-common-font;
 
     .xb-title-area-wrapper {
@@ -18,26 +18,47 @@ ns-x-life .xb-component-wrapper {
         border: 1px solid red;
 
         .xb-title-container {
-            font-size: 25pt;
+            font-size: 45pt;
+            font-weight: 300;
         }
     }
+
     .xb-split-view {
-        width: 500px;
+        width: 100%;
         border: 2px solid gray;
-        .split-component{
-            height: 300px;
-            width: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .xb-split-view-wrapper {
+            width: 650px;
+            height: 550px;
+            border: 2px solid red;
 
             display: grid;
-            grid-template-columns: 250px 250px;
+            grid-template-rows: 275px 275px;
+            .split-component {
+                border: 2px solid purple;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                .xb-split-component {
+                    border: 2px solid red;                  
+                }
 
-            .xb-split-component {
-                .split-wrapper{
-                    border: 1px solid black;
+                .xb-content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .split-wrapper {
+                        margin-left: 20px;
+                        width: fit-content;
+                        height: fit-content;
+                    }
                 }
             }
         
         }
+
     }
 
 }

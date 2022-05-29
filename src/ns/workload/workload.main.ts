@@ -75,6 +75,10 @@ import "ns/components/views/Academics/Dos Quote/DosQuote";
 import "ns/components/views/Academics/News/news";
 import "ns/components/views/Academics/News/sub-components/new.item.component";
 import "ns/components/views/Academics/academicsWelcomeNote/academicsWelcomeNote";
+import "ns/components/views/Academics/UniformDesign/Uniformdesign";
+import "ns/components/views/Academics/voices/voice";
+import "ns/components/views/Academics/view.academics";
+
 
 
 

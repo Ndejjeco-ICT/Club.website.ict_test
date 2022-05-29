@@ -23,4 +23,4 @@ export class Dos extends HTMLElement implements IWebComponents {
 };
 
 
-customElements.define("ns-quote-dos",Dos)
+customElements.define("ns-x-quotedos",Dos)

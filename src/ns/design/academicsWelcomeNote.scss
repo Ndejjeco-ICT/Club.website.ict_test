@@ -1,5 +1,12 @@
+@use "./Variables.scss"as V;
+
 ns-x-acdmw {
     display: block;
+}
+
+ns-x-acdmw .xb-academics-component { 
+    width: 100%;
+    height: 450px;
 }
 
 ns-x-acdmw .xb-academics-component {
@@ -7,6 +14,7 @@ ns-x-acdmw .xb-academics-component {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
     .xb-wrapper {
         width: fit-content;
         margin-left: 50px;

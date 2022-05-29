@@ -4,7 +4,7 @@ const Template_ = document.createElement("template");
 Template_.innerHTML = `
 <div class="xb-academics-quote-component">
     <div class="xb-component-wrapper">
-        <div class="xb-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis quod quos  </div>
+        <div class="xb-content">The roots of education are bitter but the fruits are sweet</div>
     </div>
 </div>
 

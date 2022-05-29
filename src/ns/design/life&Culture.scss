@@ -1,56 +1,56 @@
+@use "./Variables.scss" as V;
+
 ns-x-culture {
     display: block;
 }
 
 ns-x-culture .xb-culture-component {
     width: 100%;
+    font-family: V.$ns-common-font;
 
     .xb-title-area-wrapper {
         width: 100%;
         height: 150px;
         border: 1px solid red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
 
         .xb-title-container {
-            font-size: 25pt;
+            font-size: 35pt;
+            font-weight: 300;
+            width: fit-content;
         }
 
         .xb-title-minor-container {
-            font-size: 13pt;
+            font-size: 23pt;
+            width: fit-content;
+
+            &::before {
+                content: '"';
+            }
+
+            &::after {
+                content: '"';
+            }
         }
     }
 
     .xb-component-wrapper {
-        .xb-component-items-wrapper {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+        border: 2px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-            .xb-component-items-wrapper:nth-child(0) {
-                flex: 3;
-            }
+        .xb-components-item-wrapper {
+            border: 3px solid rebeccapurple;
+            width: fit-content;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            gap: 0;
+           
 
-            .xb-component-items-wrapper:nth-child(0) {
-                flex: 4;
-            }
-
-            .xb-component-items-wrapper:nth-child(0) {
-                flex: 2;
-            }
-
-            .xb-component-items-wrapper:nth-child(0) {
-                flex: 1;
-            }
-
-            .xb-component-items-wrapper:nth-child(0) {
-                flex: 6;
-            }
-            .xb-component-items-wrapper:nth-child(0) {
-                flex: 4;
-            }
-
-            .xb-component-items-wrapper:nth-child(0) {
-                flex: 7;
-            }
         }
 
 

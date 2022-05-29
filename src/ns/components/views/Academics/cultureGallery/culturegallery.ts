@@ -6,10 +6,12 @@ Template_.innerHTML = `
 <div class="xb-culture-component">
     <div class="xb-title-area-wrapper">
         <div class="xb-title-container">Life And Culture</div>
-        <div class="xb-title-minor-container"></div>
+        <div class="xb-title-minor-container">If we are to preserve culture we must continue to create it.</div>
     </div>
     <div class="xb-component-wrapper">
         <div class="xb-components-item-wrapper">
+   
+
             <ns-x-gimage></ns-x-gimage>
             <ns-x-gimage></ns-x-gimage>
             <ns-x-gimage></ns-x-gimage>
@@ -17,8 +19,7 @@ Template_.innerHTML = `
             <ns-x-gimage></ns-x-gimage>
             <ns-x-gimage></ns-x-gimage>
             <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
-            <ns-x-gimage></ns-x-gimage>
+          
         </div>
     </div>
 </div>
