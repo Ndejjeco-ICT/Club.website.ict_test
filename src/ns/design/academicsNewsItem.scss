@@ -1,0 +1,34 @@
+ns-x-newsitem {
+    display: block;
+}
+
+
+ns-x-newsitem  .xb-news-item-component {
+
+    width: 600px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .xb-holder-wrapper {
+        margin: 50px 0px 50px 0px;
+        width: 320px;
+        height: 500px;
+        position: relative;
+         > div {
+             position: absolute;
+         }
+        .xb-picture-holder-container{
+            width: inherit;
+            height: inherit;
+            background-color: purple;
+        }
+        .xb-content-holder {
+            bottom: 0px;
+            width: inherit;
+            height: 150px;
+            background-color: green;
+        }
+    }
+
+}

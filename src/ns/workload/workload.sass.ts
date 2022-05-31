@@ -54,6 +54,9 @@ import "@design/academicsAwardsItem.scss";
 import "@design/academicsCommunity.scss";
 import "@design/voices.scss";
 import "@design/uniformDesign.scss";
+import "@design/academicsNews.scss";
+import "@design/academicsNewsItem.scss";
+
 
 
 

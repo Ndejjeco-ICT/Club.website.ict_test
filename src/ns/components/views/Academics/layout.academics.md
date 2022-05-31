@@ -8,5 +8,5 @@
 - awards%
 - big voices%
 - uniform design%
-- news
+- news%
 - dos quote
