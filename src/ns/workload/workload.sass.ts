@@ -51,6 +51,11 @@ import "@design/life&Culture.scss";
 import "@design/cultureImageComponent.scss";
 import "@design/academicsAwards.scss";
 import "@design/academicsAwardsItem.scss";
+import "@design/academicsCommunity.scss";
+import "@design/voices.scss";
+import "@design/uniformDesign.scss";
+
+
 
 
 

@@ -4,8 +4,16 @@ const Template_ = document.createElement("template");
 Template_.innerHTML = `
 <div class="xb-community-component">
     <div class="xb-wrapper">
-        <div class="xb-content-text-1">Join The Community</div>
-        <div class="xb-content-text-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, aut iste sed non ab mai</div>
+        <div class="xb-content-text-1">
+            <div class="wrapper">
+                Join The Community
+            </div>
+        </div>
+        <div class="xb-content-text-2">
+            <div class="wrapper">
+                Alone we can do so little Together we can do so much
+            </div>
+        </div>
         <div class="xb-content-text-3">
             <ns-enroll-button></ns-enroll-button>
         </div>

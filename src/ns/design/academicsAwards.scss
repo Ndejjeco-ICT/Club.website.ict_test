@@ -8,19 +8,30 @@ ns-x-awards {
 ns-x-awards .xb-awards-component {
     font-family: V.$ns-common-font;
     width: 100%;
-    height: auto;
+    border: 3px solid black;
 
     .xb-title-area-component {
+        @include V.center();
         width: 100%;
+        height: 95px;
+        border: 1px solid red;
         .xb-title-container {
-            font-size: 20pt;
+            font-size: 35pt;
         }
     }
     .xb-wrapper {
         width: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         .xb-main-container {
+            border: 2px solid red;
+            width: fit-content;
             display: grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: auto auto auto auto;
+            column-gap: 30px;
+            row-gap: 30px;
         }
     }
 }

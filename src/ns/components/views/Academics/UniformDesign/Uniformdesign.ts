@@ -11,17 +11,18 @@ Template_.innerHTML = `
             <div class="xb-container-area">
                 <div class="xb-content-manager">
                     <div class="xb-split-view">
-                        <div class="xb-split-view-1">
-                            <div class="xb-content-1 xb-pic">
+                        <div class="xb-split-view-1 view-area">
+                            <div class="xb-content-1 xb-pic xbr-content">
                                 <div class="xb-picture-container"></div>
                             </div>
-                            <div class="xb-content-2"></div>
+                            <div class="xb-content-2 xbr-content"></div>
                         </div>
-                        <div class="xb-split-view-2">
-                            <div class="xb-content-1">
+                        <div class="xb-split-view-2 view-area">
+                            <div class="xb-content-1 xbr-content">
                             </div>
-                            <div class="xb-content-2 xb-pic">
+                            <div class="xb-content-2 xb-pic xbr-content">
                                 <div class="xb-picture-container"></div>
+
                             </div>
                         </div>
                     </div>

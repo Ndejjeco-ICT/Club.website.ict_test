@@ -14,6 +14,8 @@ Template_.innerHTML = `
             <ns-x-awarditem></ns-x-awarditem>
             <ns-x-awarditem></ns-x-awarditem>
             <ns-x-awarditem></ns-x-awarditem>
+            <ns-x-awarditem></ns-x-awarditem>
+            <ns-x-awarditem></ns-x-awarditem>
         </div>
     </div>
 </div>

@@ -1,3 +1,5 @@
+@use "./Variables.scss" as V;
+
 ns-x-uniformdesign {
     display: block;
 
@@ -6,27 +8,40 @@ ns-x-uniformdesign {
 ns-x-uniformdesign .xb-uniform-design-component {
     width: 100%;
     height: auto;
+    font-family: V.$ns-common-font;
 
-    .xb-title-area-wrapper {
-        font-size: 20pt;
+    .xb-title {
+        font-size: 30pt;
+        height: 100px;
+        @include V.center();
     }
+
     .xb-wrapper {
         width: 100%;
         height: auto;
         border: 1px solid red;
 
-        .xb-content-area {
-            .xb-content-manager {
-                 > div {
-                     height: 500px;
-                     display: grid;
-                     grid-template-columns: 1fr 1fr;
-                    .xb-pic {
-                        height: 500px;
-                        width: 300px;
+        .xb-main-container {
+            .xb-container-area {
+                .xb-content-manager {
+                    .xb-split-view {
+                        .view-area {
+                            height: 600px;
+                            border: 2px solid purple;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            .xbr-content{
+                                height: 600px;
+                                border: 1px solid grey;
+                            }
+
+                            
+                        }
                     }
-                 }
+                }
             }
+
         }
+
     }
 }
