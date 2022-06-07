@@ -22,9 +22,6 @@ Template_.innerHTML = `
             No Pains No Gains
         </div>
     </div>
-    <div class="welcome-text-2 svg-container">
-        <div class="svg-container-wrapper">Ndejje S.S.S</div>
-    </div>
     <div class="control-button-container">
         <div class="expl-button-container">Explore</div>
     </div>

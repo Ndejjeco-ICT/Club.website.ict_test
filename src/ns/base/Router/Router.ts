@@ -1,5 +1,5 @@
 import { Route } from "ns/base/Router/Route";
-import { commonEvents, ICommonEvents } from "ns/common/events"
+import { commonEvents, globalEventEmitter, ICommonEvents, IGlobalEventEmitter } from "ns/common/events"
 import { LifeCycleEvents, Lifecycle } from "ns/common/lifecycle"
 /**
  * The Router enables navigation within Pages with the use html hashes
@@ -93,6 +93,11 @@ interface IRouterOptions {
 
     RouteErrorHandler(callback: (e: string) => void): void;
 
+    /**
+     * Called when navigation to a route takeplaces
+     */
+    didNavigateToRouteEventManager: IGlobalEventEmitter<MainRoutes>;
+
 
 };
 
@@ -155,7 +160,7 @@ class NSRouterView {
                 component.setAttribute("ns-route", "active");
 
             }
-           
+
 
         }
     }
@@ -173,6 +178,10 @@ export class NSRouter extends NSRouterView implements IRouterOptions {
     private _nsRouteNavigationState: NavigationState;
     private _nsCurrrentRoute: MainRoutes;
     private _nsStack: IRouteStack;
+
+
+    didNavigateToRouteEventManager: IGlobalEventEmitter<MainRoutes>
+
     constructor(ROutes: Route[]) {
         super();
         this._nsStack = { backwardStack: [], forwardStack: [] };
@@ -186,9 +195,18 @@ export class NSRouter extends NSRouterView implements IRouterOptions {
         this._nsRouteNavigationHooks = new Map<MainRoutes, (IROptions: IRouteNavigationHookCallbackOptions) => void>();
         this._nsRouteStorage = new Map<string, string>();
         this._nsRoutesArray = ROutes;
+        this.didNavigateToRouteEventManager = new globalEventEmitter()
         this.registerForLifecyclEvents()
 
     };
+
+
+    private _dispatchForEventForRouteChange(route: MainRoutes) {
+        this.didNavigateToRouteEventManager.raiseEvent(route)
+    }
+
+
+
     private registerForLifecyclEvents() {
         LifeCycleEvents.onPhaseDidChange.subscribe(this._listenerForLifecyclEvents.bind(this));
     };
@@ -314,10 +332,13 @@ export class NSRouter extends NSRouterView implements IRouterOptions {
         if (_currentHashTitle == "") {
             let _viewAttribute = this.getViewAttriubte("home");
             this.toggleRouteExchange(this.getViewComponent(_viewAttribute), true)
+            this._dispatchForEventForRouteChange("home")
         } else {
             if (this.isHashPresent(_currentHashTitle)) {
                 let _viewAttribute = this.getViewAttriubte(_currentHashTitle);
+                this._dispatchForEventForRouteChange(_currentHashTitle! as unknown as MainRoutes)
                 this.toggleRouteExchange(this.getViewComponent(_viewAttribute), false)
+
             }
         }
 

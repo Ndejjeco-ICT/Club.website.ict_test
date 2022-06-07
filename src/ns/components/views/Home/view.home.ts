@@ -1,4 +1,3 @@
-import { BannerImageSizer } from "ns/dom/sizeManagers/BannerImageSize";
 import { IWebComponents } from "ns/typings/schw";
 import { createInstance } from "ns/base/instanceCreators/instanceCreators";
 
@@ -32,7 +31,6 @@ export class HomeView extends HTMLElement implements IWebComponents {
         this._initResourcesOfViewHome();
     };
     _initResourcesOfViewHome() {
-        createInstance<any>(BannerImageSizer);
     }
 }
 

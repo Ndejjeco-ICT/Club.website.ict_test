@@ -24,7 +24,6 @@ import "@design/history.scss";
 
 
 //detached components
-import "@design/BImage.scss"
 import "@design/overflowNav.scss"
 
 //mediaQueries
@@ -56,6 +55,7 @@ import "@design/voices.scss";
 import "@design/uniformDesign.scss";
 import "@design/academicsNews.scss";
 import "@design/academicsNewsItem.scss";
+import "@design/academicsDosQuote.scss"
 
 
 
