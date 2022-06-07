@@ -58,7 +58,7 @@ import "@design/academicsNews.scss";
 import "@design/academicsNewsItem.scss";
 
 
-
+//Blog view
 
 
 
