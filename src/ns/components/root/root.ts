@@ -49,7 +49,7 @@ export class UIRoot extends HTMLElement implements IWebComponents {
          */
         //Create Instance To Have It stay for a longtime;
         WebMainInstance.initResources();
-        
+    src/ns/base/Router/Router.ts    
     };
 
 }

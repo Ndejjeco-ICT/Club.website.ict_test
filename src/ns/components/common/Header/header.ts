@@ -106,6 +106,13 @@ export class HeaderComponent extends HTMLElement implements IWebComponents {
 
 
 
+    //event listener bindings
+    /**
+     * Social Links event listeners
+     */
+
+
+
     constructor() {
         super();
         this.appendChild(Template_.content.cloneNode(true))
