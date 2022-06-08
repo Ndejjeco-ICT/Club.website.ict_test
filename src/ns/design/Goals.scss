@@ -29,6 +29,9 @@ ns-x-benefits .ponaco-splitview-3 {
         height: inherit;
         width: inherit;
 
+        border: 30px solid V.$ns-layout-color;
+
+
         .split-view {
             width: 100%;
             height: inherit;
@@ -100,14 +103,14 @@ ns-x-benefits .ponaco-splitview-3 {
                                     justify-content: center;
                                 }
                                 .cn-1 {
-                                    background-image: url("./Imgs/new/pride/DSCN1679.JPG");
+                                    // background-image: url("./Imgs/new/pride/DSCN1679.JPG") linear-gradient(to left top,black,black);
 
                                 }
                                 .cn-2 {
-                                    background-image: url("./Imgs/new/pride/DSCN0536.JPG");
+                                    // background-image: url("./Imgs/new/pride/DSCN0536.JPG");
                                 }
                                 .cn-3 {
-                                    background-image: url("./Imgs/new/pridE/OI_lab1.jpg");
+                                    // background-image: url("./Imgs/new/pridE/OI_lab1.jpg");
                                     //background-image: url("");
                                 }
 

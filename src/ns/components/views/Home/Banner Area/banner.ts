@@ -1,6 +1,5 @@
 import { IWebComponents } from "ns/typings/schw";
 import { AnimationProvider } from "ns/common/Animations";
-import { XTR1Observer } from "ns/dom/Observers/xtrH.observer";
 
 export class BannerAreaComponent extends HTMLElement implements IWebComponents {
 
@@ -40,15 +39,7 @@ export class BannerAreaComponent extends HTMLElement implements IWebComponents {
    
     createFlowAnimationInstructor() {
         if(this._commonWelcomeComponentSection){
-            new XTR1Observer({
-                discreteElement : this._commonWelcomeComponentSection,
-                callbackFunction : ()=>{
-                    AnimationProvider.executeInterfaceAnimation("WELCOME_COMPONENT")
-                },
-                resetCallback : () =>{
-                    this.animationResetInstructor()
-                }
-            })
+         
         }
     }
 

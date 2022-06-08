@@ -7,7 +7,7 @@ ns-header {
     top: 0px;
     --ns-header-font-size: 10pt;
     --ns-text-color : #fff;
-    --ns-navigation-color : #134bc4;
+    --ns-navigation-color : #6a95f3;
 
     .wx-component-header-section {
         font-family: V.$ns-common-font;
@@ -26,14 +26,14 @@ ns-header {
             height: fit-content;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            backdrop-filter: blur(8px);
-            background-color: rgba(0,0,0,0.3);
+            background-color: rgba(0, 0, 0, 0.644);
             .wx-badge-wrapper {
                 height: 70px;
                 width: 100px;
                 display: grid;
                 grid-template-columns: 100px 400px;
                 #badge-icon {
+                    margin-top: 10px;
                     margin-left: 20px;
                     width: 50px;
                     height: 50px;
@@ -44,6 +44,7 @@ ns-header {
                     background-size: contain;
                     background-image: url("./Imgs/logo-banner.png");
                     background-repeat: no-repeat;
+                    filter: brightness(-3);
 
                     // svg {
                     //     width: 100px;
@@ -87,7 +88,7 @@ ns-header {
                             li{
                                 cursor: pointer;
                                 font-size: 11pt;
-                                margin: 20px 30px 20px 30px;
+                                margin: 20px 20px 20px 20px;
                                 list-style-type: none;
                                 a.active-link {
                                     color: var(--ns-navigation-color);
@@ -114,8 +115,20 @@ ns-header {
                         justify-content: center;
                 .control-options {
                     display: flex;
+                      >:nth-child(1) {
+                         color: 	#4267B2;
+                     }
+                     >:nth-child(2){
+                         color: #fb3958;
+                     }
+                     >:nth-child(3){
+                        color: #1DA1F2;
+                     }
+                     >:nth-child(4){
+                        color: #fff;
+                     }
+
                     >div {
-                        color: var(--ns-text-color);
                         display: flex;
                         align-items: center;
                         justify-content: center;

@@ -9,7 +9,6 @@ ns-x-pride {
 ns-x-pride .pride-x-component {
     height: 400px;
     width: inherit;
-    background-color: V.$ns-layout-color ;
 
     display: flex;
     flex-direction: column;
@@ -19,9 +18,6 @@ ns-x-pride .pride-x-component {
     justify-content: center;
 
     .container {
-       
-        opacity: 0;
-        transform: translateY(100px);
         transition: all .5s;
         .welcome-text {
             width: 100%;
@@ -29,7 +25,7 @@ ns-x-pride .pride-x-component {
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #f3f310fa;
+            color: #000;
 
 
             .welcome-text-wrapper {
@@ -46,22 +42,7 @@ ns-x-pride .pride-x-component {
             }
         }
 
-        .welcome-text-2 {
-            width: 100%;
-            height: 140px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-
-            .svg-container-wrapper {
-                color: #fff;
-                font-size: 55pt;
-                font-weight: 300;
-
-            }
-        }
-
+       
         .control-button-container {
             display: flex;
             align-items: center;
@@ -75,12 +56,16 @@ ns-x-pride .pride-x-component {
                 color: #fff;
                 transition: all .5s;
                 background-color: V.$ns-layout-color;
-                @include V.center();
-                @include V.button();
+                height: 50px;
+                width: 160px;
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
 
                 &:hover {
-                    background-color: unset;
-                    color: #fff;
+                    width: 190px;
                     text-decoration: underline;
                     line-height: 10px;
                 }

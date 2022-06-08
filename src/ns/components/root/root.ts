@@ -2,6 +2,9 @@ import { IWebComponents } from "ns/typings/schw";
 import { LifeCycleEvents,Lifecycle} from "ns/common/lifecycle";
 import { WebMain} from "ns/base/Web/web.main";
 
+/**
+ * The root main file and startup web componenent of the whole HTML
+ */
 
 
 const Template_ = document.createElement("template");
@@ -28,6 +31,10 @@ Template_.innerHTML = `
     </div>
 </div>
 `
+
+/**
+ * Startup of the web main instance that connects all instances
+ */
 export const WebMainInstance = new WebMain();
 export class UIRoot extends HTMLElement implements IWebComponents {
 
@@ -42,7 +49,7 @@ export class UIRoot extends HTMLElement implements IWebComponents {
          */
         //Create Instance To Have It stay for a longtime;
         WebMainInstance.initResources();
-        
+    src/ns/base/Router/Router.ts    
     };
 
 }
