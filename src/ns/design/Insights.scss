@@ -62,6 +62,9 @@ ns-x-insights .ponaco-splitview-5 {
 
 
                     .card-x-component {
+                        transition: all .5s;
+                        opacity: 0;
+                        transform: translateY(50px);
                         .card-content {
                             display: block;
 
@@ -124,11 +127,6 @@ ns-x-insights .ponaco-splitview-5 {
                                         transition: all .5s;
                                     
                                     }
-
-                                    .x-title-1:hover {
-                                        transform: translateY(-10px);
-                                    }
-
                                     .x-title-2 {
                                         display: none;
                                         color: #fff;

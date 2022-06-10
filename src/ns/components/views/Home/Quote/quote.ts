@@ -1,4 +1,6 @@
 import { IWebComponents } from "ns/typings/schw";
+import { createViewLinkerManger } from "ns/dom/view_linkers/view_linker";
+// 
 
 
 export class QuoteComponent extends HTMLElement implements IWebComponents {
@@ -17,24 +19,58 @@ export class QuoteComponent extends HTMLElement implements IWebComponents {
         </div>
         `
     }
-    connectedCallback() {
-        this.init();
+    connectedCallback(){
+        this.initializeComponent();
     }
-    createElementHandle() {
+
+    initializeComponent(){
+        this.__createComponentAttachment();
+        this.__createAnimationFacilityFunction()
+    }
+
+    __createComponentAttachment(){
         this._mainContentHolder = this.querySelector(".main-content-holder")
+
     }
-    override scrollIntoView(arg?: boolean | ScrollIntoViewOptions): void {
-        if (arg) {
-            this.createFlowAnimation();
+     /**
+     * Animations inset and outsets
+     */
+
+      __viewLinkAnimationInset(){
+        if (this._mainContentHolder) {
+            this._mainContentHolder.style.animation  = "__QuoteAnimation__ 1s forwards"
         }
     }
-    createFlowAnimation() {
+    __viewLinkAnimationOutset(){
+        if (this._mainContentHolder) {
+            this._mainContentHolder.style.opacity = "0";
+            this._mainContentHolder.style.transform = "translateX(50px)";
+        }
+    }
+
+    /**
+     * Create Animation Bed
+     */
+
+    __createAnimationFacilityFunction() {
+        console.log("didCreateAnimationBase",this._mainContentHolder);
         
+        if (this._mainContentHolder) {
+            createViewLinkerManger({
+                element : this._mainContentHolder,
+                linkPosition : 250,
+                LinkerCallbacks : {
+                    inset  : ()=>{
+                        this.__viewLinkAnimationInset()
+                    },
+                    outset : () =>{
+                        this.__viewLinkAnimationOutset()
+                    }
+                }
+            })
+        }
     }
-    
-    private init() {
-        this.createElementHandle()
-    }
+
 }
 
 customElements.define("ns-x-quote", QuoteComponent);

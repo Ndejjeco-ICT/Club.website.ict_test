@@ -57,7 +57,7 @@ import "@design/academicsNews.scss";
 import "@design/academicsNewsItem.scss";
 import "@design/academicsDosQuote.scss"
 
-
+import "@design/Animations.scss"
 
 
 

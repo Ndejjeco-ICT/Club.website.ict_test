@@ -19,6 +19,8 @@ ns-x-pride .pride-x-component {
 
     .container {
         transition: all .5s;
+        opacity: 0;
+        transform: translateY(-100px);
         .welcome-text {
             width: 100%;
             height: 200px;

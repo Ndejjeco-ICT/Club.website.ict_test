@@ -1,4 +1,6 @@
 import { IWebComponents } from "ns/typings/schw";
+import { createViewLinkerManger } from "ns/dom/view_linkers/view_linker";
+import {addDisposableEventListener } from "ns/common/domListener"
 
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
@@ -138,21 +140,70 @@ Template_.innerHTML = `
 
 export class InsightsComponent extends HTMLElement implements IWebComponents {
 
+    private _cardElementHandlers:NodeListOf<HTMLDivElement>|null;
+    private _cardDataMinorHandlers:NodeListOf<HTMLDivElement>|null;
 
     constructor() {
         super();
         this.appendChild(Template_.content.cloneNode(true))
-    }
-    _createHoverOperation(){
-        const _allXtitles = this.querySelectorAll(".x-title-1");
-        _allXtitles.forEach((_elements)=>{
-            
-        })
+        this._cardElementHandlers = null;
+        this._cardDataMinorHandlers = null;
     }
     connectedCallback(){
+        this.initializeComponent()
+    }
+
+    initializeComponent(){
+        this._createComponentAttachments();
+        this._createAnimationFacilityFunction()
+        this._assignCommonDataHoverActions()
+    }
+    _createComponentAttachments() {
+        this._cardElementHandlers = this.querySelectorAll<HTMLDivElement>(".card-x-component");
+        this._cardDataMinorHandlers = this.querySelectorAll<HTMLDivElement>(".card-x-component .x-title-2")
+    };
+
+
+    _assignCommonDataHoverActions(){
+        if(this._cardDataMinorHandlers){
+            this._cardDataMinorHandlers.forEach((e)=>{
+                
+                e.addEventListener("mouseleave",function(e){
+                    this.style.display = "none"
+                })
+                e.addEventListener("mouseover",function(e){
+                    this.style.display = "block";
+                })
+            });
+
+        }
+
+
+    }
+
+    _createAnimationFacilityFunction() {
+        if(this._cardElementHandlers){
+            this._cardElementHandlers.forEach((_cardElement)=>{
+
+                createViewLinkerManger({
+                    element : _cardElement,
+                    linkPosition : 250,
+                    LinkerCallbacks : {
+                        inset: () =>{
+                            _cardElement.style.animation = "__uniqueCardAnimation__ 1s forwards"
+                        },
+                        outset : ()=>{
+                            // _cardElement.style.opacity = "0";
+                            // _cardElement.style.transform = "translateY(-50px)"
+                            // _cardElement.style.animation = ""
+                        }
+                    }
+                })
 
 
 
+            });
+        }
     }
 
 

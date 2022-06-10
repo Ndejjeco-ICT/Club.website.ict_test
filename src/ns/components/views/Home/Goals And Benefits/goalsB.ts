@@ -1,5 +1,5 @@
-import { addDisposableEventListener } from "ns/common/domListener";
 import { IWebComponents } from "ns/typings/schw";
+import { createViewLinkerManger } from "ns/dom/view_linkers/view_linker";
 
 
 const Template_ = document.createElement("template");
@@ -67,33 +67,62 @@ Template_.innerHTML = `
 
 export class GoalsBenefitsComponent extends HTMLElement implements IWebComponents {
 
-    private _contentRedirect: HTMLDivElement | null;
+    private _contentDataElementHandle: HTMLDivElement | null;
 
     constructor() {
         super();
-        this._contentRedirect = null;
+        this._contentDataElementHandle = null;
         this.appendChild(Template_.content.cloneNode(true))
     };
     connectedCallback() {
-        this.init()
-     };
+        this.initializeComponent()
+    };
+    initializeComponent() {
+        this._createElementHandles()
+    }
 
-    init() {
-        this.createElementHandles();
-        this.registerEventListener()
+    _createElementHandles() {
+        this._contentDataElementHandle = this.querySelector(".conic-section-2 .wrapper")
     }
-    createElementHandles() {
-        this._contentRedirect = this.querySelector(".content-redirect");
-    };
-    registerEventListener() {
-        if (this._contentRedirect) {
-            addDisposableEventListener(this._contentRedirect, "click", this._redirectContent.bind(this));
+
+        /**
+     * Animations inset and outsets
+     */
+
+    __viewLinkAnimationInset() {
+        if (this._contentDataElementHandle) {
+            this._contentDataElementHandle.style.animation = "__bannerAnimation__  .5s forwards"
         }
-    };
-    _redirectContent() {
-        
     }
+    __viewLinkAnimationOutset() {
+        if (this._contentDataElementHandle) {
+            this._contentDataElementHandle.style.opacity = "0";
+            this._contentDataElementHandle.style.transform = "translateX(-50px)";
+        }
+    }
+
+    __createAnimationFacilityFunction() {
+        if (this._contentDataElementHandle) {
+            createViewLinkerManger({
+                element : this._contentDataElementHandle,
+                linkPosition : 78,
+                LinkerCallbacks : {
+                    inset  : ()=>{
+                        this.__viewLinkAnimationInset()
+                    },
+                    outset : () =>{
+                        this.__viewLinkAnimationOutset()
+                    }
+                }
+            })
+        }
+    }
+
+
+
+
+
 
 };
 
-customElements.define("ns-x-benefits",GoalsBenefitsComponent)
+customElements.define("ns-x-benefits", GoalsBenefitsComponent)

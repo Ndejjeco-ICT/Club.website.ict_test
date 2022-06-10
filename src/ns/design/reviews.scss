@@ -6,7 +6,6 @@
 
     .main-review-container {
         min-width: 80%;
-        border: solid 1px blue;
         margin: auto;
         width: 70%;
         padding: 7%;
@@ -19,9 +18,8 @@
             
 
             .split-container-1 {
-                border: 1px solid green;
                 border-radius: 6%;
-                //background-image: url('../design/Imgs/martin-shreder-5Xwaj9gaR0g-unsplash.jpg');
+                background-image: url('../design/Imgs/martin-shreder-5Xwaj9gaR0g-unsplash.jpg');
                 background-position: center;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -53,20 +51,24 @@
                     display: grid;
                     grid-template-columns: 30px 30px 30px;
                     grid-template-rows: 1fr;
-
+                    transition: all .5s;
                     .carosell-1 {
+                    transition: all .5s;
                         width: 20px;
                         height: 20px;
                         border: solid 1px #000;
                         border-radius: 100%;
-                        background-color: #000;
                         margin: 0 5px 0 5px;
                     }
-
-                    .carosell-2 {
-                        background-color: #fff;
-                        border: solid 2px #000;
+                    .cr-active {
+                        background-color: #000;
                     }
+                    .cr-off {
+                        background-color: unset;
+                    }
+
+
+
                 }
             }
         }

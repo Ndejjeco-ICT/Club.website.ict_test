@@ -35,8 +35,11 @@ ns-x-quote .ponaco-splitview-6 {
         @include V.center();
 
         .main-content-holder {
+            transition: all .2s;
             width: fit-content;
             font-family: V.$ns-common-font;
+            opacity: 0;
+            transform: translateY(50px);
 
             .x-content-1 {
                 font-weight: 350;
@@ -46,7 +49,6 @@ ns-x-quote .ponaco-splitview-6 {
                 margin-left: 20px;
                 margin-right: 20px;
                 margin-bottom: 20px;
-                animation: slideFromAbove 1.5s forwards;
 
                 //    color: rgb(233, 233, 233);
                 &::before {

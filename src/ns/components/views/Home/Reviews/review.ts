@@ -1,12 +1,15 @@
 import { IWebComponents } from "ns/typings/schw";
+import { addDisposableEventListener } from "ns/common/domListener"
+import { ReviewsData } from "./reviews.data";
 
 export class ReviewSection extends HTMLElement implements IWebComponents {
 
-    private _reviews: HTMLDivElement | null;
+    private _studentReviewsQuote: HTMLParagraphElement | null = null;
+    private _carosoellNavigationComponents: NodeListOf<HTMLDivElement> | null = null;
+    private _studentReviewsImageManager:HTMLDivElement|null = null;
 
     constructor() {
         super();
-        this._reviews = null;
         this.innerHTML = `   
         <div class="review-main-component">
         <div class="main-review-container">
@@ -15,7 +18,7 @@ export class ReviewSection extends HTMLElement implements IWebComponents {
                     
                 </div>
                 <div class="split-container-2">
-                    <h2> -Student Reviews</h2>
+                    <h2>Student Reviews</h2>
     
                     <div class="student-quote">
                         <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -26,9 +29,9 @@ export class ReviewSection extends HTMLElement implements IWebComponents {
                     </div>
     
                     <div class="carosell-navigation">
-                        <div class="carosell-1"></div>
-                        <div class="carosell-1 carosell-2"></div>
-                        <div class="carosell-1 carosell-2"></div>
+                        <div class="carosell-1 cr-active" carosell-x="0"></div>
+                        <div class="carosell-1 cr-off" carosell-x="1"></div>
+                        <div class="carosell-1 cr-off" carosell-x="2"></div>
                     </div>
                 </div>
             </div>
@@ -37,14 +40,72 @@ export class ReviewSection extends HTMLElement implements IWebComponents {
     `
     };
     connectedCallback() {
-        this.init();
+        this.initializeComponent();
+      
     };
-    init() {
-        this.createClickAnimation();
-    }
-    createClickAnimation() {
-        this._reviews= this.querySelector("Review")
-    }
-}
 
+    initializeComponent() {
+        this.__createComponentAttachments()
+        this._createEventListenersForCarousellNavigation()
+    }
+
+    __createComponentAttachments() {
+        this._studentReviewsQuote = this.querySelector(".split-container-2 .student-quote p");
+        this._carosoellNavigationComponents = this.querySelectorAll<HTMLDivElement>(".carosell-navigation .carosell-1")
+    };
+
+
+
+    private async __changeElementContent__(__number_:number){
+        this._removeActivityFromCarouselle();
+        this._clearCurrentDataAvailabilty()
+        this._updateCarousellDisplay(__number_);
+        this._fillDataInQuote(__number_);
+    }
+
+    //first make the data seem to be empty
+    private _clearCurrentDataAvailabilty() {
+        if (this._studentReviewsQuote) {
+            this._studentReviewsQuote.innerHTML = ``
+        }
+    };
+
+    //fill quote with data;
+    private _fillDataInQuote(_number_: number) {
+        if (this._studentReviewsQuote) {
+            let _getPreviewDataContent = ReviewsData[_number_];
+            this._studentReviewsQuote.innerHTML = _getPreviewDataContent.data;
+        }
+    };
+    //remove activity from any carousell 
+    private _removeActivityFromCarouselle() {
+        if (this._carosoellNavigationComponents) {
+            this._carosoellNavigationComponents.forEach((_E_) => {
+                if (_E_.classList.contains("cr-active")) {
+                    _E_.classList.replace("cr-active", "cr-off");
+                }
+            })
+        }
+    }
+    //update current carousell;
+    private _updateCarousellDisplay(_number_: number) {
+        if (this._carosoellNavigationComponents) {
+            let _getPrviewedCarousellElement = this._carosoellNavigationComponents[_number_];
+            _getPrviewedCarousellElement.classList.replace("cr-off", "cr-active")
+        }
+    }
+
+    _createEventListenersForCarousellNavigation() {
+        let that = this;
+        if (this._carosoellNavigationComponents) {
+            this._carosoellNavigationComponents.forEach((__e__) => {
+                __e__.addEventListener("click", function (e) {
+                    let _ccNumber = this.getAttribute("carosell-x")!;
+                    that.__changeElementContent__(parseInt(_ccNumber))
+                })
+            })
+        }
+    }
+
+}
 customElements.define("ns-x-reviews", ReviewSection);

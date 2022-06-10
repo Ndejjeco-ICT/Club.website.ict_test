@@ -1,5 +1,6 @@
 import { IWebComponents } from "ns/typings/schw";
-import { AnimationProvider } from "ns/common/Animations";
+import { createViewLinkerManger } from "ns/dom/view_linkers/view_linker";
+
 
 export class BannerAreaComponent extends HTMLElement implements IWebComponents {
 
@@ -21,28 +22,61 @@ export class BannerAreaComponent extends HTMLElement implements IWebComponents {
         `
     };
     connectedCallback() {
-        this.init();  
+        this.initializeComponent();
     };
-    init() {
-        this.createComponentAttachment();
-        this.createFlowAnimationInstructor()
+
+    //Intialize component
+    initializeComponent() {
+        this.__createComponentAttachment();
+        this.__createAnimationFacilityFunction();
+
     }
-    createComponentAttachment() {
+    __createComponentAttachment() {
         this._commonWelcomeComponentSection = this.querySelector(".welcome-note-section")
     };
-    animationResetInstructor(){
-        if(this._commonWelcomeComponentSection){
+
+
+
+    /**
+     * Animations inset and outsets
+     */
+
+    __viewLinkAnimationInset(){
+        if (this._commonWelcomeComponentSection) {
+            this._commonWelcomeComponentSection.style.animation  = "__bannerAnimation__  1s forwards"
+        }
+    }
+    __viewLinkAnimationOutset(){
+        if (this._commonWelcomeComponentSection) {
             this._commonWelcomeComponentSection.style.opacity = "0";
-            this._commonWelcomeComponentSection.style.transform = "translateX(-100px)";
+            this._commonWelcomeComponentSection.style.transform = "translateX(-50px)";
+            this._commonWelcomeComponentSection.style.animation  = ""
         }
     }
-   
-    createFlowAnimationInstructor() {
-        if(this._commonWelcomeComponentSection){
-         
+
+    /**
+     * Create Animation Bed
+     */
+
+    __createAnimationFacilityFunction() {
+        if (this._commonWelcomeComponentSection) {
+            createViewLinkerManger({
+                element : this._commonWelcomeComponentSection,
+                linkPosition : 150,
+                LinkerCallbacks : {
+                    inset  : ()=>{
+                        this.__viewLinkAnimationInset()
+                    },
+                    outset : () =>{
+                        this.__viewLinkAnimationOutset()
+                    }
+                }
+            })
         }
     }
+
+
 
 }
 
-customElements.define("ns-x-banner",BannerAreaComponent)
+customElements.define("ns-x-banner", BannerAreaComponent)
