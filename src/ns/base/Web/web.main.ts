@@ -23,7 +23,6 @@ export class WebMain {
         this._didInitializeResources = false;
         this._WebRouter = null;
         this._WebRoutes = null;
-        this.initResources();
     };
 
 

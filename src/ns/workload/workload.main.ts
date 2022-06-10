@@ -79,6 +79,8 @@ import "ns/components/views/Academics/UniformDesign/Uniformdesign";
 import "ns/components/views/Academics/voices/voice";
 import "ns/components/views/Academics/view.academics";
 
+// Blog view
+import "ns/components/views/Blog/view.blog";
 
 
 /**

@@ -15,47 +15,30 @@ export class HistorySectionComponent extends HTMLElement implements IWebComponen
                     <h2>History Of the School</h2>
                     <p>View the history of the school</p>
                     <button>Read more</button>
+                    <img src="#" alt="#">
                 </div>
                 <div class="section-content-2">
-                    <div class="section-divider">
-                        <div class="content-left">
-                            <div class="content-class-a">
-                                <p>1973</p>
-                            </div>
-                            <div class="content-class-x">
-                                <p>1756</p>
-                            </div>
-                            <div class="content-class-a">
-                                <p>1973</p>
-                            </div>
-                            <div class="content-class-x">
-                                <p>1756</p>
-                            </div>
+                    <div class="content-container left">
+                        <div class="content">
+                            <h2>1963</h2>
+                            <p>Tito Ssesanga Walusimbi, the headteacher of Ndejje JUnior school  started a fundraising to build
+                                a secondary school on the vast land on which the Junior school sat.
+                            </p>
                         </div>
-    
-                        <div class="line-divider"></div>
-    
-                        <div class="content-right">
-                            <div class="content-class-b">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisi
-                                    pisci similique corporis reprehenderit!
-                                </p>
-                            </div>
-                            <div class="content-class-y">
-                                <p>Lorem ipsum dolor sit amet cons
-                                    officiis distinctio!
-                                </p>
-                            </div>
-                            <div class="content-class-b">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisi
-                                    pisci similique corporis reprehenderit!
-                                </p>
-                            </div>
-                            <div class="content-class-y">
-                                <p>Lorem ipsum dolor sit amet cons
-                                    officiis distinctio!
-                                </p>
-                            </div>
+                    </div>
+                    <div class="content-container right">
+                        <div class="content">
+                            <h2>1963</h2>
+                            <p>
+                                Ndejje SS was born as a mixed O-level secondary school with Walusimbi as its first headteacher
+                            </p>
+                        </div>
+                    </div>
+                    <div class="content-container left">
+                        <div class="content">
+                            <h2>1986</h2>
+                            <p>Ndejje SS was the first school to experience free education currently enjoyed by Universal Secondary Schools in the country. 
+                            </p>
                         </div>
                     </div>
                 </div>

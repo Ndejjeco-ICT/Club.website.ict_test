@@ -59,6 +59,7 @@ import "@design/academicsDosQuote.scss"
 
 import "@design/Animations.scss"
 
+//Blog view
 
 
 

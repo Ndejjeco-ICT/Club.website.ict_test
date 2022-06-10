@@ -6,7 +6,6 @@
 
 //Banner
 @keyframes __bannerAnimation__ {
-
     0% {
         opacity: 0;
         transform: translateX(-50px);
@@ -49,16 +48,21 @@
 }
 
 
-@keyframes  __uniqueCardDataInfoMajorAnimation__ {
+
+//home page
+
+//Goals
+@keyframes __GoalsAnimation__ {
     0%{
         opacity: 0;
         transform: translateY(-50px);
     }
-    100% {
+    100%{
         opacity: 1;
         transform: translateY(0px);
     }
 }
+
 
 @keyframes __uniqueCardDataInfoMinorAnimation__ {
     0%{
@@ -73,6 +77,8 @@
 
 
 //Main Quote
+//Quote
+
 @keyframes __QuoteAnimation__ {
     0%{
         opacity: 0;
@@ -109,6 +115,23 @@
     100%{
         opacity: 1;
         font-size: 65pt;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+}
+
+//edu Quote
+@keyframes __eduQuoteAnimation__ {
+    0%{
+        opacity: 0;
+        height: 0px;
+    }
+    100%{
+        opacity: 1;
+        height: 300px;
     }
     
 }
