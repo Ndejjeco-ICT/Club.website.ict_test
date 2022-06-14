@@ -1,3 +1,7 @@
+import {IWebComponents} from "ns/typings/schw";
+
+const Template_ = document.createElement("template");
+Template_.innerHTML = `
 <div class="article-topics-section">
     <div class="topics-main-container">
         <div class="topic-header-navigator">
@@ -85,8 +89,23 @@
                 <h2>Submit your newsletter</h2>
             </div>
             <div class="submit-container">
-                <input type="text" placeholder="newsletter">
+            <input type="text" placeholder="newsletter">
             </div>
         </div>
     </div>
 </div>
+`;
+
+export class ArticleTopics extends HTMLElement implements IWebComponents {
+    constructor() {
+        super();
+        this.appendChild(Template_.content.cloneNode(true))
+    }
+
+    connectedCallback() {
+
+    }
+};
+
+
+customElements.define("ns-x-articletopics", ArticleTopics)
