@@ -48,7 +48,7 @@ export class UIRoot extends HTMLElement implements IWebComponents {
          * We Can Connect WebMain
          */
         //Create Instance To Have It stay for a longtime;
-        WebMainInstance.initResources();    
+        WebMainInstance.initResources();   
     };
 
 }

@@ -17,7 +17,7 @@
 
 ns-x-benefits {
     display: block;
-    --ns-x-height: 700px;
+    --ns-x-height: 800px;
     font-family: V.$ns-common-font;
 }
 
@@ -28,9 +28,6 @@ ns-x-benefits .ponaco-splitview-3 {
     .wx-component-3 {
         height: inherit;
         width: inherit;
-
-        border: 30px solid V.$ns-layout-color;
-
 
         .split-view {
             width: 100%;
@@ -47,9 +44,7 @@ ns-x-benefits .ponaco-splitview-3 {
                     display: grid;
                     grid-template-columns: 3fr 2fr;
 
-                    >div {
-                        
-                    }
+              
 
 
                     .conic-section-1 {
@@ -64,10 +59,7 @@ ns-x-benefits .ponaco-splitview-3 {
 
                             width: 700px;
 
-                            >div {
-                                
-                            }
-
+                          
                             display: grid;
                             grid-template-rows: 300px 300px;
 
@@ -75,10 +67,7 @@ ns-x-benefits .ponaco-splitview-3 {
                                 display: grid;
                                 grid-template-columns: 1fr 1fr;
 
-                                >div {
-                                   
-
-                                }
+                               
                             }
 
 
@@ -103,13 +92,18 @@ ns-x-benefits .ponaco-splitview-3 {
                                     justify-content: center;
                                 }
                                 .cn-1 {
+                                    background-image: linear-gradient(to top,#000,#808080,#808080);
+                        
                                     // background-image: url("./Imgs/new/pride/DSCN1679.JPG") linear-gradient(to left top,black,black);
 
                                 }
                                 .cn-2 {
+                                    background-image: linear-gradient(to top,#000,#4084e9,#2473e9);
                                     // background-image: url("./Imgs/new/pride/DSCN0536.JPG");
                                 }
                                 .cn-3 {
+                                    background-image: linear-gradient(to top,#000,#c0bdbd,#c0bdbd);
+
                                     // background-image: url("./Imgs/new/pridE/OI_lab1.jpg");
                                     //background-image: url("");
                                 }
@@ -146,13 +140,15 @@ ns-x-benefits .ponaco-splitview-3 {
                                         .cn-short-title {
                                             font-size: 15pt;
                                             margin-bottom: 11px;
-                                            color: rgba(0, 0, 0, 0.801);
+                                            color: #fff;
+                                            font-weight: 350;
                                         }
 
                                         .cn-short-title-2 {
-                                            color: #000;
+                                            color: rgba(255, 255, 255, 0.671);
                                             font-size: 22pt;
                                             margin-bottom: 11px;
+                                            font-weight: 300;
 
                                         }
                                     }
@@ -169,30 +165,50 @@ ns-x-benefits .ponaco-splitview-3 {
                         justify-content: center;
 
                         .wrapper {
+                            opacity: 0;
+                            transform: translateY(-50px);
                             .content-wrapper {
                                 margin-left: 30px;
 
                                 .cr-title {
-                                    font-size: 40pt;
-                                    font-weight: bold;
+                                    color: #000;
+                                    font-size: 45pt;
+                                    
                                 }
 
                                 .cr-description {
                                     margin-top: 10px;
-                                    color: rgba(0, 0, 0, 0.781);
+                                    color: #000000e1;
                                     word-wrap: break-word;
                                     width: 400px;
-                                    font-size: 15pt;
+                                    font-size: 19pt;
                                 }
 
                                 .cr-xmore {
                                     margin-top: 20px;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
+                                    cursor: pointer;
+                                    border: 2px solid V.$ns-layout-color;
+                                    background-color: V.$ns-layout-color;
+                                    color: #fff;
+                                    transition: all .5s;
                                     height: 50px;
                                     width: 160px;
                                     border-radius: 10px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    font-size: 13pt;
+                                    font-weight: 350;
+                                    cursor: pointer;
+                    
+                                    &:hover {
+                                        width: 190px;
+                                        line-height: 10px;
+                                    }
+                    
+                                    &:active {
+                                        transform: scale(0.8);
+                                    }
                                 }
 
                             }

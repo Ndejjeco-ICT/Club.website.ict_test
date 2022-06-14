@@ -5,69 +5,101 @@
     margin-bottom: 100px;
 
     .main-review-container {
-        min-width: 80%;
-        border: solid 1px blue;
-        margin: auto;
-        width: 70%;
-        padding: 7%;
+        width: 100%;
 
         .split-layout-containers {
+            padding-top: 30px;
+            padding-bottom: 30px;
             width: 100%;
             display: grid;
-            grid-template-columns: 0.5fr 1fr;
+            grid-template-columns: 1fr 1fr;
             grid-template-rows: 100%;
-            
+
 
             .split-container-1 {
-                border: 1px solid green;
-                border-radius: 6%;
-                //background-image: url('../design/Imgs/martin-shreder-5Xwaj9gaR0g-unsplash.jpg');
-                background-position: center;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-size: contain;
+                height: 650px;
+                border-left: 2px solid grey;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
-                img {
-                    width: 200px;
-                    height: 100px;
-                    border-radius: 10%;
+                .split-image-container {
+                    background-image: linear-gradient(to top, #000, #4084e9, #2473e9);
+
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    width: 550px;
+                    height: 560px;
                 }
             }
 
             .split-container-2 {
-                h2 {
-                    font-size: 32pt;
-                    text-align: right;
-                }
+                .split-wrapper {
+                    margin-top: 100px;
 
-                .student-quote {
-                    p {
-                        font-size: 23pt;
-                        margin: 20px 0 5px 30px;
+                    h2 {
+                        font-size: 38pt;
+                        font-weight: 400;
                         text-align: right;
+                        margin-right: 100px;
+                        color: rgba(0, 0, 0, 0.884)
+                    }
+
+                    .student-quote {
+                        opacity: 0;
+                        transform: translateX(-100px);
+                        margin-top: 20px;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        height: 300px;
+                        transition: all .5s;
+
+                        p {
+                            transition: all .5s;
+                            width: 500px;
+                            padding: 0px;
+                            margin: 0px;
+                            font-weight: 350;
+                            font-size: 20pt;
+                            color: #000000cb;
+                        }
+                    }
+
+                    .carosell-navigation {
+                        margin: 10% 50% 0 50%;
+                        display: grid;
+                        grid-template-columns: 30px 30px 30px;
+                        grid-template-rows: 1fr;
+                        transition: all .5s;
+
+                        .carosell-1 {
+                            transition: all .5s;
+                            width: 15px;
+                            height: 15px;
+                            border: solid 1px #000;
+                            border-radius: 100%;
+                            margin: 0 5px 0 5px;
+                        }
+
+                        .carosell-1:hover {
+                            cursor: pointer;
+                            background-color: #242424;
+                        }
+
+                        .cr-active {
+                            background-color: #000;
+                        }
+
+                        .cr-off {
+                            background-color: unset;
+                        }
+
+
+
                     }
                 }
 
-                .carosell-navigation {
-                    margin: 5% 50% 0 50%;
-                    display: grid;
-                    grid-template-columns: 30px 30px 30px;
-                    grid-template-rows: 1fr;
-
-                    .carosell-1 {
-                        width: 20px;
-                        height: 20px;
-                        border: solid 1px #000;
-                        border-radius: 100%;
-                        background-color: #000;
-                        margin: 0 5px 0 5px;
-                    }
-
-                    .carosell-2 {
-                        background-color: #fff;
-                        border: solid 2px #000;
-                    }
-                }
             }
         }
     }

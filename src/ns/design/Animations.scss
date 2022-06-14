@@ -5,6 +5,75 @@
 
 
 //Banner
+@keyframes __bannerAnimation__ {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    
+}
+
+
+//goals animation
+
+@keyframes __GoalsAnimation__ {
+    
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+//Pride
+@keyframes __PrideBannerAnimation__ {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+//Pride
+@keyframes __ReviewsAnimation__ {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+//uniqueness of Ndejje
+
+@keyframes __uniqueCardAnimation__ {
+
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+}
+
 
 
 //home page
@@ -21,11 +90,60 @@
     }
 }
 
+
+@keyframes __uniqueCardDataInfoMinorAnimation__ {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}   
+
+
+//Main Quote
 //Quote
+
 @keyframes __QuoteAnimation__ {
     0%{
         opacity: 0;
         transform: translateY(50px);
+        height: 0px;
+    }
+    100% {
+        opacity: 1;
+        height: 30px;
+        transform: translateY(0px);
+    }
+}
+
+
+//student reviews
+
+@keyframes __studentReviewsAnimation__ {
+
+    0% {
+        opacity: 0;
+        display: none;
+    }
+    100%{
+        opacity: 1;
+        display: block;
+    }
+    
+}
+
+@keyframes __eduAnimation__ {
+
+    0% {
+        opacity: 0;
+        font-size: 15pt;
+    }
+    100%{
+        opacity: 1;
+        font-size: 65pt;
     }
     100%{
         opacity: 1;
@@ -44,6 +162,5 @@
         opacity: 1;
         height: 300px;
     }
-    
     
 }

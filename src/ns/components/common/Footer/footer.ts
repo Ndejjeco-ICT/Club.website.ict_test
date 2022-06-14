@@ -1,7 +1,8 @@
 import { IWebComponents } from "ns/typings/schw";
-import { LifeCycleEvents, Lifecycle } from "ns/common/lifecycle";
 import { addDisposableEventListener } from "ns/common/domListener";
+import { LifeCycleEvents, Lifecycle } from "ns/common/lifecycle";
 import { _navigateToBasePage } from "ns/components/common/Header/header";
+import { LinksManagerSystem } from "ns/dom/links/linksManager";
 
 
 
@@ -61,49 +62,49 @@ Template_.innerHTML = `
 
 export class FooterComponent extends HTMLElement implements IWebComponents {
 
-    private _schBadgeTitle: HTMLDivElement | null = null;
-    private _schFaceBookLink: HTMLSpanElement | null = null;
-    private _schInstagramLink: HTMLSpanElement | null = null;
-    private _schControlComponent: HTMLDivElement | null = null;
+    //accordiaon options
+    private _facebook_link: HTMLDivElement | null = null;
+    private _instagram_link: HTMLDivElement | null = null;
+    private _twitter_link: HTMLDivElement | null = null;
     constructor() {
         super();
         this.appendChild(Template_.content.cloneNode(true))
     };
     connectedCallback() {
-        this.init()
+        this.initializeComponent()
     };
-    init() {
-        this.attachResourcesAndEventHandlers();
-        this.attachEventListeners()
+    initializeComponent(){
+        this.__createComponentAttachment();
+        this._attachSocialLinkksSystem()
+
+
+        /**
+         * Did load everything
+         */
+
         LifeCycleEvents.phase = Lifecycle.Restored;
     }
-    attachResourcesAndEventHandlers() {
-        this._schBadgeTitle = this.querySelector(".school-badge-title");
-        this._schFaceBookLink = this.querySelector(".x-fl-facebook");
-        this._schInstagramLink = this.querySelector(".x-fl-instagram");
-        this._schControlComponent = this.querySelector(".control-component");
+    __createComponentAttachment(){
+        this._facebook_link = this.querySelector(".facebook-link");
+        this._instagram_link = this.querySelector(".instagram-link");
+        this._twitter_link = this.querySelector(".twitter-link");
     }
-    attachEventListeners() {
-        if (this._schBadgeTitle && this._schFaceBookLink && this._schInstagramLink && this._schControlComponent) {
-            addDisposableEventListener(this._schBadgeTitle, "click", _navigateToBasePage);
-            addDisposableEventListener(this._schFaceBookLink, "click", this._linkToFaceBookHandle.bind(this));
-            addDisposableEventListener(this._schInstagramLink, "click", this._linkToInstagramHandle.bind(this));
-            addDisposableEventListener(this._schControlComponent, "click", this._scrollToTopLevel.bind(this));
+    _attachSocialLinkksSystem() {
+        if (this._facebook_link && this._instagram_link && this._twitter_link) {
+            //click event listeners
+            addDisposableEventListener(this._facebook_link, "click", this.__linkFaceBook.bind(this));
+            addDisposableEventListener(this._instagram_link, "click", this.__linkInstagram.bind(this));
+            addDisposableEventListener(this._twitter_link, "click", this.__linkTwitter.bind(this));
         }
-    }
-
-    _linkToFaceBookHandle() {
-
     };
-    _linkToInstagramHandle() {
-
+    __linkFaceBook() {
+        LinksManagerSystem.LinkToFaceBook()
     }
-    _scrollToTopLevel() {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth"
-        })
+    __linkInstagram() {
+        LinksManagerSystem.LinkToInstagram();
+    }
+    __linkTwitter() {
+        LinksManagerSystem.LinkToTwitter()
     }
 
 }

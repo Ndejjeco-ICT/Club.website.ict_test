@@ -1,41 +1,45 @@
 @use "./Variables.scss" as V;
 
-.ponaco-x-component  {
+
+
+ns-x-mission {
+    display: block;
+}
+
+ns-x-mission .xtr-component {
     font-family: V.$ns-common-font;
     width: 100%;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    margin-bottom: 50px;
-    color: #fff;
-    background-color: #000;
+    height: 500px;
+    border: 1px solid #00000000;
+    background-image: linear-gradient(to right,#000,#c0bdbd,#c0bdbd);
 
-}
-
-.ponaco-x-component .content-wrapper {
-
-    width: inherit;
-}
-
-.ponaco-x-component .content-wrapper .title-area {
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 50pt;
-}
-
-.ponaco-x-component .content-wrapper .description-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;;
-    font-size: 16pt;
-
-    .sr2{
-        text-align: center;
-        width: 90%;
+    .xtr-wrapper {
+        transition: all .5s;
+        border: 1px solid #fff;
+        &:hover{
+            border: 10px solid #fff;
+        }
+        height: 500px;
+        width: 100%;
+        .ctr-content {
+            margin:50px 0px 0px 50px;
+            height: 500px;
+            .xtr-title-provider {
+                font-size: 38pt;
+                color: #fff;
+            }
+            .xtr-content-mgr {
+                opacity: 0;
+                transform: translateX(-100px);
+                color: #fff;
+                margin-top: 10px;
+                font-weight: 350;
+                font-size: 25pt;
+                .wrapper {
+                    width: 650px;
+                }
+            }
+        }
     }
+
 }

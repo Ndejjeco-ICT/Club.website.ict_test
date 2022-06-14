@@ -7,23 +7,13 @@ export class HomeView extends HTMLElement implements IWebComponents {
         super();
         this.innerHTML = `
             <ns-x-banner></ns-x-banner>
-            <ns-x-pride></ns-x-pride>
             <ns-x-benefits></ns-x-benefits>
-            <div class="ponaco-x-component misson-container">
-                <div class="content-wrapper">
-                    <div class="title-area">
-                        <div class="sr1">Mission</div>
-                    </div>
-                    <div class="description-area">
-                        <div class="sr2">From rigorous academics to the beautiful greens of our tree-filled campus to the activity of student life, Ndejje has it all. Switch between Live and Learn to explore everything Ndejje has to offer</div>
-                    </div>
-                </div>
-            </div>
+            <ns-x-pride></ns-x-pride>
             <ns-x-insights></ns-x-insights>
-            <ns-x-quote></ns-x-quote>
-            <ns-x-reviews></ns-x-reviews>
             <ns-x-edu></ns-x-edu>
-            <ns-x-Faq></ns-x-Faq>
+            <ns-x-reviews></ns-x-reviews>
+            <ns-x-quote></ns-x-quote>
+            <ns-x-mission></ns-x-mission>
 
         `
     }

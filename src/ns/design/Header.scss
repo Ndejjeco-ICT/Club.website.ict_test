@@ -26,7 +26,7 @@ ns-header {
             height: fit-content;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            background-color: rgba(0, 0, 0, 0.644);
+            background-color: #000000b6;
             .wx-badge-wrapper {
                 height: 70px;
                 width: 100px;
@@ -88,7 +88,7 @@ ns-header {
                             li{
                                 cursor: pointer;
                                 font-size: 11pt;
-                                margin: 20px 20px 20px 20px;
+                                margin: 20px 25px 20px 25px;
                                 list-style-type: none;
                                 a.active-link {
                                     color: var(--ns-navigation-color);
@@ -116,10 +116,10 @@ ns-header {
                 .control-options {
                     display: flex;
                       >:nth-child(1) {
-                         color: 	#4267B2;
+                         color: 	#1DA1F2;
                      }
                      >:nth-child(2){
-                         color: #fb3958;
+                         color: #1DA1F2;
                      }
                      >:nth-child(3){
                         color: #1DA1F2;

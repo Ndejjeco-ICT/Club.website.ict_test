@@ -1,0 +1,22 @@
+{
+    "banner-section" : {
+        "view-height" : 320,
+        "off-view-height" : -379
+    },
+    "pride-section" : {
+        "view-height" : 165,
+        "off-view-height" : -735
+    },
+    "goals-section" : {
+        "view-height" : -1100,
+        "off-view-height" : -700
+
+    },
+    "insights-sections" : {
+        "view-heights" : {
+            "first-portion" : 456,
+            "second-portion" : 456
+        }
+    }
+
+}

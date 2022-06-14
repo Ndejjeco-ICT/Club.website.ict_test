@@ -1,7 +1,5 @@
 import { IWebComponents } from "ns/typings/schw";
-import { MediaScreenManagerControl, IMediaScrollPositions } from "ns/base/MediaQueries/mediaQueries";
-import { RevealAnimationElement } from "ns/dom/RevealAnimation/revealAnimation";
-import { AnimationProvider } from "ns/common/Animations";
+import { createViewLinkerManger } from "ns/dom/view_linkers/view_linker";
 
 
 const _svgDataContent = `
@@ -15,7 +13,7 @@ const _svgDataContent = `
 
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
-    <div class="pride-x-component">
+<div class="pride-x-component">
     <div class="container">
     <div class="welcome-text">
         <div class="welcome-text-wrapper">
@@ -23,7 +21,7 @@ Template_.innerHTML = `
         </div>
     </div>
     <div class="control-button-container">
-        <div class="expl-button-container">Explore</div>
+        <div class="expl-button-container" title="Explore the Goodness of the School of Joy And Pride">Explore</div>
     </div>
     </div>
 </div>
@@ -39,24 +37,41 @@ export class PrideComponent extends HTMLElement implements IWebComponents {
 
     }
     connectedCallback() {
-        this.init();
+        this.initializeComponent();
     }
-    private init() {
-        this._createFlowAnimationInstructor()
+    private initializeComponent() {
+        this.__createComponentAttachmnent()
+        this.__createAnimationFacilityFunction()
     }
 
-    _createComponentAttachmnent(){
+    __createComponentAttachmnent(){
         this._prideContainer = this.querySelector(".pride-x-component .container")
     }
-    _createFlowAnimationInstructor() {
-        if(this._prideContainer){
-            new RevealAnimationElement({
+    __viewLinkAnimationInset(){
+        if (this._prideContainer) {
+            this._prideContainer.style.animation  = "__bannerAnimation__  .5s forwards"
+        }
+    }
+    __viewLinkAnimationOutset(){
+        if (this._prideContainer) {
+            this._prideContainer.style.opacity = "0";
+            this._prideContainer.style.transform = "translateX(-50px)";
+        }
+    }
+    __createAnimationFacilityFunction() {
+        if (this._prideContainer) {
+            createViewLinkerManger({
                 element : this._prideContainer,
-                revealHeight : 250,
-                __animationCallback__ : ()=> {
-                    AnimationProvider.executeInterfaceAnimation("PRIDE_COMPONENT")
+                linkPosition : 0,
+                LinkerCallbacks : {
+                    inset  : ()=>{
+                        this.__viewLinkAnimationInset()
+                    },
+                    outset : () =>{
+                        this.__viewLinkAnimationOutset()
+                    }
                 }
-            })   
+            })
         }
     }
 
