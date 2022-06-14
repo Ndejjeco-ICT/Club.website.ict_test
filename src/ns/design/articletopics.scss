@@ -1,0 +1,87 @@
+@use "./Variables.scss" as V;
+
+.article-topics-section {
+    .topics-main-container {
+        .topic-header-navigator {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;   
+            grid-template-rows: 1fr;
+            
+            .nav-1 {
+                font-size: 35pt;
+            }
+        }
+
+        .topic-section-navigator {
+            h2 {
+                text-align: center;
+                font-size: 25pt;
+            }
+            .section-card-content {
+                h2 {
+                    font-size: 25pt;
+                }
+                .content-card-layouts {
+                    display: grid;
+                    grid-template-columns: 50% 50%;   
+                    grid-template-rows: 50% 50%;
+                    grid-row-gap: 20px;
+
+                    .card {
+                        border-left: solid 1px #000;
+                        margin: auto;
+                        padding: 0 30%;
+    
+                        img {
+                            border: solid 1px #000;
+                            width: 300px;
+                            height: 300px;
+                        }
+        
+                        p {
+                            font-size: 20pt;
+                        }
+                    }
+                }
+            }
+        }
+
+        //should have moving animation to the right nonstop
+        .article-section2-content {
+            margin: 100px 0 100px 0;
+
+            .sec2-master-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+
+                .ms-x-1 {
+                    font-size: 30pt;
+
+                    .ms-img {
+                        width: fit-content;
+                        height: fit-content;
+                    }
+                }
+            }
+        }
+
+        .info-wrapper-section {
+            .wrapper-content-1 {
+                text-align: center;
+
+                h2 {
+                    font-size: 30pt;
+                }
+            }
+
+            .submit-container {
+                input  {
+                    width: 300px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}

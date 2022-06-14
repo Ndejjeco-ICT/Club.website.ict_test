@@ -60,6 +60,11 @@ import "@design/academicsDosQuote.scss"
 
 
 //Blog view
-
+import "@design/titleholder.scss"
+import "@design/blogtrends.scss";
+import "@design/articlesection.scss";
+import "@design/blogsection2.scss";
+import "@design/blogsection3.scss";
+import "@design/articletopics.scss";
 
 

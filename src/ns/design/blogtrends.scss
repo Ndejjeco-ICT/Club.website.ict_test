@@ -1,0 +1,26 @@
+@use "./Variables.scss" as V;
+
+
+.blog-trends { 
+    .trend-article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        max-width: 100%;
+
+        .trend-picture {
+            padding: 3em;
+            img {
+                width: 500px;
+                height: 400px;
+            }
+        }
+
+        .trend-text {
+            width: 1fr;
+            p {
+                font-size: 20pt;
+            }
+        }
+    }
+}

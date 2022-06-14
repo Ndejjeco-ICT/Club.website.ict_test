@@ -1,0 +1,57 @@
+@use "./Variables.scss" as V;
+
+ns-x-titleholder {
+    display: block;
+}
+
+ns-x-titleholder .title-content {
+    width: fit-content;
+    padding-top: 100px;
+
+    .content-x {
+        h1 {
+            font-size: 30pt;
+        }
+    }
+    .content-y {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+
+        .text-content {
+            p {
+                font-size: 20pt;
+            }
+        }
+
+        .picture-content {
+            img {
+                position: relative;
+                width: 200px;
+                height: 200px;
+            }
+            .img-selector {
+                background-image: url("../design/Imgs/aziz-acharki-gXndgCS-CGo-unsplash.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-attachment: fixed; 
+            }
+            .img1 {
+                left: 30px;
+                bottom: 30px;
+                z-index: -1;
+            }
+            .img2 {
+                height: 250px;
+                width: 250px;
+                z-index: 1;
+            }
+            .img3 {
+                bottom: 30px;
+                right: 30px;
+                z-index: -1;
+            }
+        }
+    }
+}
