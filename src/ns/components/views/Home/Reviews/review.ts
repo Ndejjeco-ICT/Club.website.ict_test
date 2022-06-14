@@ -1,9 +1,11 @@
 import { IWebComponents } from "ns/typings/schw";
 import { addDisposableEventListener } from "ns/common/domListener"
+import { createViewLinkerManger } from "ns/dom/view_linkers/view_linker";
 import { ReviewsData } from "./reviews.data";
 
 export class ReviewSection extends HTMLElement implements IWebComponents {
 
+    private  _studentReviewsQuotecc:HTMLDivElement|null = null;
     private _studentReviewsQuote: HTMLParagraphElement | null = null;
     private _carosoellNavigationComponents: NodeListOf<HTMLDivElement> | null = null;
     private _studentReviewsImageManager:HTMLDivElement|null = null;
@@ -14,29 +16,32 @@ export class ReviewSection extends HTMLElement implements IWebComponents {
         <div class="review-main-component">
         <div class="main-review-container">
             <div class="split-layout-containers">
-                <div class="split-container-1">
-                    
-                </div>
+             
                 <div class="split-container-2">
-                    <h2>Student Reviews</h2>
+                    <div class="split-wrapper">
+                        <h2>Students Thoughts?.</h2>
     
-                    <div class="student-quote">
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Beatae obcaecati, alias at ut vel quaerat amet minima velit minus iusto
-                            quisquam pariatur perspiciatis natus nostrum vitae officia possimus 
-                            nulla suscipit".
-                        </p>
-                    </div>
+                        <div class="student-quote">
+                            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Beatae obcaecati, alias at ut vel quaerat amet minima velit minus iusto
+                                quisquam pariatur perspiciatis natus nostrum vitae officia possimus
+                                nulla suscipit".
+                            </p>
+                        </div>
     
-                    <div class="carosell-navigation">
-                        <div class="carosell-1 cr-active" carosell-x="0"></div>
-                        <div class="carosell-1 cr-off" carosell-x="1"></div>
-                        <div class="carosell-1 cr-off" carosell-x="2"></div>
+                        <div class="carosell-navigation">
+                            <div class="carosell-1 cr-active" carosell-x="0"></div>
+                            <div class="carosell-1 cr-off" carosell-x="1"></div>
+                            <div class="carosell-1 cr-off" carosell-x="2"></div>
+                        </div>
                     </div>
+                </div>
+                <div class="split-container-1">
+                    <div class="split-image-container"></div>
                 </div>
             </div>
         </div>
-    </div>  
+    </div>
     `
     };
     connectedCallback() {
@@ -46,14 +51,38 @@ export class ReviewSection extends HTMLElement implements IWebComponents {
 
     initializeComponent() {
         this.__createComponentAttachments()
+        this.__createAnimationFacilityFunction()
         this._createEventListenersForCarousellNavigation()
     }
 
     __createComponentAttachments() {
         this._studentReviewsQuote = this.querySelector(".split-container-2 .student-quote p");
+        this._studentReviewsQuotecc = this.querySelector(".split-container-2 .student-quote");
         this._carosoellNavigationComponents = this.querySelectorAll<HTMLDivElement>(".carosell-navigation .carosell-1")
     };
 
+
+    __viewLinkAnimationInset(){
+        if(this._studentReviewsQuotecc){
+            this._studentReviewsQuotecc.style.animation = " __ReviewsAnimation__ 1s forwards"
+        }
+    }
+    __createAnimationFacilityFunction() {
+        if (this._studentReviewsQuotecc) {
+            createViewLinkerManger({
+                element : this._studentReviewsQuotecc,
+                linkPosition : 150,
+                LinkerCallbacks : {
+                    inset  : ()=>{
+                        this.__viewLinkAnimationInset()
+                    },
+                    outset : () =>{
+                         ///
+                    }
+                }
+            })
+        }
+    }
 
 
     private async __changeElementContent__(__number_:number){

@@ -1,5 +1,15 @@
 @use "./Variables.scss" as V;
 
+@keyframes __pictureInsightsLoaderAnimation__ {
+    0% {
+        background-image: linear-gradient(to top, #000, #808080, #808080);
+    }
+
+    100% {
+        background-image: linear-gradient(to top, #303030, #808080, #808080);
+    }
+}
+
 @keyframes slidein {
     0% {
         display: none;
@@ -37,10 +47,18 @@ ns-x-insights .ponaco-splitview-5 {
             width: 100%;
 
             .content-title {
-                font-size: 40pt;
+                margin-top: 90px;
 
                 .content-title-wrapper {
-                    margin-left: 40px;
+                    font-size: 40pt;
+                    margin-left: 42px;
+                }
+
+                .content-sub-title-wrapper {
+                    margin-top: 10px;
+                    color: #000000ee;
+                    margin-left: 42px;
+                    font-size: 20pt;
                 }
 
                 margin-bottom: 20px;
@@ -65,6 +83,7 @@ ns-x-insights .ponaco-splitview-5 {
                         transition: all .5s;
                         opacity: 0;
                         transform: translateY(50px);
+
                         .card-content {
                             display: block;
 
@@ -81,6 +100,7 @@ ns-x-insights .ponaco-splitview-5 {
                                 }
 
                                 .card-content-image {
+                                    transition: all 2;
                                     width: 100%;
                                     height: 480px;
                                     font-size: 30pt;
@@ -89,56 +109,82 @@ ns-x-insights .ponaco-splitview-5 {
                                     justify-content: center;
                                     background-size: cover;
                                     background-repeat: no-repeat;
+                                    background-image: linear-gradient(to top, #000, #808080, #808080);
+                                    animation: __pictureInsightsLoaderAnimation__ .9s linear;
                                 }
+
                                 .cg-1 {
-                                    background-image: url("./Imgs/new/insights/DSCN1526.JPG");
+                                    background-color: #b4b3b3;
                                 }
+
                                 .cg-2 {
-                                    background-image: url("./Imgs/new/insights/DSCN1538.JPG");
+                                    background-color: #b4b3b3;
                                 }
+
                                 .cg-3 {
-                                    background-image: url("./Imgs/new/insights/DSCN1557.JPG");
+                                    background-color: #b4b3b3;
                                 }
+
                                 .cg-4 {
-                                    background-image: url("./Imgs/new/insights/DSCN1578.JPG");
+                                    background-color: #b4b3b3;
                                 }
+
                                 .cg-5 {
-                                    background-image: url("./Imgs/new/insights/DSCN1597.JPG");
+                                    background-color: #b4b3b3;
 
                                 }
+
                                 .cg-6 {
-                                    background-image: url("./Imgs/new/insights/DSCN1630.JPG");
-                                    
+                                    background-color: #b4b3b3;
+
                                 }
 
                                 .card-content-info {
                                     bottom: 0px;
 
                                     .ctrinfo {
-                                        margin: 0px 20px 0px 20px;
+                                        width: 600px;
+
+                                        .wrapper {
+                                            margin: 0px 20px 0px 20px;
+
+                                        }
                                     }
 
                                     .x-title-1 {
+                                        margin-bottom: 8px;
                                         font-weight: 450;
                                         color: #fff;
                                         font-size: 22pt;
-                                        margin-bottom: 8px;
+                                        // margin-bottom: 8px;
                                         cursor: pointer;
                                         transition: all .5s;
-                                    
+                                        transform: translateY(-10px);
                                     }
+
                                     .x-title-2 {
-                                        display: none;
+                                        height: 30px;
+                                        transition: all .5s;
+                                        opacity: 0;
+                                        transform: translateY(100px);
                                         color: #fff;
                                         font-weight: 300;
                                         margin-bottom: 10px;
-                                        font-size: 13pt;
+                                        font-size: 15pt;
+                                        .wrapper{
+                                            transition: all .5s;
+                                        }
                                     }
+
+                                    // .x-title-1:hover {
+                                    //     transform: translateY(-50px);
+                                    // }
 
                                     .x-title-btn {
                                         margin-bottom: 10px;
 
                                         .x-btn-wrapper {
+                                            margin: 0px 20px 0px 20px;
                                             display: grid;
                                             grid-template-columns: 50px auto;
 
@@ -155,6 +201,8 @@ ns-x-insights .ponaco-splitview-5 {
                                             }
 
                                             .sl-text {
+                                                transition: all .5s;
+
                                                 color: #fff;
                                                 font-weight: 300;
                                                 height: 45px;

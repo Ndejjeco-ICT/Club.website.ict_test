@@ -13,7 +13,7 @@ const _svgDataContent = `
 
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
-    <div class="pride-x-component">
+<div class="pride-x-component">
     <div class="container">
     <div class="welcome-text">
         <div class="welcome-text-wrapper">
@@ -21,7 +21,7 @@ Template_.innerHTML = `
         </div>
     </div>
     <div class="control-button-container">
-        <div class="expl-button-container">Explore</div>
+        <div class="expl-button-container" title="Explore the Goodness of the School of Joy And Pride">Explore</div>
     </div>
     </div>
 </div>

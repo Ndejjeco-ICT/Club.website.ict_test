@@ -52,7 +52,7 @@ Template_.innerHTML = `
                             Our faculty lead students to reach further, to achieve their goals and to effect change in the professions and passions they pursue.
 
                             </div>
-                            <div class="cr-xmore">Read More</div>
+                            <div class="cr-xmore" title="Read More about the interesting facts about Ndejje">Read More</div>
                         </div>
                         </div>
                     </div>
@@ -79,6 +79,7 @@ export class GoalsBenefitsComponent extends HTMLElement implements IWebComponent
     };
     initializeComponent() {
         this._createElementHandles()
+        this.__createAnimationFacilityFunction();
     }
 
     _createElementHandles() {
@@ -91,7 +92,7 @@ export class GoalsBenefitsComponent extends HTMLElement implements IWebComponent
 
     __viewLinkAnimationInset() {
         if (this._contentDataElementHandle) {
-            this._contentDataElementHandle.style.animation = "__bannerAnimation__  .5s forwards"
+            this._contentDataElementHandle.style.animation = "__GoalsAnimation__  .5s forwards"
         }
     }
     __viewLinkAnimationOutset() {
@@ -111,7 +112,7 @@ export class GoalsBenefitsComponent extends HTMLElement implements IWebComponent
                         this.__viewLinkAnimationInset()
                     },
                     outset : () =>{
-                        this.__viewLinkAnimationOutset()
+                        // this.__viewLinkAnimationOutset()
                     }
                 }
             })

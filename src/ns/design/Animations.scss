@@ -19,6 +19,21 @@
 }
 
 
+//goals animation
+
+@keyframes __GoalsAnimation__ {
+    
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
 //Pride
 @keyframes __PrideBannerAnimation__ {
     0%{
@@ -31,6 +46,18 @@
     }
 }
 
+
+//Pride
+@keyframes __ReviewsAnimation__ {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
 
 //uniqueness of Ndejje
 
@@ -67,11 +94,11 @@
 @keyframes __uniqueCardDataInfoMinorAnimation__ {
     0%{
         opacity: 0;
-        display: none;
+        transform: translateY(100px);
     }
     100% {
         opacity: 1;
-        display: block;
+        transform: translateY(0px);
     }
 }   
 
@@ -83,9 +110,11 @@
     0%{
         opacity: 0;
         transform: translateY(50px);
+        height: 0px;
     }
     100% {
         opacity: 1;
+        height: 30px;
         transform: translateY(0px);
     }
 }

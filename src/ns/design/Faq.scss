@@ -20,11 +20,76 @@
     font-family: V.$ns-common-font;
 
     .main-content-layout {
-        h2 {
-            font-size: 35pt;
-            text-align: center;
+        
+        .content-title {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 30px;
+
+            .content-title-wrapper {
+                width: fit-content;
+                font-size: 35pt;
+            }
         }
+
+
+        .content-slider {
+            width: 100%;
+            .slider-wrapper {
+                width: inherit;
+                .ctr-slider-component{
+                    height: 100px;
+                    border: 1px solid red;
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    width: 100%;
+                    .ctr-label-container {
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: row-reverse;
+                        .cl-wrapper {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 50px;
+                            font-size: 25pt;
+                        }
+                        .cl-icon-wrapper {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 50px;
+                            width: 50px;
+                        }
+                    }
+
+                    .ctr-expand-section {
+                        width: 100%;
+                        font-size: 16pt;
+                        height: 100px;
+                        display: flex;
+                        align-items: center;
+                        display: none;
+                        justify-content: center;
+                        .clx-wrapper {
+                            text-align: center;
+                            width: 70%;
+                            font-size: 18pt;
+                        border-bottom: 1px solid black;
+                        padding-bottom: 20px;
+
+                        }
+                    }
+                }
+            }
+        }
+
+
 
         .content-slider {
             .info-slider-1 {

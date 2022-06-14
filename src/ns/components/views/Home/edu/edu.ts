@@ -5,7 +5,7 @@ const Template_ = document.createElement("template");
 Template_ .innerHTML = `
 <div class="ponaco-component-edu">
     <div class="wrapper">
-        <div class="info">Education  the Key.</div>
+        <div class="info">Keep Cool And Proud!</div>
     </div>
 </div>
 `
@@ -27,40 +27,11 @@ export class EduComponent extends HTMLElement implements IWebComponents {
 
     initializeComponent(){
         this.__createComponentAttachment()
-        this.__createAnimationFacilityFunction();
     };
     __createComponentAttachment() {
         this._eduElementHandle= this.querySelector(".wrapper .info")
     };
-    __viewLinkAnimationInset(){
-        if (this._eduElementHandle) {
-            this._eduElementHandle.style.animation  = "__eduAnimation__   1s forwards"
-        }
-    }
-    __viewLinkAnimationOutset(){
-        if (this._eduElementHandle) {
-            this._eduElementHandle.style.opacity = "0";
-            this._eduElementHandle.style.transform = "translateX(50px)";
-        }
-    }
-    __createAnimationFacilityFunction() {
-        console.log("didCreateAnimationBase",this._eduElementHandle);
-        
-        if (this._eduElementHandle) {
-            createViewLinkerManger({
-                element : this._eduElementHandle,
-                linkPosition : 150,
-                LinkerCallbacks : {
-                    inset  : ()=>{
-                        this.__viewLinkAnimationInset()
-                    },
-                    outset : () =>{
-                        // this.__viewLinkAnimationOutset()
-                    }
-                }
-            })
-        }
-    }
+  
 
 
 
