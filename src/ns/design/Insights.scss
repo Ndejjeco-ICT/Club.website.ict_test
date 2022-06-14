@@ -156,17 +156,14 @@ ns-x-insights .ponaco-splitview-5 {
                                         font-weight: 450;
                                         color: #fff;
                                         font-size: 22pt;
-                                        // margin-bottom: 8px;
                                         cursor: pointer;
                                         transition: all .5s;
-                                        transform: translateY(-10px);
                                     }
 
                                     .x-title-2 {
-                                        height: 30px;
+                                        height: 0px;
                                         transition: all .5s;
                                         opacity: 0;
-                                        transform: translateY(100px);
                                         color: #fff;
                                         font-weight: 300;
                                         margin-bottom: 10px;
@@ -189,14 +186,14 @@ ns-x-insights .ponaco-splitview-5 {
                                             grid-template-columns: 50px auto;
 
                                             .sl-button {
-                                                font-size: 13pt;
+                                                background-color: unset;
+                                                font-size: 15pt;
                                                 border-radius: 50%;
                                                 display: flex;
                                                 align-items: center;
                                                 justify-content: center;
                                                 width: 40px;
                                                 height: 40px;
-                                                color: #fff;
                                                 border: 1px solid #fff;
                                             }
 
@@ -221,9 +218,38 @@ ns-x-insights .ponaco-splitview-5 {
 
             }
 
+           
 
         }
     }
 
+    
 
+}
+
+
+
+ns-x-insights {
+    .card-content-info {
+        &:hover {
+            cursor: pointer;
+            .x-title-2{
+                height: 50px !important;
+                opacity: 1 !important;
+             }
+             .x-title-btn{
+                .x-btn-wrapper {
+                    .sl-button{
+                        background-color: #fff !important;
+                        color: #000 !important;
+                    }
+             
+                }
+             }
+           
+        }
+       
+
+       
+    }
 }

@@ -213,7 +213,6 @@ export class InsightsComponent extends HTMLElement implements IWebComponents {
     initializeComponent() {
         this._createComponentAttachments();
         this._createAnimationFacilityFunction();
-        this._createHoverableFacility()
     }
     _createComponentAttachments() {
         this._cardElementHandlers = this.querySelectorAll<HTMLDivElement>(".card-x-component");
@@ -222,37 +221,6 @@ export class InsightsComponent extends HTMLElement implements IWebComponents {
 
     };
 
-    _createHoverableFacility() {
-        if (this._cardMajorDataElementHandlers && this._cardMinorDataElementHandlers) {
-            var self = this
-            this._cardMajorDataElementHandlers.forEach((e, i) => {
-                let _hoverDebounceAction = false;
-                e.addEventListener("mouseover", function(ev) {
-                    if (!_hoverDebounceAction) {
-                        this.style.transform = "translateY(-100px)"
-                        self._cardMinorDataElementHandlers![i].style.animation = "__uniqueCardDataInfoMinorAnimation__ .5s forwards";
-                        _hoverDebounceAction = true;
-
-                    }
-                });
-                e.addEventListener("mouseleave", function(ev) {
-                    //debounce action
-                    setTimeout(() => {
-                        if (_hoverDebounceAction) {
-                        this.style.transform = "translateY(-100px)"
-
-                            self._cardMinorDataElementHandlers![i].style.animation = "";
-                            self._cardMinorDataElementHandlers![i].style.opacity = "0";
-                            self._cardMinorDataElementHandlers![i].style.height = "0px";
-                            self._cardMinorDataElementHandlers![i].style.transform = "translateY(100px)";
-                            _hoverDebounceAction = false;
-                        }
-                    }, 100)
-
-                })
-            })
-        }
-    }
 
     _createAnimationFacilityFunction() {
         if (this._cardElementHandlers) {
