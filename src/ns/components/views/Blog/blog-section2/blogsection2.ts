@@ -5,11 +5,9 @@ Template_.innerHTML = `
 <div class="blog-section-2">
 <div class="main-section-content">
     <div class="content-txt">
-        <h2>Get to know us more </h2>
-        <button>About us</button>
-    </div>
-    <div class="section-2-img">
-        <img src="#" alt="" srcset="#">
+        <h2>Ndejjean Fraternity</h2>
+        <p>Get to know us more</p>
+        <div class="nav-content">About us</div>
     </div>
 </div>
 </div>

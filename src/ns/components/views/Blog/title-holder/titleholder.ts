@@ -4,19 +4,18 @@ const Template_ = document.createElement("template");
 Template_.innerHTML = `
 <div class="title-content">
     <div class="content-x">
-        <h1>Blog</h1>
+        Blog
     </div>
     <div class="content-y">
         <div class="text-content">
-            <h2>hello</h2>
-            <p>WE WRITE ARTICLES THAT INSPIRE</p>
-            <button>-thats the ndejjean culture</button>
+            WHERE WE WRITE ARTICLES THAT INSPIRE,<br> - THATS THE NDEJJEAN CULTURE
+            <button>Read more</button>
 
         </div>
         <div class="picture-content">
-        <div class="img-selector img"></div>
-        <div class="img-selector img"></div>
-        <div class="img-selector img"></div>
+        <div class="img-selector img img1"></div>
+        <div class="img-selector img img2"></div>
+        <div class="img-selector img img3"></div>
         </div>
     </div>
 </div>

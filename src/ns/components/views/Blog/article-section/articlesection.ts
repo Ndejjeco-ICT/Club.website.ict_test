@@ -3,7 +3,9 @@ import {IWebComponents} from "ns/typings/schw";
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
 <div class="main-article-content">
-<h1>Latest Articles</h1>
+<div class="article-content-title">
+FEATURED TOPICS
+</div>
 <div class="article-grid">
     <div class="article-card article-1">
         <div class="card-picture">

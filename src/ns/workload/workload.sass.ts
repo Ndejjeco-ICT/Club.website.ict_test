@@ -66,6 +66,3 @@ import "@design/articlesection.scss";
 import "@design/blogsection2.scss";
 import "@design/blogsection3.scss";
 import "@design/articletopics.scss";
-import "@design/view.insights.scss";
-
-
