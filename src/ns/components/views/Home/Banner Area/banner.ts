@@ -53,7 +53,7 @@ export class BannerAreaComponent extends HTMLElement implements IWebComponents {
     _requestImageLoad(){
         if(this._imageLoader){
             setTimeout(()=>{
-                this._imageLoader!.LoadImage();
+                // this._imageLoader!.LoadImage();
             },100)
         }
     }
