@@ -8,12 +8,13 @@ ns-x-titleholder .title-content {
     padding-top: 100px;
 
     .content-x {
+        margin-left: 50px;
+        font-weight: 300;
         width: 100%;
         font-size: 55pt;
         width: 500px;
         font-weight: 300;
         margin-bottom: 30px;
-        text-decoration: underline;
     }
     .content-y {
         @include V.flex-grid();

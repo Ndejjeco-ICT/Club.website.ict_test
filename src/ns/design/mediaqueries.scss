@@ -219,3 +219,16 @@ body {
         }
     }
 }
+
+
+/*
+ACADEMICS
+*/
+@media only screen and (max-width: 425px) {
+    .xb-component-wrapper {
+        .xb-split-view {
+            max-width: 100%;
+            margin: 0 10px !important;
+        }
+    }
+}

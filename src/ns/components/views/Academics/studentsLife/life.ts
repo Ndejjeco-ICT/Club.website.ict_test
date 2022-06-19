@@ -59,7 +59,7 @@ export class Life extends HTMLElement implements IWebComponents {
   }
   _viewInsetAnimation() {
     if (this._controlElement) {
-      this._controlElement.style.animation = "__studentsLife 1.5s forwards";
+      this._controlElement.style.animation = "__studentsLife__ 1.5s forwards";
     }
   }
   _viewOutsetAnimation() {
