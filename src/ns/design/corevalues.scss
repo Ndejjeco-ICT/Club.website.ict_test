@@ -4,52 +4,87 @@
     font-family: V.$ns-common-font;
 
     .intro-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transform: translateX(-100px);
         h2 {
             font-size: 30pt;
+
+            font-weight: 400;
             text-align: center;
         }
 
         p {
+            margin-top: 15px;
+            width: 90%;
             text-align: center;
             font-size: 15pt;
         }
     }
 
     .main-content-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-
-        .split-section-1 {
-            margin: 50px ;
-
-            p {
-                font-size: 13pt;
-            }
-
-            .title-holder {
-                margin: 10px;
-                display: grid;
-                grid-template-columns: 1fr 30px;
-                grid-template-rows: 1fr;
-
-                h2 {
-                    font-size: 20pt;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .wrapper {
+            width: fit-content;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            column-gap: 50px;
+            row-gap: 50px;
+            .split-section-1 {
+                opacity: 0;
+                transform: translateY(50px);
+                display: flex;
+                flex-direction: column;
+                // align-items: center;
+                justify-content: center;
+                background-color:#2473e9 ;
+                width: 380px;
+                height: 230px;
+    
+                p {
+                    word-wrap: break-word;
+                    margin-left: 8px;
+                    font-size: 11pt;
+                    color: #fff;
                 }
-
-                .arithmetic {
-                    border: solid 1px #000000;
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
-
+    
+                .title-holder {
+                    margin: 10px;
+                    display: grid;
+                    grid-template-columns: 1fr 30px;
+                    grid-template-rows: 1fr;
+    
                     h2 {
-                        text-align: center;
-                        padding: 10px;
-                        font-size: 15pt;
+                        font-size: 20pt;
+                        font-weight: 395;
+                        color: yellow;
+                    }
+    
+                    .arithmetic {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+    
+                        h2 {
+                            color: #fff;
+                            display: flex;
+                            align-items:flex;
+                            justify-content: center;
+                            text-align: center;
+                            // padding: 10px;
+                            font-size: 15pt;
+                        }
                     }
                 }
             }
         }
+       
     }
 }

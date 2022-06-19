@@ -15,7 +15,7 @@ Template_.innerHTML = `
                 <div class="xb-split-component-1 str-comp">
                     <div class="wrapper">
                         <div class="xb-picture-container"></div>
-                        <div class="xb-description-container"></div>
+                        <div class="xb-description-container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolore magn</div>
                     </div>
                 </div>
                 <div class="xb-split-component-2 str-comp">

@@ -1,6 +1,7 @@
 import { IWebComponents } from "ns/typings/schw";
 import { LifeCycleEvents,Lifecycle} from "ns/common/lifecycle";
 import { WebMain} from "ns/base/Web/web.main";
+import { dialogHost ,IIDialogHost} from "ns/dom/dialogHost/dialogHost";
 
 /**
  * The root main file and startup web componenent of the whole HTML
@@ -24,10 +25,17 @@ Template_.innerHTML = `
             <div class="academics-view page-view" ns-route="inactive" ns-view="academics-view">
                 <ns-academics-view></ns-academics-view>
             </div>
+            <div class="insights-view page-view" ns-route="inactive" ns-view="insights-view">
+                <ns-insights-view></ns-insights-view>
+            </div>
         </div>
     <ns-footer></ns-footer>
     <div class="ns-sub-components">
-        
+        <div class="dialog-host">
+            <div class="staff-dialog-wrapper">
+                <ns-d-staffdialog></ns-d-staffdialog>
+            </div>
+        </div>
     </div>
 </div>
 `
@@ -37,10 +45,13 @@ Template_.innerHTML = `
  */
 export const WebMainInstance = new WebMain();
 export class UIRoot extends HTMLElement implements IWebComponents {
+    private _dialogHost:IIDialogHost|null;
+    private _staffdialogwrapper:HTMLDivElement|null = null;
 
     constructor() {
         super();
         this.appendChild(Template_.content.cloneNode(true))
+        this._dialogHost = null;
     }
     connectedCallback() {
         LifeCycleEvents.phase = Lifecycle.Started;
@@ -49,7 +60,21 @@ export class UIRoot extends HTMLElement implements IWebComponents {
          */
         //Create Instance To Have It stay for a longtime;
         WebMainInstance.initResources();   
+        this.____connectectDialogSubscribers__()
+
     };
+    ____connectectDialogSubscribers__(){
+        this._staffdialogwrapper = this.querySelector(".staff-dialog-wrapper");
+        this._dialogHost = new dialogHost({
+            subscribers : [
+                {
+                    element : this._staffdialogwrapper!,
+                    key : "staff-view"
+                }
+            ]
+        });
+        this._dialogHost!.initializeDialogHost()
+    }
 
 }
 customElements.define("ns-root", UIRoot);

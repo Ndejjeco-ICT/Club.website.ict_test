@@ -94,6 +94,7 @@ import "ns/components/views/Blog/view.blog";
  * 
  */
 
+import  "ns/components/views/Insights/view.insights"
 
 
 

@@ -110,11 +110,9 @@
     0%{
         opacity: 0;
         transform: translateY(50px);
-        height: 0px;
     }
     100% {
         opacity: 1;
-        height: 30px;
         transform: translateY(0px);
     }
 }
@@ -163,4 +161,47 @@
         height: 300px;
     }
     
+}
+
+
+/*
+welcome note animatin
+*/
+
+@keyframes welcomeNoteAnimation_1 {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+   
+}
+
+@keyframes welcomeNoteAnimation_2 {
+
+    0% {
+        opacity: 0;
+        width: 0px;
+    }
+    100%{
+        opacity: 1;
+        width: 300px;
+    }
+   
+}
+ 
+
+@keyframes __studentsLife__ {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }    
 }

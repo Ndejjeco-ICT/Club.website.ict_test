@@ -8,6 +8,8 @@ ns-x-life .xb-component-wrapper {
     width: 100%;
     height: 700px;
     font-family: V.$ns-common-font;
+    opacity: 0;
+    transform: translateY(-100px);
 
     .xb-title-area-wrapper {
         display: flex;
@@ -15,7 +17,6 @@ ns-x-life .xb-component-wrapper {
         justify-content: center;
         width: 100%;
         height: 150px;
-        border: 1px solid red;
 
         .xb-title-container {
             font-size: 45pt;
@@ -25,7 +26,6 @@ ns-x-life .xb-component-wrapper {
 
     .xb-split-view {
         width: 100%;
-        border: 2px solid gray;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -33,16 +33,18 @@ ns-x-life .xb-component-wrapper {
         .xb-split-view-wrapper {
             width: 650px;
             height: 550px;
-            border: 2px solid red;
 
             display: grid;
             grid-template-rows: 275px 275px;
             .split-component {
-                border: 2px solid purple;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 .xb-split-component {
-                    border: 2px solid red;                  
+
+                    border: 2px solid #000;                  
+                }
+                .xb-content{
+                    background-color:#2473e9 ;
                 }
 
                 .xb-content {

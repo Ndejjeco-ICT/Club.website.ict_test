@@ -15,11 +15,12 @@ ns-x-welcomenote .xb-about-component {
     flex-direction: column;
     justify-content: center;
     .xb-wrapper {
+        transition: all .5s;
+        opacity: 0;
+        transform: translateX(-100px);
         width: fit-content;
         margin-left: 50px;
-        border-left: 4px solid black;
         height: 180px;
-        padding-left: 15px;
 
         .tr-title {
             width: fit-content;
@@ -30,9 +31,11 @@ ns-x-welcomenote .xb-about-component {
             }
         }
         .tr-x-line {
-            background-color: unset;
-            height: 2px;
-            width: 300px;
+            transition: all .5s;
+            background-color: black;
+            height: 4px;
+            opacity: 0;
+            width: 0px;
         }
         .tr-x-description {
             color: rgba(0, 0, 0, 0.61);

@@ -50,6 +50,7 @@ export class WebMain {
             new Route({ viewlocation: "/about", viewAttribute: "about-view" }),
             new Route({ viewlocation: "/blog", viewAttribute: "blog-view" }),
             new Route({ viewlocation: "/academics", viewAttribute: "academics-view" }),
+            new Route({viewlocation : "/insights",viewAttribute : "insights-view"})
         ]
         this._WebRouter = new NSRouter(this._WebRoutes)
     };

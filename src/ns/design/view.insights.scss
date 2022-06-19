@@ -1,0 +1,41 @@
+ns-insights-view {
+
+        display: block;
+
+
+}
+
+
+ns-insights-view  .insights-view-component-area {
+    width: 100%;
+    height: fit-content;
+
+    .view-wrapper {
+        width: 100%;
+        height: fit-content;
+        .view-title-area {
+            height: 150px;
+            display: flex;
+            flex-direction: row;
+            .wrapper {
+                height: inherit;
+                .major-title {
+                    font-size: 30pt;
+                }
+                .minor-title{
+                    font-size: 15px;
+                }
+            }
+        }
+        .split-view-content {
+            .wrapper {
+                width: 100%;
+                .insights-base-image {
+                    height: 600px;
+                    width: 600px;
+                }
+                
+            }
+        }
+    }
+}

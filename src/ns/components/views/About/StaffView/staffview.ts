@@ -1,3 +1,5 @@
+import { dialogHostEventManager } from "ns/dom/dialogHost/dialogHost";
+import { createViewLinkerManger } from "ns/dom/view_linkers/view_linker";
 import { IWebComponents } from "ns/typings/schw";
 
 const Template_ = document.createElement("template");
@@ -52,12 +54,74 @@ Template_.innerHTML = `
 
 class StaffView extends HTMLElement implements IWebComponents {
 
+    private _xrt1:HTMLDivElement|null = null;
+    private _xrt2Main:HTMLDivElement|null = null;
+    private _xrt2:NodeListOf<HTMLDivElement>|null = null;
+    private _xrtControlBtn:HTMLDivElement|null = null;
     constructor(){
         super();
         this.appendChild(Template_.content.cloneNode(true))
     }
     connectedCallback(){
+        this._initializeComponent();
+   
+    }
+    private _initializeComponent(){
+        this._createComponentAttachment();
+        this._createAnimationFacility1()
+        this._applyGeneralEventListeners()
+    }
+    private _createComponentAttachment(){
+        this._xrt1 = this.querySelector(".xb-staffview .xb-wrapper .tr-container-elements .tr-view-1");
+        this._xrt2Main = this.querySelector(".xb-staffview .xb-wrapper .tr-container-elements .tr-view-2")
+        this._xrt2 = this.querySelectorAll(".xb-staffview .xb-wrapper .tr-container-elements .tr-view-2 .tr-view-2-wrapper .tr-content .tr-members-wrapper ns-x-member");
+        this._xrtControlBtn = this.querySelector(".xb-staffview .xb-wrapper .tr-container-elements .tr-view-2 .tr-view-2-wrapper .tr-content-2  .selective-btn")
+    };
 
+    private _applyGeneralEventListeners(){
+        if(this._xrtControlBtn){
+            this._xrtControlBtn.addEventListener("click",()=>{
+                dialogHostEventManager.emit("invoke-dialog","staff-view")
+            })
+        }
+    }
+
+    private __viewAnimationInset1(){
+        if(this._xrt1){
+            this._xrt1.style.animation = "__uniqueCardAnimation__ 1.5s forwards"
+        }
+    }
+    private _createAnimationFacility1(){
+        if(this._xrt1){
+            createViewLinkerManger({
+                element : this._xrt1,
+                linkPosition : 150,
+                LinkerCallbacks : {
+                    inset : ()=>{
+                        this.__viewAnimationInset1();
+                    },
+                    outset : ()=>{
+
+                    }
+                }
+            })
+        }
+        if(this._xrt2){
+            this._xrt2.forEach((e)=>{
+                createViewLinkerManger({
+                    element : e,
+                    linkPosition : 150,
+                    LinkerCallbacks : {
+                        inset : ()=>{
+                            e.style.animation = "__uniqueCardAnimation__ 1s forwards"
+                        },
+                        outset : ()=>{
+
+                        }
+                    }
+                })
+            })
+        }
     }
 }
 

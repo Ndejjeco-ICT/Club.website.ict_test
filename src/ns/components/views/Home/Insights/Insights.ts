@@ -1,6 +1,8 @@
 import { IWebComponents } from "ns/typings/schw";
 import { createViewLinkerManger } from "ns/dom/view_linkers/view_linker";
 import { addDisposableEventListener } from "ns/common/domListener"
+import { WebMainInstance } from "ns/components/root/root";
+import { MainRoutes } from "ns/base/Router/Router"
 
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
@@ -213,17 +215,28 @@ export class InsightsComponent extends HTMLElement implements IWebComponents {
     initializeComponent() {
         this._createComponentAttachments();
         this._createAnimationFacilityFunction();
+        this._createEventListenerForInsightsInfo()
     }
     _createComponentAttachments() {
         this._cardElementHandlers = this.querySelectorAll<HTMLDivElement>(".card-x-component");
-        this._cardMajorDataElementHandlers = this.querySelectorAll<HTMLDivElement>(".card-x-component .card-content .card-content-wrapper .card-content-info .x-title-1");
+        this._cardMajorDataElementHandlers = this.querySelectorAll<HTMLDivElement>(".card-x-component .card-content .card-content-wrapper .card-content-info");
         this._cardMinorDataElementHandlers = this.querySelectorAll<HTMLDivElement>(".card-x-component .card-content .card-content-wrapper .card-content-info .x-title-2")
 
     };
 
+    //settup event listeners
+    _createEventListenerForInsightsInfo() {
+        if(this._cardMajorDataElementHandlers){
+            this._cardMajorDataElementHandlers.forEach((_e)=>{
+                _e.addEventListener("click",()=>{
+                    WebMainInstance.FrameRouter.NavigateToRoute("insights",{data : ""})
+                })
+            })
+        }
+    }
 
     _createAnimationFacilityFunction() {
-        if (this._cardElementHandlers) {
+    if (this._cardElementHandlers) {
             this._cardElementHandlers.forEach((_cardElement) => {
 
                 createViewLinkerManger({

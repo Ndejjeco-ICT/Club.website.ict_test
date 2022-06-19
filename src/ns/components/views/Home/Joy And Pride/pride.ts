@@ -1,6 +1,7 @@
 import { IWebComponents } from "ns/typings/schw";
 import { createViewLinkerManger } from "ns/dom/view_linkers/view_linker";
-
+import { addDisposableEventListener } from "ns/common/domListener";
+import { _navigateToAboutusPage, _navigateToAcademicsPage } from "ns/components/common/Header/header"; 
 
 const _svgDataContent = `
 <svg 
@@ -30,6 +31,7 @@ Template_.innerHTML = `
 
 export class PrideComponent extends HTMLElement implements IWebComponents {
     private _prideContainer:HTMLDivElement|null
+    private _contentAboutButton:HTMLDivElement|null = null;
     constructor() {
         super();
         this._prideContainer = null;
@@ -42,10 +44,12 @@ export class PrideComponent extends HTMLElement implements IWebComponents {
     private initializeComponent() {
         this.__createComponentAttachmnent()
         this.__createAnimationFacilityFunction()
+        this._createEventListenerForContentButton()
     }
 
     __createComponentAttachmnent(){
-        this._prideContainer = this.querySelector(".pride-x-component .container")
+        this._prideContainer = this.querySelector(".pride-x-component .container");
+        this._contentAboutButton  = this.querySelector(".pride-x-component .container .control-button-container")
     }
     __viewLinkAnimationInset(){
         if (this._prideContainer) {
@@ -56,6 +60,13 @@ export class PrideComponent extends HTMLElement implements IWebComponents {
         if (this._prideContainer) {
             this._prideContainer.style.opacity = "0";
             this._prideContainer.style.transform = "translateX(-50px)";
+        }
+    }
+    _createEventListenerForContentButton(){
+        if(this._contentAboutButton){
+            this._contentAboutButton.addEventListener("click",()=>{
+                _navigateToAboutusPage()
+            })
         }
     }
     __createAnimationFacilityFunction() {

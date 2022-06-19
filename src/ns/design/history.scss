@@ -1,123 +1,129 @@
 @use "./Variables.scss" as V;
 
-
 .historyComponent {
-    font-family: V.$ns-common-font;
-    margin: 10px 50px;
+  font-family: V.$ns-common-font;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 800px;
+  .main-historysection-container {
+    .split-layout-divider {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
 
-    .main-historysection-container {
-
-        .split-layout-divider {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
-
-            .section-content-1 {
-                h2 {
-                    font-size: 30pt;
-                }
-
-                p {
-                    margin-bottom: 30px;
-                    font-size: 15pt;
-                }
-
-                button {
-                    @include V.common_btn();
-                }
-
-                img {
-                    border: 1px solid #000;
-                    width: 100vmin;
-                    height: 100vmin;
-
-                }
-            }
-
-            .section-content-2 {
-                position: relative;
-                max-width: 1200px;
-                margin: 0 auto;
-
-                .content-container {
-                    padding: 10px 40px;
-                    position: relative;
-                    background-color: inherit;
-                    width: 50%;
-                }
-
-                .content-container::after {
-                    content: '';
-                    position: absolute;
-                    width: 25px;
-                    height: 25px;
-                    right: -17px;
-                    background-color: #000;
-                    border: 4px solid #68f709;
-                    top: 15px;
-                    border-radius: 50%;
-                    z-index: 1;
-                }
-
-                .left {
-                    left: 0;
-                }
-
-                .left::before {
-                    content: " ";
-                    height: 0;
-                    position: absolute;
-                    top: 22px;
-                    width: 0;
-                    z-index: 1;
-                    right: 30px;
-                    border: medium solid #000;
-                    border-width: 10px 0 10px 10px;
-                    border-color: transparent transparent transparent #000;
-                }
-                
-                
-                .right {
-                    left: 50%;
-                }
-
-                .right::before {
-                    content: " ";
-                    height: 0;
-                    position: absolute;
-                    top: 22px;
-                    width: 0;
-                    z-index: 1;
-                    left: 30px;
-                    border: medium solid #000;
-                    border-width: 10px 10px 10px 0;
-                    border-color: transparent #000 transparent transparent;
-                }
-
-                .right::after {
-                    left: -16px;
-                }
-
-                .content {
-                    border: #000 1px solid;
-                    padding: 20px 30px;
-                    background-color: #fff;
-                    position: relative;
-                    border-radius: 6px;
-                }
-                
-            }
-
-            .section-content-2::after {
-                content: '';
-                position: absolute;
-                width: 6px;
-                background-color: #000;
-                top: 0;
-                bottom: 0;
-                left: 50%;
-                margin-left: -3px;
-            } 
+      .section-content-1 {
+        opacity: 0;
+        transform: translateX(-100px);
+        margin-left: 30px;
+        h2 {
+          font-size: 30pt;
         }
+
+        p {
+          margin-bottom: 30px;
+          font-size: 15pt;
+        }
+
+        button {
+          @include V.common_btn();
+        }
+
+        .img-container {
+          background-image: linear-gradient(to top, #000, #4084e9, #2473e9);
+
+          background-size: cover;
+          background-repeat: no-repeat;
+          margin-top: 20px;
+          width: 550px;
+          height: 500px;
+        }
+      }
+
+      .section-content-2 {
+        opacity: 0;
+        transform: translateX(-100px);
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .content-container {
+          padding: 10px 40px;
+          position: relative;
+          background-color: inherit;
+          width: 50%;
+        }
+
+        .content-container::after {
+          content: "";
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          right: -17px;
+          background-color: #000;
+          border: 4px solid #68f709;
+          top: 15px;
+          border-radius: 50%;
+          z-index: 1;
+        }
+
+        .left {
+          left: 0;
+        }
+
+        .left::before {
+          content: " ";
+          height: 0;
+          position: absolute;
+          top: 22px;
+          width: 0;
+          z-index: 1;
+          right: 30px;
+          border: medium solid #000;
+          border-width: 10px 0 10px 10px;
+          border-color: transparent transparent transparent #000;
+        }
+
+        .right {
+          left: 50%;
+        }
+
+        .right::before {
+          content: " ";
+          height: 0;
+          position: absolute;
+          top: 22px;
+          width: 0;
+          z-index: 1;
+          left: 30px;
+          border: medium solid #000;
+          border-width: 10px 10px 10px 0;
+          border-color: transparent #000 transparent transparent;
+        }
+
+        .right::after {
+          left: -16px;
+        }
+
+        .content {
+          border: #000 1px solid;
+          padding: 20px 30px;
+          background-color: #fff;
+          position: relative;
+          border-radius: 6px;
+        }
+      }
+
+      .section-content-2::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        background-color: #000;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+      }
     }
+  }
 }

@@ -30,7 +30,7 @@ const enum RouterLifeCycle {
 };
 
 
-export type MainRoutes = "home" | "about" | "blog" | "academics" | "pagenotfound";
+export type MainRoutes = "home" | "about" | "blog" | "academics" | "pagenotfound" | "insights";
 type NavigationState = "towards" | "AwayFrom" | "static";
 
 

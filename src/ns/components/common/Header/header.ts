@@ -14,6 +14,26 @@ export function _navigateToBasePage() {
 
     WebMainInstance.FrameRouter.NavigateToRoute("home", { data: "" });
 }
+export function _navigateToAcademicsPage() {
+    const __activeRouteLink = document.querySelector(".active-link");
+    __activeRouteLink!.classList.remove("active-link");
+
+    const __incomingRouterLink = document.querySelector("#academics-nav-control a")! as HTMLDivElement
+    __incomingRouterLink.classList.add("active-link");
+
+    WebMainInstance.FrameRouter.NavigateToRoute("academics", { data: "" });
+}
+export function _navigateToAboutusPage() {
+    const __activeRouteLink = document.querySelector(".active-link");
+    __activeRouteLink!.classList.remove("active-link");
+
+    const __incomingRouterLink = document.querySelector("#about-nav-control a")! as HTMLDivElement
+    __incomingRouterLink.classList.add("active-link");
+
+    WebMainInstance.FrameRouter.NavigateToRoute("about", { data: "" });
+}
+
+
 
 
 
