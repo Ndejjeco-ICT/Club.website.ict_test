@@ -1,5 +1,5 @@
 const path = require('path')
-
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 /**
  * @param {string} source
  */
@@ -43,8 +43,29 @@ const _WebPackConfiguration = {
     },
     output: {
         filename: "development.js",
-        path : path.resolve(__dirname,"./.devcontainer/ns/browser")
+        path : path.resolve(__dirname,"./.devcontainer/ns/browser"),
+        clean: true,
     },
+    plugins : [
+        new HtmlWebpackPlugin({
+            filename: 'workload.html',
+            templateContent: `
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <!--Font Awesome-->
+                <link rel="stylesheet" href="./fontAwesome/css/all.css">
+            </head>
+            <body>
+                <!--The startup webcomponet to be initially loaded-->
+                <ns-root></ns-root>
+            </body>
+            </html>
+            `
+          })
+    ],
     stats : {
         modules : true,
         errors  : true,

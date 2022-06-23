@@ -23,16 +23,17 @@
                 }
                 .content-card-layouts {
                     display: grid;
-                    grid-template-columns: 50% 50%;   
-                    grid-template-rows: 50% 50%;
+                    grid-template-columns: 1fr 1fr;   
+                    grid-template-rows: 1fr 1fr;
                     grid-row-gap: 20px;
 
                     .card {
                         border-left: solid 1px #000;
                         margin: auto;
-                        padding: 0 30%;
+                        padding: 0;
     
                         img {
+                            max-width: 100%;
                             border: solid 1px #000;
                             width: 300px;
                             height: 300px;
