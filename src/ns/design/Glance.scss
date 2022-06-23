@@ -65,8 +65,10 @@ ns-x-glance .xb-glance-component {
                         height: 400px;
                         width: 600px;
                         margin-left: 50px;
+                        margin-top: 20px;
                         background-size: cover;
                         background-repeat: no-repeat;
+                        background-image:linear-gradient(to top, #000, #0000006c, #80808028);
                     }
                 }
             }

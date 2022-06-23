@@ -1,8 +1,11 @@
 import { IWebComponents } from "ns/typings/schw";
+import { createViewLinkerManger } from "ns/dom/view_linkers/view_linker";
 
 export class HistorySectionComponent extends HTMLElement implements IWebComponents {
 
     private _historySection: HTMLDivElement | null;
+    private _sec1:HTMLDivElement|null  = null;
+    private _sec2:HTMLDivElement|null  = null;
 
     constructor() {
         super();
@@ -15,7 +18,7 @@ export class HistorySectionComponent extends HTMLElement implements IWebComponen
                     <h2>History Of the School</h2>
                     <p>View the history of the school</p>
                     <button>Read more</button>
-                    <img src="#" alt="#">
+                    <div class="img-container"></div>
                 </div>
                 <div class="section-content-2">
                     <div class="content-container left">
@@ -48,7 +51,40 @@ export class HistorySectionComponent extends HTMLElement implements IWebComponen
     `
     };
     connectedCallback() {
+        this.initializeComponent()
     };
+
+    initializeComponent(){
+        this.createComponentAttachment();
+        this.__createAnimationFacilityFunction()
+    };
+    createComponentAttachment(){
+        this._historySection = this.querySelector(".historyComponent")
+        this._sec1 = this.querySelector(".historyComponent .section-content-1");
+        this._sec2 = this.querySelector(".historyComponent .section-content-2");
+    }
+    __viewLinkAnimationInset() {
+        if (this._sec1 && this._sec2) {
+          this._sec1.style.animation ="welcomeNoteAnimation_1 1.5s forwards";
+          this._sec2.style.animation ="welcomeNoteAnimation_1 1.5s forwards";
+        }
+    }
+    __createAnimationFacilityFunction(){
+        createViewLinkerManger({
+            element :this._historySection!,
+            linkPosition : 150,
+            LinkerCallbacks : {
+                inset : ()=>{
+                    this.__viewLinkAnimationInset()
+                },
+                outset : ()=>{
+
+                }
+            }
+        })
+    }
+
+    
 }
 
 customElements.define("ns-x-history", HistorySectionComponent);

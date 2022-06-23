@@ -66,5 +66,8 @@ import "@design/articlesection.scss";
 import "@design/blogsection2.scss";
 import "@design/blogsection3.scss";
 import "@design/articletopics.scss";
+import "@design/caroselslider.scss";
 
-
+//media queries
+//should be last file
+import "@design/mediaqueries.scss"

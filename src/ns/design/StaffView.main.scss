@@ -34,6 +34,8 @@ ns-x-staffview .xb-staffview {
             grid-template-rows: 1fr 3fr;
 
             .tr-view-1 {
+                opacity: 0;
+                transform: translateY(50px);
                 width: 100%;
 
                 .tr-view-1-wrapper {

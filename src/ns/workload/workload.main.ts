@@ -87,6 +87,7 @@ import "ns/components/views/Blog/article-section/articlesection";
 import "ns/components/views/Blog/blog-section2/blogsection2";
 import "ns/components/views/Blog/blog-section3/blogsection3"
 import "ns/components/views/Blog/topic-container/articletopics";
+import "ns/components/views/Blog/carosel-slider/caroselslider";
 import "ns/components/views/Blog/view.blog";
 
 
@@ -94,6 +95,7 @@ import "ns/components/views/Blog/view.blog";
  * 
  */
 
+import  "ns/components/views/Insights/view.insights"
 
 
 

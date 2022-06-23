@@ -1,10 +1,13 @@
 import { IWebComponents } from "ns/typings/schw";
 import { createViewLinkerManger } from "ns/dom/view_linkers/view_linker";
+import  {AsyncImageLoader,IIAsyncImageLoad} from "ns/dom/imageLoader/imageLoader";
 
 
 export class BannerAreaComponent extends HTMLElement implements IWebComponents {
 
     private _commonWelcomeComponentSection: HTMLDivElement | null;
+    private _bannerImageHolder:HTMLDivElement|null = null;
+    private _imageLoader:IIAsyncImageLoad|null = null;
 
     constructor() {
         super();
@@ -29,12 +32,31 @@ export class BannerAreaComponent extends HTMLElement implements IWebComponents {
     initializeComponent() {
         this.__createComponentAttachment();
         this.__createAnimationFacilityFunction();
+        this.__connectImageLoader();
+        this._requestImageLoad()
 
     }
     __createComponentAttachment() {
+        this._bannerImageHolder = this.querySelector(".ponaco-splitview-1");
         this._commonWelcomeComponentSection = this.querySelector(".welcome-note-section")
     };
+    __connectImageLoader(){
+        if(this._bannerImageHolder){
+            this._imageLoader = new AsyncImageLoader({
+                element : this._bannerImageHolder,
+                hasGradientRefill : false,
+                source : "./f4b881b628862ccf6c21.jpg",
+            })
+        }
+    }
 
+    _requestImageLoad(){
+        if(this._imageLoader){
+            setTimeout(()=>{
+                this._imageLoader!.LoadImage();
+            },100)
+        }
+    }
 
 
     /**

@@ -1,5 +1,6 @@
 import { IWebComponents } from "ns/typings/schw";
 import { createViewLinkerManger } from "ns/dom/view_linkers/view_linker";
+import { _navigateToAcademicsPage } from "ns/components/common/Header/header";
 
 
 const Template_ = document.createElement("template");
@@ -68,6 +69,7 @@ Template_.innerHTML = `
 export class GoalsBenefitsComponent extends HTMLElement implements IWebComponents {
 
     private _contentDataElementHandle: HTMLDivElement | null;
+    private _controlButton:HTMLDivElement|null = null;
 
     constructor() {
         super();
@@ -80,10 +82,12 @@ export class GoalsBenefitsComponent extends HTMLElement implements IWebComponent
     initializeComponent() {
         this._createElementHandles()
         this.__createAnimationFacilityFunction();
+        this._createEventListenerForControlButton()
     }
 
     _createElementHandles() {
         this._contentDataElementHandle = this.querySelector(".conic-section-2 .wrapper")
+        this._controlButton = this.querySelector(".conic-section-2 .wrapper .cr-xmore")
     }
 
         /**
@@ -99,6 +103,14 @@ export class GoalsBenefitsComponent extends HTMLElement implements IWebComponent
         if (this._contentDataElementHandle) {
             this._contentDataElementHandle.style.opacity = "0";
             this._contentDataElementHandle.style.transform = "translateX(-50px)";
+        }
+    }
+
+    _createEventListenerForControlButton(){
+        if(this._controlButton){
+            this._controlButton.addEventListener("click",()=>{
+                _navigateToAcademicsPage()
+            })
         }
     }
 

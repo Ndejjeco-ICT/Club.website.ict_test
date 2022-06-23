@@ -11,11 +11,12 @@ ns-x-culture .xb-culture-component {
     .xb-title-area-wrapper {
         width: 100%;
         height: 150px;
-        border: 1px solid red;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        opacity: 0;
+        transform: translateY(-100px);
 
         .xb-title-container {
             font-size: 35pt;
@@ -38,7 +39,6 @@ ns-x-culture .xb-culture-component {
     }
 
     .xb-component-wrapper {
-        border: 2px solid black;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -49,7 +49,10 @@ ns-x-culture .xb-culture-component {
             display: grid;
             grid-template-columns: auto auto auto auto auto;
             gap: 0;
-           
+
+         &:nth-child(1){
+            grid-column: 4;
+         }
 
         }
 

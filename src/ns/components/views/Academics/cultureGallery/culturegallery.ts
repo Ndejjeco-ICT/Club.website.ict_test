@@ -28,13 +28,31 @@ Template_.innerHTML = `
 `;
 
 export class CultureGallery extends HTMLElement implements IWebComponents {
+    private _titleAreaWrapper:HTMLDivElement|null = null;
     constructor() {
         super();
         this.appendChild(Template_.content.cloneNode(true))
     }
 
-    connectedCallback() {
 
+    initializeComponent(){
+        this.createComponentAttachment();
+    }
+    createComponentAttachment(){
+        this._titleAreaWrapper = this.querySelector(".xb-culture-component .xb-title-area-wrapper")
+    }
+
+    _viewInsetAnimation(){
+        this._titleAreaWrapper!.style.animation = "__studentsLife__  1.5s forwards"
+    }
+    _createAnimationFacility(){
+        if(this._titleAreaWrapper){
+            
+        }
+    }
+
+    connectedCallback() {
+        this.initializeComponent()
     }
 };
 

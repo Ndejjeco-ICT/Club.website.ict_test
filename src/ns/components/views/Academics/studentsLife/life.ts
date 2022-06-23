@@ -1,4 +1,5 @@
-import {IWebComponents} from "ns/typings/schw";
+import { createViewLinkerManger } from "ns/dom/view_linkers/view_linker";
+import { IWebComponents } from "ns/typings/schw";
 
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
@@ -37,17 +38,52 @@ Template_.innerHTML = `
 </div>
 `;
 
-
 export class Life extends HTMLElement implements IWebComponents {
-    constructor() {
-        super();
-        this.appendChild(Template_.content.cloneNode(true))
+  private _controlElement: HTMLDivElement | null = null;
+  constructor() {
+    super();
+    this.appendChild(Template_.content.cloneNode(true));
+  }
+
+  connectedCallback() {
+    this.initalizeComponent();
+  }
+  initalizeComponent() {
+    this._createComponentAttachment();
+    this._createAnimationFacility();
+  }
+  _createComponentAttachment() {
+    this._controlElement = this.querySelector(
+      ".xb-life-component .xb-component-wrapper"
+    );
+  }
+  _viewInsetAnimation() {
+    if (this._controlElement) {
+      this._controlElement.style.animation = "__studentsLife__ 1.5s forwards";
     }
-
-    connectedCallback() {
-
+  }
+  _viewOutsetAnimation() {
+    if (this._controlElement) {
+      this._controlElement.style.opacity = "0";
+      this._controlElement.style.transform = "translateY(-100px)";
+      this._controlElement.style.animation = "";
     }
-};
+  }
 
+  _createAnimationFacility() {
+    if (this._controlElement) {
+      createViewLinkerManger({
+        element: this._controlElement,
+        linkPosition: 150,
+        LinkerCallbacks: {
+          inset: () => {
+            this._viewInsetAnimation();
+          },
+          outset: () => {},
+        },
+      });
+    }
+  }
+}
 
-customElements.define("ns-x-life",Life)
+customElements.define("ns-x-life", Life);

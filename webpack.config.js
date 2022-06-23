@@ -44,7 +44,6 @@ const _WebPackConfiguration = {
     output: {
         filename: "development.js",
         path : path.resolve(__dirname,"./.devcontainer/ns/browser"),
-        clean: true,
     },
     plugins : [
         new HtmlWebpackPlugin({
@@ -72,9 +71,6 @@ const _WebPackConfiguration = {
         moduleTrace: true,
     },
     devServer: {
-        static: {
-            directory : path.join(__dirname,"./.devcontainer/ns")
-        },
         compress: true,
         port : 9000
     },
