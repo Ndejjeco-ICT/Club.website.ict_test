@@ -43,7 +43,8 @@ const _WebPackConfiguration = {
     },
     output: {
         filename: "development.js",
-        path : path.resolve(__dirname,"./.devcontainer/ns/browser"),
+        path : path.resolve(__dirname,"./dist"),
+        // clean:true,
     },
     stats : {
         modules : true,
@@ -51,7 +52,6 @@ const _WebPackConfiguration = {
         moduleTrace: true,
     },
     devServer: {
-        compress: true,
         port : 9000
     },
     watch: true,

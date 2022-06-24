@@ -53,13 +53,11 @@ export class Life extends HTMLElement implements IWebComponents {
     this._createAnimationFacility();
   }
   _createComponentAttachment() {
-    this._controlElement = this.querySelector(
-      ".xb-life-component .xb-component-wrapper"
-    );
+    this._controlElement = this.querySelector(".xb-life-component .xb-component-wrapper");
   }
   _viewInsetAnimation() {
     if (this._controlElement) {
-      this._controlElement.style.animation = "__studentsLife 1.5s forwards";
+      this._controlElement.style.animation = "__studentsLife__ 1.5s forwards";
     }
   }
   _viewOutsetAnimation() {
@@ -79,7 +77,9 @@ export class Life extends HTMLElement implements IWebComponents {
           inset: () => {
             this._viewInsetAnimation();
           },
-          outset: () => {},
+          outset: () => {
+
+          },
         },
       });
     }

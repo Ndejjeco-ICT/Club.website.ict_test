@@ -14,7 +14,7 @@ Template_.innerHTML = `
             </div>
             <div class="xtr-content-mgr">
                 <div class="wrapper">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat quae commodi pariatur. Unde, iste delectus officia aliquid 
+                    , iste delectus officia aliquid 
                 </div>
             </div>
         </div>
