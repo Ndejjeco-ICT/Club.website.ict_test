@@ -5,49 +5,55 @@ ns-x-titleholder {
 }
 
 ns-x-titleholder .title-content {
-    width: fit-content;
     padding-top: 100px;
 
     .content-x {
-        h1 {
-            font-size: 30pt;
-        }
+        width: 100%;
+        font-size: 55pt;
+        width: 500px;
+        font-weight: 300;
+        margin-bottom: 30px;
+        text-decoration: underline;
     }
     .content-y {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
+        @include V.flex-grid();
+        line-height: 60px;
 
         .text-content {
-            p {
-                font-size: 20pt;
+            font-size: 25pt;
+
+            button {
+                margin-top: 20px;
+                @include V.common_btn();
             }
         }
 
         .picture-content {
+            @include V.flex-box();
+
             img {
+                max-width: 100%;
                 position: relative;
-                width: 200px;
-                height: 200px;
             }
             .img-selector {
                 background-image: url("../design/Imgs/aziz-acharki-gXndgCS-CGo-unsplash.jpg");
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
-                background-attachment: fixed; 
             }
             .img1 {
-                left: 30px;
-                bottom: 30px;
+                width: 200px;
+                height: 250px;
                 z-index: -1;
             }
             .img2 {
-                height: 250px;
-                width: 250px;
+                height: 300px;
+                width: 300px;
                 z-index: 1;
             }
             .img3 {
+                width: 200px;
+                height: 250px;
                 bottom: 30px;
                 right: 30px;
                 z-index: -1;

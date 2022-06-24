@@ -5,7 +5,7 @@ Template_.innerHTML = `
 <div class="blog-section-3">
 <div class="prime-article">
     <div class="prime-text">
-        <h2>Article of the week</h2>
+        <h2>Moment of the week</h2>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente repellendus, fugit iusto sint molestiae
             optio quasi eligendi aperiam voluptate. Quibusdam velit
             neque alias iste autem optio quas, eveniet expedita atque.</p>

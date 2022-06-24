@@ -1,24 +1,29 @@
 @use "./Variables.scss" as V;
 
 .main-article-content {
-    h1 {
-        font-size: 30pt;
+    margin-top: 40px;
+
+    .article-content-title {
+        text-align: center;
+        font-size: 35pt;
+        margin-bottom: 30px;
     }
 
     .article-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 8em;
-        padding-right: 8em;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 8em;
 
         .article-card {
+            max-width: 100%;
+            width: 30%;
             border: 1px solid blue;
-            width: 1fr;
             height: 2fr;
-            padding: 2em;
+            padding: 20px;
 
             .card-picture {
                 img {
