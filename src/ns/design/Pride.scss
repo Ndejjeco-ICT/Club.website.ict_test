@@ -7,9 +7,9 @@ ns-x-pride {
 }
 
 ns-x-pride .pride-x-component {
-    height: 600px;
+    height: 500px;
     // width: inherit;
-
+    background-color: black;
     display: flex;
     flex-direction: column;
     font-family: V.$ns-common-font;
@@ -25,12 +25,16 @@ ns-x-pride .pride-x-component {
             width: 100%;
             height: 200px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: #000;
+            color: #fff;
             text-decoration: double;
             text-decoration-color: #fff;
-
+            .xtr-2{
+                font-size: 13pt;
+                color: rgba(255, 255, 255, 0.63);
+            }
 
             .welcome-text-wrapper {
                 font-size: 70pt;
@@ -59,15 +63,15 @@ ns-x-pride .pride-x-component {
                 border: 3px solid #000;
                 background-color: #fff;
                 color: #000;
-                transition: width .8s;
-                height: 50px;
-                width: 160px;
+                transition:all .8s;
+                height: 60px;
+                width: 170px;
                 border-radius: 10px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 14pt;
-                font-weight: 360;
+                font-size: 15pt;
+                font-weight: bold;
                 cursor: pointer;
 
                 &:hover {
@@ -77,6 +81,7 @@ ns-x-pride .pride-x-component {
                 }
 
                 &:active {
+                    
                     transform: scale(0.8);
                 }
             }

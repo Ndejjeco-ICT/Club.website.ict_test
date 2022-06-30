@@ -124,7 +124,7 @@ export class GoalsBenefitsComponent extends HTMLElement implements IWebComponent
                         this.__viewLinkAnimationInset()
                     },
                     outset : () =>{
-                        // this.__viewLinkAnimationOutset()
+                        this.__viewLinkAnimationOutset()
                     }
                 }
             })

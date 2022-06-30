@@ -20,6 +20,9 @@ Template_.innerHTML = `
         <div class="welcome-text-wrapper">
             No Pains No Gains
         </div>
+        <div class="xtr-2">
+            #Joy&Pride
+        </div>
     </div>
     <div class="control-button-container">
         <div class="expl-button-container" title="Explore the Goodness of the School of Joy And Pride">Explore</div>
