@@ -41,10 +41,6 @@ const _WebPackConfiguration = {
             },
         ],
     },
-    output: {
-        filename: "development.js",
-        path : path.resolve(__dirname,"./.devcontainer/ns/browser"),
-    },
     plugins : [
         new HtmlWebpackPlugin({
             filename: 'workload.html',
@@ -65,25 +61,16 @@ const _WebPackConfiguration = {
             `
           })
     ],
-    stats : {
-        modules : true,
-        errors  : true,
-        moduleTrace: true,
+    output : {
+        path : path.resolve(__dirname,"./public"),
     },
     devServer: {
-        compress: true,
-        port : 9000
+        port : 9000,
+        compress : true,
+        static : {
+            directory : path.resolve(__dirname,"./public"),
+        }
     },
-    watch: true,
-    watchOptions: {
-        aggregateTimeout: 400,
-        poll: 200,
-        ignored: [
-            path.resolve(__dirname, "./src/ns/components/common"),
-            path.resolve(__dirname,"./src/ns/common"),
-            
-        ]
-    }
 }
 
 module.exports = _WebPackConfiguration;

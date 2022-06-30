@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "webpack-server" : "webpack-dev-server --config webpack.config.js",
+    "webpack-server" : "webpack-dev-server",
     "webpack-main-bundle": "webpack --config webpack.config.js",
     "compile-typescript-files": "tsc -p ./src/tsconfig.base.json",
     "serve": "webpack serve --config webpack.config.js"

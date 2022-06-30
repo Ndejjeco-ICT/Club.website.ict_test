@@ -23,6 +23,8 @@ export class NavigationHooksManager implements INavigationHook {
     didLocateToBlogRoute: IGlobalEventEmitter<NavigationHookData>;
     didLocateToAcademicsRoute: IGlobalEventEmitter<NavigationHookData>;
     didLocateToAboutRoute: IGlobalEventEmitter<NavigationHookData>;
+    didLocateToInsightsRoute: IGlobalEventEmitter<NavigationHookData>;
+
 
     constructor () {
 
@@ -30,6 +32,7 @@ export class NavigationHooksManager implements INavigationHook {
         this.didLocateToBlogRoute= new globalEventEmitter();
         this.didLocateToAcademicsRoute= new globalEventEmitter();
         this.didLocateToAboutRoute= new globalEventEmitter();
+        this.didLocateToInsightsRoute= new globalEventEmitter();
         this.registerCommonListeners();
 
     }
@@ -46,6 +49,9 @@ export class NavigationHooksManager implements INavigationHook {
             this.didLocateToAcademicsRoute.raiseEvent({data : args.data})
         })
         WebMainInstance.FrameRouter.RouterNavigationHook("blog",(args)=>{
+            this.didLocateToBlogRoute.raiseEvent({data : args.data})
+        })
+        WebMainInstance.FrameRouter.RouterNavigationHook("insights",(args)=>{
             this.didLocateToBlogRoute.raiseEvent({data : args.data})
         })
 

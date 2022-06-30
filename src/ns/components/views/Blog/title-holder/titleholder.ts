@@ -10,6 +10,7 @@ Template_.innerHTML = `
         </div>
     </div>
 </div>
+`
 
 export class Titleholder extends HTMLElement implements IWebComponents {
     constructor() {

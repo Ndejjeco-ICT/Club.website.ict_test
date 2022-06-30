@@ -2,13 +2,6 @@
 /**
  * This is startin point the whole website 
  */
-
-import { headerScreenControl,IHeaderScreenControlManager } from "ns/base/MediaQueries/ScreenControls/Services/headerControl"
-import { ServiceCollection } from "ns/base/dependencyInjection/serviceCollectionManager";
-import { Injector } from "ns/base/dependencyInjection/injector";
-import { headerInterfaceManager } from "ns/dom/Interface/HeaderIntefaceManager";
-import { footerInterfaceManager } from "ns/dom/Interface/FooterInterfaceManager";
-import {footerScreenControl,IFooterScreenControlManager} from "ns/base/MediaQueries/ScreenControls/Services/footerControl"
 import { NSRouter} from "ns/base/Router/Router";
 import { Route } from "ns/base/Router/Route";
 import { ControlIntializerInstance } from "../MediaQueries/ScreenControls/controlInitializerEvent";
@@ -27,7 +20,6 @@ export class WebMain {
 
 
     async initResources() {
-        this.attachDependenciesGraph();
         this.listenAndResolveInterfaceControlDimensions()
         this.createRouterNavigationMechanism();
         this._didInitializeResources = true;
@@ -56,20 +48,10 @@ export class WebMain {
     };
 
 
-    private attachDependenciesGraph() {
-        const InitializeDIInjectionService = this.createMainServiceInjectorControl();
-        InitializeDIInjectionService.createInstance(headerInterfaceManager);
-        InitializeDIInjectionService.createInstance(footerInterfaceManager);
-
-    }
+ 
 
 
-    private createMainServiceInjectorControl() {
-        let ServiceCollectionManager = new ServiceCollection()
-        ServiceCollectionManager.set(IHeaderScreenControlManager, new headerScreenControl());
-        ServiceCollectionManager.set(IFooterScreenControlManager, new footerScreenControl());
-        return new Injector(ServiceCollectionManager);
-    }
+  
 
 };
 

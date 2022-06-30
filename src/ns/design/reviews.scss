@@ -63,6 +63,12 @@
                             font-weight: 350;
                             font-size: 20pt;
                             color: #000000cb;
+                            &::before{
+                                content: "";
+                            }
+                            &::after{
+                                content: "";
+                            }
                         }
                     }
 

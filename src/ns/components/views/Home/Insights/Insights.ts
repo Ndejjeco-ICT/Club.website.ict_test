@@ -1,5 +1,6 @@
 import { IWebComponents } from "ns/typings/schw";
 import { createViewLinkerManger } from "ns/dom/view_linkers/view_linker";
+import { InsightsLoader } from "ns/components/views/Home/Insights/Insights.strings";
 import { addDisposableEventListener } from "ns/common/domListener"
 import { WebMainInstance } from "ns/components/root/root";
 import { MainRoutes } from "ns/base/Router/Router"
@@ -20,169 +21,7 @@ Template_.innerHTML = `
             <div class="cards-container">
                 <div class="card-wrapper-1">
                     <div class="card-wrapper-2">
-                        <div class="card-x-component">
-                            <div class="card-content">
-                                <div class="card-content-wrapper">
-                                    <div class="card-content-image cg-1"></div>
-                                    <div class="card-content-info">
-                                        <div class="x-title-1 ctrinfo">
-                                            <div class="wrapper">
-                                                Relating And Knowing Other Students
-                                            </div>
-                                        </div>
-                                        <div class="x-title-2 ctrinfo">
-                                            <div class="wrapper">
-                                                Many Students have suffered a social boundary
-                                            because of the
-                                            great wall of school which destroys there social life.
-                                            </div>
-                                        </div>
-                                        <div class="x-title-btn">
-                                            <div class="x-btn-wrapper ctrinfo">
-                                                <div class="sl-button">&RightArrow;</div>
-                                                <div class="sl-text">Read More From Interact Club.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-x-component">
-                            <div class="card-content">
-                                <div class="card-content-wrapper">
-                                    <div class="card-content-image cg-2"></div>
-                                    <div class="card-content-info">
-                                        <div class="x-title-1 ctrinfo">
-                                            <div class="wrapper">
-                                                Relating And Knowing Other Students
-                                            </div>
-                                        </div>
-                                        <div class="x-title-2 ctrinfo">
-                                            <div class="wrapper">
-                                                Many Students have suffered a social boundary
-                                            because of the
-                                            great wall of school which destroys there social life.
-                                            </div>
-                                        </div>
-                                        <div class="x-title-btn">
-                                            <div class="x-btn-wrapper ctrinfo">
-                                                <div class="sl-button">&RightArrow;</div>
-                                                <div class="sl-text">Read More From Interact Club.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-x-component">
-                            <div class="card-content">
-                                <div class="card-content-wrapper">
-                                    <div class="card-content-image cg-3"></div>
-                                    <div class="card-content-info">
-                                        <div class="x-title-1 ctrinfo">
-                                            <div class="wrapper">
-                                                Relating And Knowing Other Students
-                                            </div>
-                                        </div>
-                                        <div class="x-title-2 ctrinfo">
-                                            <div class="wrapper">
-                                                Many Students have suffered a social boundary
-                                            because of the
-                                            great wall of school which destroys there social life.
-                                            </div>
-                                        </div>
-                                        <div class="x-title-btn">
-                                            <div class="x-btn-wrapper ctrinfo">
-                                                <div class="sl-button">&RightArrow;</div>
-                                                <div class="sl-text">Read More From Interact Club.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-x-component">
-                            <div class="card-content">
-                                <div class="card-content-wrapper">
-                                    <div class="card-content-image cg-4"></div>
-                                    <div class="card-content-info">
-                                        <div class="x-title-1 ctrinfo">
-                                            <div class="wrapper">
-                                                Relating And Knowing Other Students
-                                            </div>
-                                        </div>
-                                        <div class="x-title-2 ctrinfo">
-                                            <div class="wrapper">
-                                                Many Students have suffered a social boundary
-                                            because of the
-                                            great wall of school which destroys there social life.
-                                            </div>
-                                        </div>
-                                        <div class="x-title-btn">
-                                            <div class="x-btn-wrapper ctrinfo">
-                                                <div class="sl-button">&RightArrow;</div>
-                                                <div class="sl-text">Read More From Interact Club.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-x-component">
-                            <div class="card-content">
-                                <div class="card-content-wrapper">
-                                    <div class="card-content-image cg-5"></div>
-                                    <div class="card-content-info">
-                                        <div class="x-title-1 ctrinfo">
-                                            <div class="wrapper">
-                                                Relating And Knowing Other Students
-                                            </div>
-                                        </div>
-                                        <div class="x-title-2 ctrinfo">
-                                            <div class="wrapper">
-                                                Many Students have suffered a social boundary
-                                            because of the
-                                            great wall of school which destroys there social life.
-                                            </div>
-                                        </div>
-                                        <div class="x-title-btn">
-                                            <div class="x-btn-wrapper ctrinfo">
-                                                <div class="sl-button">&RightArrow;</div>
-                                                <div class="sl-text">Read More From Interact Club.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-x-component">
-                            <div class="card-content">
-                                <div class="card-content-wrapper">
-                                    <div class="card-content-image cg-6"></div>
-                                    <div class="card-content-info">
-                                        <div class="x-title-1 ctrinfo">
-                                            <div class="wrapper">
-                                                Relating And Knowing Other Students
-                                            </div>
-                                        </div>
-                                        <div class="x-title-2 ctrinfo">
-                                            <div class="wrapper">
-                                                Many Students have suffered a social boundary
-                                            because of the
-                                            great wall of school which destroys there social life.
-                                            </div>
-                                        </div>
-                                        <div class="x-title-btn">
-                                            <div class="x-btn-wrapper ctrinfo">
-                                                <div class="sl-button">&RightArrow;</div>
-                                                <div class="sl-text">Read More From Interact Club.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-              
+                       
                     </div>
                 </div>
             </div>
@@ -190,13 +29,14 @@ Template_.innerHTML = `
     </div>
 </div>
 
+
 `
 
 export class InsightsComponent extends HTMLElement implements IWebComponents {
 
     private _cardElementHandlers: NodeListOf<HTMLDivElement> | null;
 
-
+    private _cardWrapper:HTMLDivElement|null = null;
 
     //hovered elements
     private _cardMajorDataElementHandlers: NodeListOf<HTMLDivElement> | null = null;
@@ -213,9 +53,16 @@ export class InsightsComponent extends HTMLElement implements IWebComponents {
     }
 
     initializeComponent() {
+        this._preloadInsightElements()
         this._createComponentAttachments();
         this._createAnimationFacilityFunction();
-        this._createEventListenerForInsightsInfo()
+    }
+    _preloadInsightElements(){
+        this._cardWrapper = this.querySelector(".card-wrapper-2");
+
+        if(this._cardWrapper){
+            new InsightsLoader(this._cardWrapper)
+        }
     }
     _createComponentAttachments() {
         this._cardElementHandlers = this.querySelectorAll<HTMLDivElement>(".card-x-component");
@@ -223,17 +70,6 @@ export class InsightsComponent extends HTMLElement implements IWebComponents {
         this._cardMinorDataElementHandlers = this.querySelectorAll<HTMLDivElement>(".card-x-component .card-content .card-content-wrapper .card-content-info .x-title-2")
 
     };
-
-    //settup event listeners
-    _createEventListenerForInsightsInfo() {
-        if(this._cardMajorDataElementHandlers){
-            this._cardMajorDataElementHandlers.forEach((_e)=>{
-                _e.addEventListener("click",()=>{
-                    WebMainInstance.FrameRouter.NavigateToRoute("insights",{data : ""})
-                })
-            })
-        }
-    }
 
     _createAnimationFacilityFunction() {
     if (this._cardElementHandlers) {

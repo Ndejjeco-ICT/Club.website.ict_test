@@ -13,22 +13,21 @@ export const ReviewsData:IReviewsData[] = [
 
     {
         data : `
-
-            Kalema Pius
+            Silence and Smile are two powerfull tools. Simile is the best wat to solve many probles and Silence is the best way to Avoid many problems
         `,
         position : 0
     },
     {
         data : `
 
-            Muje
+            Be the best for yourself its better to achieve sucess rather than showing
         `,
         position : 1
     },
     {
         data : `
 
-            kio
+            As s student, it is important to have and aim ib life and to acquire all possible knowledge towards a goal.
         `,
         position : 2
     }
