@@ -40,57 +40,69 @@ const InsightDefaultTemplate = `
 `
 
 export const InsightsStrings:IInsightsString[] = [
+    
 
-    {
-        title: "Interact Club",
-        componentPictureSrc: "",
-        mainDescription : "Service above self.",
-        shortDescription : "Serving others beyond self, from an idea introduced during a fellowship, ideas exchanged and ideas turned to reality",
-        onClickCallback: () => {
-            
-        },
-        key : "cr1"
-    },
-    {
-        title: "Junior Achievement Club",
-        mainDescription : "Business and Skills.",
-        componentPictureSrc: "",
-        shortDescription : "Developing business skills in young people and strengthening the existing and coming generation through making job creators and not seekers ",
-        onClickCallback: () => {
-            
-        },
-        key : "cr2"
-
-    },
     {
         title: "The Student's Council",
-        componentPictureSrc: "https://github.com/Ndejjeco-ICT/Club.website.ict/blob/main/public/img/Home/insights/sc.JPG",
+        componentPictureSrc: "./img/Home/insights/Clubs/council.jpg",
         mainDescription : "To prepare and produce disciplined, patriotic and self reliant citizens for National Development.",
         shortDescription : "The struggle for liberation",
         onClickCallback: () => {
             
         },
-        key : "cr3"
+        key : "cg-3"
+    },
+    {
+        title: "WOPI",
+        componentPictureSrc: "./img/Home/insights/Clubs/becky.jpg",
+        mainDescription : "To prepare and produce disciplined, Ladies",
+        shortDescription : "Women of Purpose",
+        onClickCallback: () => {
+            
+        },
+        key : "cg-6"
+    },
+    {
+        title: "Interact Club",
+        componentPictureSrc: "./img/Home/insights/Clubs/Interact_Club.jpg",
+        mainDescription : "Serving others beyond self, from an idea introduced during a fellowship, ideas exchanged and ideas turned to reality",
+        shortDescription : "Service above self.",
+        onClickCallback: () => {
+            console.log("---main--interact")
+        },
+        key : "cg-1"
     },
     {
         title: "Genuine Writers",
         mainDescription : "Bringing information and all you need to know close to you.",
-        componentPictureSrc: "",
+        componentPictureSrc: "./img/Home/insights/Clubs/writers1.jpg",
         shortDescription : "From Ink Came Power",
         onClickCallback: () => {
             
         },
-        key : "cr4"
+        key : "cg-4"
     },
     {
-        title  : "ICT club",
+        title: "Junior Achievement Club",
+        mainDescription : "Developing business skills in young people. and strengthening the existing and coming generation.",
+        componentPictureSrc: "./img/Home/insights/Clubs/Junior_AchievemenT1.JPG",
+        shortDescription : "Business and Skills. ",
+        onClickCallback: () => {
+            
+        },
+        key : "cg-2"
+
+    },
+   
+    {
+        title  : "Clubs Forum",
         mainDescription : "",
-        shortDescription : "We Code the Future",
-        componentPictureSrc : "A future where all we see, do and love , technology has solved.",
+        shortDescription : "With Great Power Comes Great Responsiblity.",
+        componentPictureSrc : "./img/Home/insights/Clubs/Clubs_forum.jpg",
         onClickCallback : ()=>{
 
         },
-        key : "cr5"
+        key : "cg-5"
     }
 ]
 
@@ -117,7 +129,7 @@ export class InsightsLoader  {
         <div class="card-x-component ${__element.key}">
         <div class="card-content">
             <div class="card-content-wrapper">
-                <div class="card-content-image"></div>
+                <div class="card-content-image  "></div>
                 <div class="card-content-info">
                     <div class="x-title-1 ctrinfo">
                         <div class="wrapper">
@@ -146,13 +158,18 @@ export class InsightsLoader  {
 
 
         const __holdingElement = document.querySelector<HTMLDivElement>(`.${__element.key}`)!;
-        const __hostInfoElement = __holdingElement.querySelector<HTMLDivElement>(".card-content-info");
+        const __hostInfoElement = __holdingElement.querySelector<HTMLDivElement>(".card-content-info")
         const __hostImageElment = __holdingElement.querySelector<HTMLDivElement>(".card-content-image")
-
         __hostInfoElement!.addEventListener("click",()=>{
             __element.onClickCallback();
         })
-        __hostImageElment!.style.backgroundImage = `url(${__element.componentPictureSrc})`
+        __hostImageElment!.style.backgroundImage = `linear-gradient(
+            to top,
+            #000,
+            #00000056,
+            #80808000,
+            #80808000
+          ),url(${__element.componentPictureSrc})`
 
     }
 

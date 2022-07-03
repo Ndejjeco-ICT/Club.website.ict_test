@@ -27,7 +27,10 @@ ns-x-quote .ponaco-splitview-6 {
     .wx-component-6 {
         width: 100%;
         height: var(--ns-content-size);
-        // background-image: url("../resources/vision.jpg");
+        background-image: url("./Imgs/quote.jpg");
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
          
         @include V.center();
 
@@ -41,11 +44,12 @@ ns-x-quote .ponaco-splitview-6 {
             .x-content-1 {
                 font-weight: 350;
                 font-size: var(--ns-major-Fontsize);
-                max-width: 950px;
+                max-width: 980px;
                 text-align: center;
                 margin-left: 20px;
                 margin-right: 20px;
                 margin-bottom: 20px;
+                color: #fff;
 
                 //    color: rgb(233, 233, 233);
                 &::before {

@@ -5,16 +5,20 @@ const Template_ = document.createElement("template");
 Template_.innerHTML = `
 
 <div class="xtr-component">
+    <div class="subo">
+        <div class="tl1"></div>
+        <div class="tl2"></div>
+    </div>
     <div class="xtr-wrapper">
         <div class="ctr-content">
             <div class="xtr-title-provider">
                 <div class="wrapper">
-                    Ndejje's Mission
+                   ...Our Mission...
                 </div>
             </div>
             <div class="xtr-content-mgr">
                 <div class="wrapper">
-                    , iste delectus officia aliquid 
+                <span class="cl1">T</span>o nurture highly knowledgeable and productive <span>citizens</span> through holistic education based on <span>Christ</span>ian values for socio-economic transformation.
                 </div>
             </div>
         </div>

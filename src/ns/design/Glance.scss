@@ -6,7 +6,11 @@ ns-x-glance {
 
 ns-x-glance .xb-glance-component {
     width: 100%;
-    height: fit-content;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 ns-x-glance .xb-glance-component {

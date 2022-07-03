@@ -1,6 +1,7 @@
 import { IWebComponents } from "ns/typings/schw";
 import { createViewLinkerManger } from "ns/dom/view_linkers/view_linker";
 import { _navigateToAcademicsPage } from "ns/components/common/Header/header";
+import { GlBLoader } from "./goalsBLoader";
 
 
 const Template_ = document.createElement("template");
@@ -12,49 +13,25 @@ Template_.innerHTML = `
                 <div class="ctr-component-wrapper rx-component">
                     <div class="conic-section-1">
                         <div class="ctx-pictures-wrapper">
-                            <div class="ctx-pic-1 cn-pic-box">
-                                <div class="cn-picture-container cn-1"></div>
-                                <div class="cn-info-container">
-                                    <div class="cn-info-wrapper">
-                                        <div class="cn-short-title">Practice</div>
-                                        <div class="cn-short-title-2">Technology</div>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="ctx-additive-pics">
-                                <div class="ctx-pic-2 cn-pic-box">
-                                    <div class="cn-picture-container cn-2"></div>
-                                    <div class="cn-info-container">
-                                        <div class="cn-info-wrapper">
-                                            <div class="cn-short-title">Practice</div>
-                                            <div class="cn-short-title-2">Technology</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ctx-pic-3 cn-pic-box">
-                                    <div class="cn-picture-container cn-3"></div>
-                                    <div class="cn-info-container">
-                                        <div class="cn-info-wrapper">
-                                            <div class="cn-short-title">Practice</div>
-                                            <div class="cn-short-title-2">Technology</div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="conic-section-2">
                         <div class="wrapper">
-                        <div class="content-wrapper benefits-content-holder">
-                            <div class="cr-title">Building Effective Students</div>
-                            <div class="cr-description">
+                            <div class="content-wrapper benefits-content-holder">
+                                <div class="cr-title">Building Effective Students</div>
+                                <div class="cr-description">
 
-                            Our faculty lead students to reach further, to achieve their goals and to effect change in the professions and passions they pursue.
+                                    Our faculty lead students to reach further, to achieve their goals and to effect
+                                    change in the professions and passions they pursue.
 
+                                </div>
+                                <div class="cr-xmore" title="Read More about the interesting facts about Ndejje">Read
+                                    More</div>
                             </div>
-                            <div class="cr-xmore" title="Read More about the interesting facts about Ndejje">Read More</div>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -71,6 +48,10 @@ export class GoalsBenefitsComponent extends HTMLElement implements IWebComponent
     private _contentDataElementHandle: HTMLDivElement | null;
     private _controlButton:HTMLDivElement|null = null;
 
+    private _gl1Container:HTMLDivElement|null = null;
+    private _gl2Container:HTMLDivElement|null = null;
+
+
     constructor() {
         super();
         this._contentDataElementHandle = null;
@@ -82,10 +63,18 @@ export class GoalsBenefitsComponent extends HTMLElement implements IWebComponent
     initializeComponent() {
         this._createElementHandles()
         this.__createAnimationFacilityFunction();
+        this._preloadGoalCards()
         this._createEventListenerForControlButton()
+    }
+    _preloadGoalCards(){
+        if(this._gl1Container && this._gl2Container){
+            new GlBLoader(this._gl1Container,this._gl2Container);
+        }
     }
 
     _createElementHandles() {
+        this._gl1Container = this.querySelector(".ctx-pictures-wrapper");
+        this._gl2Container = this.querySelector(".ctx-additive-pics");
         this._contentDataElementHandle = this.querySelector(".conic-section-2 .wrapper")
         this._controlButton = this.querySelector(".conic-section-2 .wrapper .cr-xmore")
     }

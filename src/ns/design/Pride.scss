@@ -41,11 +41,11 @@ ns-x-pride .pride-x-component {
                 font-weight: bolder;
 
                 &::after {
-                    content: ". ";
+                    content: "... ";
                 }
 
                 &::before {
-                    content: " .";
+                    content: " ...";
                 }
             }
         }
@@ -61,7 +61,7 @@ ns-x-pride .pride-x-component {
             .expl-button-container {
                 cursor: pointer;
                 border: 3px solid #000;
-                background-color: #fff;
+                background-color: #3b8af3;
                 color: #000;
                 transition:all .8s;
                 height: 60px;
@@ -76,8 +76,7 @@ ns-x-pride .pride-x-component {
 
                 &:hover {
                     width: 190px;
-                    font-weight: 600;
-                    line-height: 10px;
+                    background-color: #fff;
                 }
 
                 &:active {

@@ -19,7 +19,7 @@ export class ReviewSection extends HTMLElement implements IWebComponents {
              
                 <div class="split-container-2">
                     <div class="split-wrapper">
-                        <h2>Students Thoughts?.</h2>
+                        <h2>Student's Thoughts?.</h2>
     
                         <div class="student-quote">
                             <p>
