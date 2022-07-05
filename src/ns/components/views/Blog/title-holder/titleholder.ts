@@ -6,6 +6,7 @@ Template_.innerHTML = `
     <div class="content-x">
         Blog
     </div>
+    <div class="tr-line"></div>
     <div class="content-y">
         <div class="text-content">
             WHERE WE WRITE ARTICLES THAT INSPIRE,<br> - THATS THE NDEJJEAN CULTURE
