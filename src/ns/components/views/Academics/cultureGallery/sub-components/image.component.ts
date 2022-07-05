@@ -1,6 +1,9 @@
 import   {IWebComponents} from "ns/typings/schw";
 
 
+
+
+
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
 <div class="xb-sub-image-component">

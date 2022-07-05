@@ -12,7 +12,7 @@ Template_.innerHTML = `
             <div class="vid-cover-poster">
                 <div class="wrapper">
                     <div class="xty-image-control">
-                        <div class="xty-ctrl"></div>
+                        <div class="xty-ctrl" title="Play">&gtrless;</div>
                     </div>
                     <div class="xty-video-control">
                         <video src="" controls id="interview-video"></video>

@@ -6,21 +6,31 @@ ns-x-awarditem {
 
 ns-x-awarditem .xb-award-item {
     font-family: V.$ns-common-font;
-    width: 250px;
-    height: 250px;
-    border: 1px solid gray;
+    width: 350px;
+    height: 350px;
+    border: 5px solid #000;
 
     .xb-wrapper-container {
-        width: inherit;
-        height: inherit;
+        border: 1px solid blue;
+        width: 350px;
+        height: 350px;
+
         .xb-icon-container {
-            height: 125px;
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
+            border: 1px solid red;
+            .xb-icon-container-wrapper {
+                width: 150px;
+                height: 150px;
+                border: 1px solid green;
+            }
         }
+
         .xb-content-section {
             height: 125px;
+            border: 1px solid black;
         }
     }
 }

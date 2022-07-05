@@ -11,6 +11,15 @@ ns-x-member .xb-cl-memeber {
         width: 280px;
         height: 280px;
         background-color: #fff;
+        border: 2px solid #fff;
+        box-shadow: rgb(0 0 0 / 36%) 0px 0px 8px 2px;
+        transition: all .5s;
+        &:active{
+            transform:perspective(40deg);
+        }
+        &:hover{
+            border-color: #0051ff;
+        }
         .xb-picture-container {
             width: 100%;
             height: 150px;
@@ -21,7 +30,7 @@ ns-x-member .xb-cl-memeber {
                 background-size: cover;
                 background-repeat: no-repeat;
                background-image: url("./Imgs/new/staffview/staffmembers/DSCN0861.JPG");
-                filter: sepia(50%);
+                
                 border-radius: 50%;
                 width: 120px;
                 height: 120px;
@@ -52,10 +61,10 @@ ns-x-member .xb-cl-memeber {
                     font-size: 13pt;
                 }
                 .xb-ct-3 {
-                    color: rgb(0, 81, 255);
+                    color: #0051ffc4;
                     margin-top: 3px;
                     font-size: 11pt;
-                    font-weight: 200;
+                    font-weight: bold;
                     &:hover{
                         cursor: pointer;
                     }
