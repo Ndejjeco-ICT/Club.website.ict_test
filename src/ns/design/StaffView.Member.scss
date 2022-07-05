@@ -10,9 +10,16 @@ ns-x-member .xb-cl-memeber {
     .xb-cl-wrapper {
         width: 280px;
         height: 280px;
-        border: 1px solid black;
-
-        border-radius: 20px;
+        background-color: #fff;
+        border: 2px solid #fff;
+        box-shadow: rgb(0 0 0 / 36%) 0px 0px 8px 2px;
+        transition: all .5s;
+        &:active{
+            transform:perspective(40deg);
+        }
+        &:hover{
+            border-color: #0051ff;
+        }
         .xb-picture-container {
             width: 100%;
             height: 150px;
@@ -23,7 +30,7 @@ ns-x-member .xb-cl-memeber {
                 background-size: cover;
                 background-repeat: no-repeat;
                background-image: url("./Imgs/new/staffview/staffmembers/DSCN0861.JPG");
-                filter: sepia(50%);
+                
                 border-radius: 50%;
                 width: 120px;
                 height: 120px;
@@ -37,24 +44,30 @@ ns-x-member .xb-cl-memeber {
         .xb-content {
             height: 130px;
             .xb-content-wrapper{
-                margin-top: 15px;
+                margin-top: 17px;
                 .xb-text{
                     margin-left: 20px;
                 }
                 .xb-ct-1 {
                     margin-top: 10px;
                     font-size: 14pt;
+                    font-weight: bold;
                 }
                 .xb-ct-2 {
-                    margin-top: 8px;
+                    margin-top: 10px;
+                    font-weight: 600;
                     line-height: 1;
                     color: #0000009a;
-                    font-size: 12pt;
+                    font-size: 13pt;
                 }
                 .xb-ct-3 {
-                    color: rgb(0, 81, 255);
+                    color: #0051ffc4;
                     margin-top: 3px;
                     font-size: 11pt;
+                    font-weight: bold;
+                    &:hover{
+                        cursor: pointer;
+                    }
                 }
 
             }

@@ -46,7 +46,7 @@ Template_.innerHTML = `
             <div class="tr-view-2">
                 <div class="tr-view-2-wrapper">
                     <div class="cl-title-area">Ndejje At A Glance</div>
-                    <div class="cl-picture-container">__image__</div>
+                    <div class="cl-picture-container"></div>
                 </div>
             </div>
         </div>

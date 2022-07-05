@@ -18,7 +18,7 @@ Template_.innerHTML = `
                         </div>
                         <div class="cl-view-2">
                             <div class="cl-content-text-holder">
-                                <div class="ty-1">Meet Our HeadTeacher</div>
+                                <div class="ty-1">The HeadTeacher</div>
                                 <div class="ty-2">On behalf of the School Administration, I welcome you all to this platform in the name of our Lord Jesus Christ and Saviour. Ndejje Senior Secondary School is one of the top Church of Uganda schools whose success is a result of the visionary leadership it has had for the last thirty years.</div>
                                 <div class="ty-3">Ndejje has distinguished itself in providing holistic Education that brings up a balanced person empowered with relevant knowledge, skills and values to be a successful National and Global citizen.</div>
                             </div>

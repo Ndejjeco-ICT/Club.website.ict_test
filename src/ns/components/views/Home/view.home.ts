@@ -12,8 +12,9 @@ export class HomeView extends HTMLElement implements IWebComponents {
             <ns-x-insights></ns-x-insights>
             <ns-x-edu></ns-x-edu>
             <ns-x-reviews></ns-x-reviews>
-            <ns-x-quote></ns-x-quote>
             <ns-x-mission></ns-x-mission>
+            <ns-x-quote></ns-x-quote>
+          
 
         `
     }

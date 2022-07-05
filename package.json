@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "webpack-server" : "webpack-dev-server --config webpack.config.js",
+    "webpack-server" : "webpack-dev-server",
     "webpack-main-bundle": "webpack --config webpack.config.js",
     "compile-typescript-files": "tsc -p ./src/tsconfig.base.json",
     "serve": "webpack serve --config webpack.config.js"
@@ -33,6 +33,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "gulp-uglify": "^3.0.2",
+    "html-webpack-plugin": "^5.5.0",
     "mocha": "^9.2.2",
     "sass": "^1.50.0",
     "sass-loader": "^12.6.0",

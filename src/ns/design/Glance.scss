@@ -6,7 +6,11 @@ ns-x-glance {
 
 ns-x-glance .xb-glance-component {
     width: 100%;
-    height: fit-content;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 ns-x-glance .xb-glance-component {
@@ -66,9 +70,9 @@ ns-x-glance .xb-glance-component {
                         width: 600px;
                         margin-left: 50px;
                         margin-top: 20px;
-                        background-size: cover;
+                        background-size: contain;
                         background-repeat: no-repeat;
-                        background-image:linear-gradient(to top, #000, #0000006c, #80808028);
+                        background-image: url('./Imgs/new/_glance.JPG');
                     }
                 }
             }

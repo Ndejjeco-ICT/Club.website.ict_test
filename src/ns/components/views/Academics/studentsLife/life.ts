@@ -6,13 +6,13 @@ Template_.innerHTML = `
 <div class="xb-life-component">
     <div class="xb-component-wrapper">
         <div class="xb-title-area-wrapper">
-            <div class="xb-title-container">Student's Life</div>
+            <div class="xb-title-container">...Life of Students...</div>
         </div>
         <div class="xb-split-view">
             <div class="xb-split-view-wrapper">
                 <div class="xb-split-view-1 split-component">
-                    <div class="xb-split-component xb-picture-container">
-                        <div class="split-wrapper"></div>
+                    <div class="xb-split-component xb-picture-container xl-q">
+                        <div class="split-wrapper">failure is success if we learn from it.</div>
                     </div>
                     <div class="xb-split-component xb-content">
                         <div class="split-wrapper">
@@ -26,8 +26,8 @@ Template_.innerHTML = `
                             At breakfast, students are served with milk tea along with eats on Tuesday (Doughnuts), Thursday (chapattis), and Saturday (Buns) Sunday (chapattis/Eggs/Maize
                         </div>
                     </div>
-                    <div class="xb-split-component xb-picture-container">
-                        <div class="split-wrapper"></div>
+                    <div class="xb-split-component xb-picture-container xl-p">
+                        <div class="split-wrapper">What we learn becomes part of who we are.</div>
                     </div>
                 </div>
 
@@ -53,9 +53,7 @@ export class Life extends HTMLElement implements IWebComponents {
     this._createAnimationFacility();
   }
   _createComponentAttachment() {
-    this._controlElement = this.querySelector(
-      ".xb-life-component .xb-component-wrapper"
-    );
+    this._controlElement = this.querySelector(".xb-life-component .xb-component-wrapper");
   }
   _viewInsetAnimation() {
     if (this._controlElement) {
@@ -79,7 +77,9 @@ export class Life extends HTMLElement implements IWebComponents {
           inset: () => {
             this._viewInsetAnimation();
           },
-          outset: () => {},
+          outset: () => {
+
+          },
         },
       });
     }

@@ -7,6 +7,8 @@ ns-x-culture {
 ns-x-culture .xb-culture-component {
     width: 100%;
     font-family: V.$ns-common-font;
+    height: 800px;
+    border: 1px solid red;
 
     .xb-title-area-wrapper {
         width: 100%;
@@ -15,13 +17,14 @@ ns-x-culture .xb-culture-component {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        opacity: 0;
+        // opacity: 0;
         transform: translateY(-100px);
 
         .xb-title-container {
             font-size: 35pt;
             font-weight: 300;
             width: fit-content;
+            color: black;
         }
 
         .xb-title-minor-container {
@@ -45,14 +48,9 @@ ns-x-culture .xb-culture-component {
 
         .xb-components-item-wrapper {
             border: 3px solid rebeccapurple;
-            width: fit-content;
-            display: grid;
-            grid-template-columns: auto auto auto auto auto;
-            gap: 0;
-
-         &:nth-child(1){
-            grid-column: 4;
-         }
+            display: flex;
+            flex-wrap: wrap;
+            
 
         }
 

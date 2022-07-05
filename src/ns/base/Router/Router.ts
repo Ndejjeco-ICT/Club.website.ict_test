@@ -86,12 +86,7 @@ interface IRouterOptions {
      */
     NavigateToRoute(RouteId: MainRoutes, data: any): void;
 
-    /**
-     * The Error Handles For The Router;
-     * @param callback A Callback To Be Called whenever an error occures within the ROuter
-     */
 
-    RouteErrorHandler(callback: (e: string) => void): void;
 
     /**
      * Called when navigation to a route takeplaces
@@ -173,7 +168,6 @@ export class NSRouter extends NSRouterView implements IRouterOptions {
     private _nsRouteStorage: Map<string, string>;
     private _nsRouteErrorHandler: ((e: string) => void) | null;
     private _nsRoutesArray: Route[];
-    private _nsSnychronousOptions: IRouteSnychrnousOptions | null;
     private _nsRouteNavigationHooks: Map<MainRoutes, (IROptions: IRouteNavigationHookCallbackOptions) => void>;
     private _nsRouteNavigationState: NavigationState;
     private _nsCurrrentRoute: MainRoutes;
@@ -189,7 +183,6 @@ export class NSRouter extends NSRouterView implements IRouterOptions {
         this._nsRouteNavigationState = "static";
         this._nsRouterAfterNavigationCallback = null;
         this._nsRouterBeforeNavigationCallback = null;
-        this._nsSnychronousOptions = null;
         this._nsRouteErrorHandler = null;
         this._nsRouterLifeCycle = RouterLifeCycle.Initializing;
         this._nsRouteNavigationHooks = new Map<MainRoutes, (IROptions: IRouteNavigationHookCallbackOptions) => void>();
@@ -214,6 +207,9 @@ export class NSRouter extends NSRouterView implements IRouterOptions {
         if (phase == Lifecycle.Restored) {
             this.nsRouteInitialization();
         }
+        LifeCycleEvents.onPhaseDidChange.unsubscribe(this._listenerForLifecyclEvents.bind(this));
+        
+
     }
     private nsRouteInitialization() {
         this._createStorageFoundationForAllRoutes();
@@ -237,7 +233,6 @@ export class NSRouter extends NSRouterView implements IRouterOptions {
         if (this._nsRouterAfterNavigationCallback == null) {
             this._nsRouterAfterNavigationCallback = callback;
         }
-        this.callNavigationHooks();
     }
     RouterNavigationHook(RouteId: MainRoutes, callback: (IROptions: IRouteNavigationHookCallbackOptions) => void): void {
         if (!this._nsRouteNavigationHooks.has(RouteId)) {
@@ -246,37 +241,13 @@ export class NSRouter extends NSRouterView implements IRouterOptions {
     }
     NavigateToRoute(RouteId: MainRoutes, data: any): void {
         if (this.isHashPresent(RouteId)) {
-            this._writeSynchronousRouterOptions(RouteId, data);
             this._setLocationHash(RouteId);
             this._nsCurrrentRoute = RouteId;
+        }else{
+            this._setLocationHash("pagenotfound")
         }
     };
-    private pushToStack(RouteID: MainRoutes, stack: "forwardStack" | "backwardStack") {
-        if (stack == "backwardStack") {
-            this._nsStack.backwardStack.push(RouteID)
-        } else {
-            this._nsStack.forwardStack.push(RouteID)
 
-        }
-    };
-    private disposeFromStack(RouteID: MainRoutes, stack: "forwardStack" | "backwardStack") {
-        if (stack == "backwardStack") {
-            let _index = this._nsStack.backwardStack.indexOf(RouteID);
-            this._nsStack.backwardStack.splice(_index, 1);
-        } else {
-            let _index = this._nsStack.forwardStack.indexOf(RouteID);
-            this._nsStack.forwardStack.splice(_index, 1);
-        }
-    }
-    private callNavigationHooks() {
-        if (this._nsRouteNavigationHooks.has(this._nsCurrrentRoute)) {
-            this._nsRouteNavigationHooks.get(this._nsCurrrentRoute)!({ data: this._nsSnychronousOptions!.data, navigationState: "towards" })
-            this._disposeSynchronousRouterOptions();
-        }
-    }
-    RouteErrorHandler(callback: (e: string) => void): void {
-        throw new Error("Method not implemented.");
-    };
 
     listenerForNsExchangeEvent() {
         //Initial Load;
@@ -297,20 +268,8 @@ export class NSRouter extends NSRouterView implements IRouterOptions {
 
     }
 
-    private _disposeSynchronousRouterOptions() {
-        if (this._nsSnychronousOptions) {
-            delete this._nsSnychronousOptions["data"]
+ 
 
-        }
-    }
-    private _writeSynchronousRouterOptions(routeID: MainRoutes, data: any) {
-        if (this._nsSnychronousOptions) {
-            if (this._nsSnychronousOptions["RouteId"] == undefined) {
-                this._nsSnychronousOptions["RouteId"] = routeID;
-                this._nsSnychronousOptions["data"] = data;
-            }
-        }
-    }
     private _setLocationHash(routeid: MainRoutes) {
         window.location.hash = routeid;
     }

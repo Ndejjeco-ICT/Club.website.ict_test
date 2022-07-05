@@ -7,7 +7,6 @@ class AcademicsView extends HTMLElement implements IWebComponents {
         this.innerHTML = `
         <ns-x-acdmw></ns-x-acdmw>
         <ns-x-life></ns-x-life>
-        <ns-x-acdmq></ns-x-acdmq>
         <ns-x-culture></ns-x-culture>
         <ns-x-community></ns-x-community>
         <ns-x-awards></ns-x-awards>

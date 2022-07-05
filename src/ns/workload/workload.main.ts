@@ -47,7 +47,6 @@ import "ns/components/views/Home/Quote/quote"
 import "ns/components/views/Home/Reviews/review"
 import "ns/components/views/Home/edu/edu"
 import "ns/components/views/Home/misson/misson"
-import "ns/components/views/Home/FAQ Section/FAQ"
 import "ns/components/views/Home/view.home";
 
 

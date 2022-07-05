@@ -6,7 +6,7 @@ ns-x-life {
 
 ns-x-life .xb-component-wrapper {
     width: 100%;
-    height: 700px;
+    height: 1200px;
     font-family: V.$ns-common-font;
     opacity: 0;
     transform: translateY(-100px);
@@ -31,34 +31,85 @@ ns-x-life .xb-component-wrapper {
         justify-content: center;
 
         .xb-split-view-wrapper {
-            width: 650px;
-            height: 550px;
+            width: 88%;
+            height: 900px;
+
 
             display: grid;
-            grid-template-rows: 275px 275px;
+            grid-template-rows: 475px 475px;
+
             .split-component {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                .xb-split-component {
 
-                    border: 2px solid #000;                  
+                .xb-picture-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-repeat: no-repeat;
+                    
+
+                    .split-wrapper {
+                        width: 350px;
+                        height: 350px;
+                        // backdrop-filter: blur(8px);
+                        background-color: #3b8bf391;
+                        font-size: 25pt;
+                        color: #fff;
+                        text-transform: uppercase;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        transition: all .5s;
+
+                    }
+
+                    &:hover {
+                        .split-wrapper {
+
+                            width: 550px;
+                            height: 400px;
+                            background-color: #00000091;
+                            backdrop-filter: blur(8px);
+                        }
+                    }
                 }
-                .xb-content{
-                    background-color:#2473e9 ;
+
+                .xl-q {
+                    background-size: contain;
+                    background-image: url('./Imgs/new/cloq.JPG');
+                }
+
+                .xl-p {
+                    background-size: contain;
+                    background-image: url('./Imgs/new/cloq1.JPG');
+                }
+
+
+
+
+
+
+                .xb-content {
+                    background-color: #000;
                 }
 
                 .xb-content {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
                     .split-wrapper {
+                        color: #ffffffcc;
+                        font-size: 20pt;
                         margin-left: 20px;
-                        width: fit-content;
+                        width: 500px;
                         height: fit-content;
                     }
                 }
             }
-        
+
         }
 
     }

@@ -16,8 +16,9 @@ ns-x-banner .ponaco-splitview-1 {
     border: 1px solid rgba(0, 0, 0, 0);
     width: 100%;
     font-family: V.$ns-common-font;
-    // background-image:    linear-gradient(to top, #000, #4084e9, #2473e9);
+    background-image:    url("./Imgs/new/banner/banner_sample\ 1.jpg");
     background-attachment: fixed;
+    background-position: 50% 8%;
     background-repeat: no-repeat;
     background-size: cover;
     transition: all .5s;

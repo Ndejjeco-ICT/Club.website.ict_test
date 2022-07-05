@@ -19,13 +19,11 @@ export class ReviewSection extends HTMLElement implements IWebComponents {
              
                 <div class="split-container-2">
                     <div class="split-wrapper">
-                        <h2>Students Thoughts?.</h2>
+                        <h2>Student's Thoughts?.</h2>
     
                         <div class="student-quote">
-                            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Beatae obcaecati, alias at ut vel quaerat amet minima velit minus iusto
-                                quisquam pariatur perspiciatis natus nostrum vitae officia possimus
-                                nulla suscipit".
+                            <p>
+                            Silence and Smile are two powerfull tools. Simile is the best wat to solve many probles and Silence is the best way to Avoid many problems".
                             </p>
                         </div>
     

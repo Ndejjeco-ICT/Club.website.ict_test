@@ -21,5 +21,5 @@
             ]
         },
     },
-    "exclude" : ["./scripts"]
+    "exclude" : ["./scripts","gulpfile.js","./public","webpack.config.js"]
 }

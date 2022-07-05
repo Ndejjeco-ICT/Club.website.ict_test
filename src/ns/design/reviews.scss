@@ -2,11 +2,10 @@
 
 .review-main-component {
     font-family: V.$ns-common-font;
-    margin-bottom: 100px;
 
     .main-review-container {
         width: 100%;
-
+        background-color: #000;
         .split-layout-containers {
             padding-top: 30px;
             padding-bottom: 30px;
@@ -24,10 +23,10 @@
                 justify-content: center;
 
                 .split-image-container {
-                    background-image: linear-gradient(to top, #000, #4084e9, #2473e9);
-
-                    background-size: cover;
+                    background-image:  url("./Imgs/website_images/tingey-injury-law-firm-LJhXYHxPfEY-unsplash.jpg");
+                    background-size: contain;
                     background-repeat: no-repeat;
+                    background-position: 100% 100%;
                     width: 550px;
                     height: 560px;
                 }
@@ -38,11 +37,11 @@
                     margin-top: 100px;
 
                     h2 {
-                        font-size: 38pt;
+                        font-size: 50pt;
                         font-weight: 400;
-                        text-align: right;
-                        margin-right: 100px;
-                        color: rgba(0, 0, 0, 0.884)
+                        text-align: left;
+                        margin-left: 100px;
+                        color: #fff;
                     }
 
                     .student-quote {
@@ -61,8 +60,8 @@
                             padding: 0px;
                             margin: 0px;
                             font-weight: 350;
-                            font-size: 20pt;
-                            color: #000000cb;
+                            font-size: 27pt;
+                            color: #ffffffd7;
                         }
                     }
 
@@ -77,18 +76,18 @@
                             transition: all .5s;
                             width: 15px;
                             height: 15px;
-                            border: solid 1px #000;
+                            border: solid 1px #fff;
                             border-radius: 100%;
                             margin: 0 5px 0 5px;
                         }
 
                         .carosell-1:hover {
                             cursor: pointer;
-                            background-color: #242424;
+                            background-color: #3b8af3;
                         }
 
                         .cr-active {
-                            background-color: #000;
+                            background-color: #3b8af3;
                         }
 
                         .cr-off {

@@ -1,22 +1,25 @@
 @use "./Variables.scss" as V;
+
 ns-x-vidinterview {
     display: block;
 }
 
 @keyframes rotate {
 
-    100%{
+    100% {
         transform: rotate(360deg);
     }
-    
+
 }
 
 ns-x-vidinterview .xb-vid-interview {
     font-family: V.$ns-common-font;
     width: 100%;
-    height:600px;
+    height: 600px;
     display: flex;
+    background-color: black;
     align-items: center;
+
     .xb-title-area {
         opacity: 0;
         transform: translateX(-100px);
@@ -24,10 +27,11 @@ ns-x-vidinterview .xb-vid-interview {
         margin-left: 30px;
         margin-right: 20px;
         font-size: 50pt;
-        border-left: 4px solid black;
+        color: #dbdbdb;
+        border-left: 4px solid #dbdbdb;
     }
+
     .xb-wrapper {
-        border: 1px solid red;
         height: 500px;
         width: 800px;
         margin-right: 20px;
@@ -35,38 +39,61 @@ ns-x-vidinterview .xb-vid-interview {
         .xb-content-container {
             width: inherit;
             height: inherit;
+
             .vid-cover-poster {
                 width: inherit;
                 height: inherit;
+                border: 2px solid white;
+                background-image: url("./Imgs/new/keagan-henman-e6BkcrbCvzs-unsplash.jpg");
+                background-size: contain;
+
                 .wrapper {
                     position: relative;
-                     > div{
-                         position: absolute;
+
+                    >div {
+                        position: absolute;
                     }
+
                     .xty-image-control {
-                        border: 1px solid green;
                         height: 500px;
                         width: 800px;
                         z-index: 5;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        .xty-ctrl{
+
+                        .xty-ctrl {
+                            transition: all .5s;
                             display: flex;
                             align-items: center;
                             justify-content: center;
                             border: 5px solid rgb(212, 212, 212);
-                            border-top-color: V.$ns-layout-color;
-                            width: 150px;
-                            height: 150px;
+                            // border-top-color: V.$ns-layout-color;
+                            width: 100px;
+                            height: 100px;
+                            color: #fff;
+                            font-size: 40pt;
                             border-radius: 50%;
+                            background-color: #3b8af3;
+
+                            &:hover {
+                                color: #3b8af3;
+                                background-color: #000;
+                                cursor: pointer;
+                                transform: rotate(-90deg);
+                            }
+                            &:active{
+                                transform:rotate(-90deg) scale(2);
+                                
+                            }
+
                             // animation: rotate .5s linear infinite;
                         }
                     }
+
                     .xty-video-control {
                         z-index: 3;
                         height: 500px;
-                        border: 1px solid blue;
                         width: 800px;
 
                         #interview-video {

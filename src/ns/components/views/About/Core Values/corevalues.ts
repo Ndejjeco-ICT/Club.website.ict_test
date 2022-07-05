@@ -13,7 +13,7 @@ export class CoreValuesSectionComponent extends HTMLElement implements IWebCompo
         this.innerHTML = `
         <div class="corevalues-main-section-component">
         <div class="intro-section">
-            <h2>Our Core Values</h2>
+            <h2>Our Core Values...</h2>
             <p>The core values are the guiding principles that dictate the
                 behavior and action of the Ndejje S.S.S community. Living those
                 core values helps us to determine whether we are on the right
@@ -21,6 +21,7 @@ export class CoreValuesSectionComponent extends HTMLElement implements IWebCompo
                 make us a community and a people with a difference,
                 a distinct culture, behavior and personality
             </p>
+            <div class="colium-banner-2 clb"></div>
         </div>
         <div class="main-content-container">
             <div class="wrapper">
@@ -28,7 +29,7 @@ export class CoreValuesSectionComponent extends HTMLElement implements IWebCompo
                     <div class="title-holder">
                         <h2>Excellence</h2>
                         <div class="arithmetic">
-                            <h2>01</h2>
+                            <h2>1</h2>
                         </div>
                     </div>
         
@@ -41,7 +42,7 @@ export class CoreValuesSectionComponent extends HTMLElement implements IWebCompo
                     <div class="title-holder">
                         <h2>Integrity and Time management</h2>
                         <div class="arithmetic">
-                            <h2>02</h2>
+                            <h2>2</h2>
                         </div>
                     </div>
         
@@ -51,7 +52,7 @@ export class CoreValuesSectionComponent extends HTMLElement implements IWebCompo
                     <div class="title-holder">
                         <h2>Innovativeness</h2>
                         <div class="arithmetic">
-                            <h2>03</h2>
+                            <h2>3</h2>
                         </div>
                     </div>
         
@@ -63,7 +64,7 @@ export class CoreValuesSectionComponent extends HTMLElement implements IWebCompo
                     <div class="title-holder">
                         <h2>Godliness</h2>
                         <div class="arithmetic">
-                            <h2>04</h2>
+                            <h2>4</h2>
                         </div>
                     </div>
         
@@ -73,27 +74,30 @@ export class CoreValuesSectionComponent extends HTMLElement implements IWebCompo
                 </div>
                 <div class="split-section-1">
                     <div class="title-holder">
-                        <h2>Patriotism</h2>
+                        <h2>Hard Work</h2>
                         <div class="arithmetic">
-                            <h2>05</h2>
+                            <h2>6</h2>
                         </div>
                     </div>
-        
+                
+                    <p>Make every effort to fulfill our potential to the best. Be productive even when faced with challenges.
+                    </p>
+                </div>
+                
+                <div class="split-section-1">
+                    <div class="title-holder">
+                        <h2>Patriotism</h2>
+                        <div class="arithmetic">
+                            <h2>5</h2>
+                        </div>
+                    </div>
+                
                     <p>Attaching ourselves to the country, driven by a national pride to accommodate the community’s
                         diversities.
                     </p>
                 </div>
-                <div class="split-section-1">
-                    <div class="title-holder">
-                        <h2>Hard Work</h2>
-                        <div class="arithmetic">
-                            <h2>06</h2>
-                        </div>
-                    </div>
-        
-                    <p>Make every effort to fulfill our potential to the best. Be productive even when faced with challenges.
-                    </p>
-                </div>
+                
+             
             </div>
            
         </div>

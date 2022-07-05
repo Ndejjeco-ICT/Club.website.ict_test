@@ -6,11 +6,8 @@ const Template_ = document.createElement("template");
 Template_.innerHTML  = `
 <div class="xb-academics-component">
     <div class="xb-wrapper">
-        <div class="tr-title">
-            <div class="wrapper">Academics</div>
-        </div>
-        <div class="tr-x-line"></div>
-        <div class="tr-x-description">Get To Know About Ndejje In a deeper Aspect</div>
+        <div class="tl-x-o-text">The beautiful thing about learning is that no one can take it away from you.</div>
+        <div class="xl-sub-content">...Our Academics...</div>
     </div>
 </div>
 `

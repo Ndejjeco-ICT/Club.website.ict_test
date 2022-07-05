@@ -15,10 +15,10 @@ export class HistorySectionComponent extends HTMLElement implements IWebComponen
         <div class="main-historysection-container">
             <div class="split-layout-divider">
                 <div class="section-content-1">
-                    <h2>History Of the School</h2>
-                    <p>View the history of the school</p>
-                    <button>Read more</button>
-                    <div class="img-container"></div>
+                    <h2>...Years Back...</h2>
+                    <div class="container-data-elements">
+                        We are makers of history, We are made by history
+                    </div>
                 </div>
                 <div class="section-content-2">
                     <div class="content-container left">
@@ -46,8 +46,10 @@ export class HistorySectionComponent extends HTMLElement implements IWebComponen
                     </div>
                 </div>
             </div>
+            <div class="xr-button">Read More</div>
         </div>
-    </div>
+        </div>
+    
     `
     };
     connectedCallback() {

@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
       "module" : "es2020",
-      "target"  : "amd",
+      "target"  : "ESNEXT",
       "allowJs": true,
       "moduleResolution" : "classic",
       "experimentalDecorators" : true,

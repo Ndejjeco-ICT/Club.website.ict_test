@@ -8,20 +8,27 @@ ns-x-staffview {
 ns-x-staffview .xb-staffview {
     width: 100%;
     height: 1500px;
-    margin-bottom: 100px;
 }
 
 ns-x-staffview .xb-staffview {
     font-family: V.$ns-common-font;
+
+    .xb-wrapper {
+        background-color: #e4e4e4;
+
+    }
 
     .tr-title-area-wrapper {
 
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
+        background-color: black;
+        height: 150px;
         .tr-title-container {
-            font-size: 40pt;
+            color: #fff;
+            font-size: 45pt;
         }
     }
 
@@ -34,6 +41,7 @@ ns-x-staffview .xb-staffview {
             grid-template-rows: 1fr 3fr;
 
             .tr-view-1 {
+                background-color: black;
                 opacity: 0;
                 transform: translateY(50px);
                 width: 100%;
@@ -55,7 +63,7 @@ ns-x-staffview .xb-staffview {
                             justify-content: center;
                             height: 280px;
                             width: 280px;
-                            border: 1px solid black;
+                            border: 1px solid #323232;
                             border-radius: 50%;
                         }
                     }
@@ -66,17 +74,18 @@ ns-x-staffview .xb-staffview {
                         .cl-content-text-holder {
                             margin: 70px 30px 30px 30px;
                             .ty-1 {
+                                color: #fff;
                                 font-size: 35pt;
                             }
                             .ty-2 {
-                                color: rgba(0, 0, 0, 0.795);
+                                color: rgba(221, 221, 221, 0.836);
                                 margin-top: 20px;
-                                font-size: 13pt;
+                                font-size: 16pt;
                             }
                             .ty-3 {
-                                color: rgba(0, 0, 0, 0.795);
+                                color: rgba(138, 136, 136, 0.795);
                                 margin-top: 20px;
-                                font-size: 13pt;
+                                font-size: 14pt;
                             }
                         }
                     }
@@ -86,6 +95,7 @@ ns-x-staffview .xb-staffview {
             .tr-view-2 {
                 height: fit-content;
                 width: 100%;
+                background-color: #e4e4e4;
                 .tr-content {
                     margin-top: 100px;
                     width: 100%;

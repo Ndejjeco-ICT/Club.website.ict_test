@@ -6,7 +6,8 @@ ns-x-acdmq {
 ns-x-acdmq .xb-academics-quote-component {
     font-family: V.$ns-common-font;
     width: 100%;
-    height: 250px;
+    height: 550px;
+    border: 1px solid red;
     .xb-component-wrapper {
         width: 100%;
         display: flex;

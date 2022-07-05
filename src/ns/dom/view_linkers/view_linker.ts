@@ -50,14 +50,6 @@ export class ViewLinker {
             let _elementdistanceFromTop = this._element.getBoundingClientRect().top;
 
             if (_elementdistanceFromTop < (_currentWindowHeight - this._linkPosition)) {
-                console.log("ANIMATION-ELEMENT-DETAILS",{
-                    ELEMENT_ : this._element,
-                    DISTANCE_FROM_TOP : _elementdistanceFromTop,
-                    WINDOW_HEIGHT : _currentWindowHeight,
-                    LINKER_BREAK_POSITION : this._linkPosition,
-                    PARTS_VALUE_REQ : `${_elementdistanceFromTop} <IS-LESS-THAN> -VALUE:${(_currentWindowHeight - this._linkPosition)}`,
-                    ASSERTION_TELL : _elementdistanceFromTop < (_currentWindowHeight - this._linkPosition)
-                })
                 this._dispatchInSet()
             } else {
                 this._dispatchOutSet()
