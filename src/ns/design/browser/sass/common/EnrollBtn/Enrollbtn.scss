@@ -1,0 +1,24 @@
+@use "../../common/Variables/Variables.scss"as V;
+
+ns-enroll-button {
+    display: block;
+    .enroll-ns-button{
+        cursor: pointer;
+        border: 2px solid V.$ns-layout-color;
+        color: #fff;
+        transition: all .5s;
+        background-color: V.$ns-layout-color;
+        @include V.center();
+        @include V.button();
+        &:hover{
+            background-color: unset;
+            color: #fff;
+            text-decoration: underline;
+            line-height: 10px;
+        }
+        &:active{
+            transform: scale(0.8);
+        }
+
+    }
+}

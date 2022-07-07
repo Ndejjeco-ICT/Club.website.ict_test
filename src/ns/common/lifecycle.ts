@@ -59,6 +59,9 @@ class LifeCycleManager implements ILifecycWindowEvents {
     };
     
 
+    /**
+     * Set the current Phase for the Process workflow.
+     */
     set phase(phase: Lifecycle){
         this._phase = phase;
         this.onPhaseDidChange.raiseEvent(phase);

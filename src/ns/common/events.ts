@@ -87,6 +87,11 @@ export class globalEventEmitter<K> implements IGlobalEventEmitter<K> {
     public didFireHandler:Function|null = null;
 
 
+    /**
+     * Raise Event fro global Listeners that are available
+     * @param args The Arguments to dispatch to all subscribers.
+     */
+
     raiseEvent(...args:K[]){
         if(this._eventListeners != null && this._eventListeners!.length > 0){
             this._executeSubscribersWithArgs(args);
@@ -94,6 +99,11 @@ export class globalEventEmitter<K> implements IGlobalEventEmitter<K> {
             console.warn(`Raising Event With No Subscribers ${this}`)
         }
     };
+
+    /**
+     * Call and Start Subscribers with Arguments
+     * @param args The Arguments to dispatch to all subscribers.
+     */
     protected _executeSubscribersWithArgs(args:K[]){
         let _indicator =this._eventListeners!.length;
         for(let i = 0; i < this._eventListeners!.length; i++){
@@ -104,6 +114,12 @@ export class globalEventEmitter<K> implements IGlobalEventEmitter<K> {
             }
         }
     }
+
+    /**
+     * Remeber that we we called the Fire handler.
+     * To Prevent calling it multiple times.
+     */
+
     private _invokeDidFireHandler(){
         if(this.didFireHandler != null){
             this.didFireHandler();
@@ -130,10 +146,17 @@ export class globalEventEmitter<K> implements IGlobalEventEmitter<K> {
         }
        
     };
+    /**
+     * Unsubscrbe from the event handler
+     * @param handler 
+     */
     unsubscribe(handler:IGlobalEventEmitterHandlerSubscriber<K>){
         this._deleteHandler(handler)
     }
 
+    /**
+     * Dispose the Global event Listener
+     */
     dispose(){
         this._eventListeners = null;
     }

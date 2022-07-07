@@ -1,0 +1,97 @@
+@use "../../common/Variables/Variables.scss" as V;
+
+
+
+ns-x-mission {
+    display: block;
+}
+
+ns-x-mission .xtr-component {
+
+    position: relative;
+    font-family: V.$ns-common-font;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f5f4f4;
+
+
+    &:hover{
+        .subo {
+            .tl1 {
+                width: 100% !important;
+                height: 100%;
+                opacity: 0;
+            }
+            .tl2{
+                
+                height: 50px;
+                width: 100%;
+                bottom: 0px;
+            }
+        }
+    }
+
+    .subo{
+        .tl1{
+            position:absolute;
+            bottom: 0px;
+            background-color: #000;
+            width: 150px;
+            height: 150px;
+            transition: all .5s;
+        }
+        .tl2{
+            transition: all .5s;
+            position:absolute;
+            top: 0px;
+            right: 0px;
+            background-color: #3b8af3;
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .xtr-wrapper {
+        transition: all .5s;
+        border: 1px solid #fff;
+        height: 500px;
+        width: 100%;
+        .ctr-content {
+            margin:100px 0px 0px 0px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .xtr-title-provider {
+                font-size: 48pt;
+                color: black;
+                font-weight: bold;
+            
+            }
+            .xtr-content-mgr {
+                text-align: center;
+                opacity: 0;
+                transform: translateX(-100px);
+                color: rgba(0, 0, 0, 0.938);
+                margin-top: 10px;
+                font-weight: 350;
+                font-size: 25pt;
+                .wrapper {
+                    width: 650px;
+                    
+                    span {
+                        font-size: 32pt;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        color: rgba(0, 0, 0, 0.726);
+                    }
+                }
+            }
+        }
+    }
+
+
+}

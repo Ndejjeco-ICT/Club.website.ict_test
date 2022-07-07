@@ -1,0 +1,58 @@
+@use "../../common/Variables/Variables.scss" as V;
+
+ns-x-acdmw {
+    display: block;
+}
+
+ns-x-acdmw .xb-academics-component { 
+    width: 100%;
+    height: 450px;
+}
+
+ns-x-acdmw .xb-academics-component {
+    font-family: V.$ns-common-font;
+    width: 100%;
+    height: 700px;
+
+    background-image:linear-gradient(to top, #000, #0000006c, #80808011), 
+    url("../../../Imgs/new/ma.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 100% 40%;
+    transition: all .5s;
+
+
+    .xb-wrapper {
+        height: 150px;
+        width: 60%;
+        transform: translateY(200px);
+        margin: auto;
+        text-align: center;
+        .tl-x-o-text {
+            transition: all .5s;
+            font-size: 55pt;
+            font-weight: bold;
+            color: #fff;
+            &::before{
+                content: '"';
+            }
+            &::after{
+                content: '"';
+            }
+            &:hover{
+                color:rgba(255, 255, 0, 0.836) ;
+            }
+        }
+       
+
+    }
+    .xl-sub-content {
+        width: 100%;
+        font-size: 24pt;
+        margin-top: 20px;
+        color: #c7c7c7;
+        
+    }
+
+}

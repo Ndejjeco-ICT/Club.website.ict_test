@@ -1,0 +1,234 @@
+@use "../../common/Variables/Variables.scss" as V;
+//for mobile devices
+
+// @media only screen and (max-width: 320px) {
+
+// }
+
+//for tablets and below
+@media only screen and (max-width: 768px) {
+    //benefits and goals
+    ns-x-benefits {
+        width: 100% !important;
+    }
+
+    .ctr-component-wrapper {
+        margin: 0 30px;
+        grid-template-columns: 80% 1fr !important;
+    }
+
+    //no pains no gains
+    ns-x-pride {
+        display: block;
+        width: 100%;
+    }
+
+    .welcome-text-wrapper {
+        display: block;
+        font-size: 10vw !important;
+        width: 100% !important;
+    }
+
+    //insights
+    ns-x-insights {
+        display: block;
+        width: 100%;
+    }
+
+    .card-wrapper-2 {
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: 1fr 1fr !important;
+    }
+
+
+    .card-content-image {
+        width: 80% !important;
+    }
+    .card-content-info {
+        width: 80%;
+    }
+
+    //mission
+
+
+    //edu
+    .ponaco-component-edu {
+        padding: 20px !important;
+    }
+
+
+}
+
+
+//for mobile
+@media only screen and (max-width: 425px) {
+    ns-x-benefits {
+        width: 100% !important;
+    }
+
+
+    .ctr-component-wrapper {
+        margin: 0 !important;
+        max-width: 100%;
+        @include V.flex-box();
+        grid-template-columns: 100% !important;
+        grid-template-rows: 50% 50% !important;
+    }
+
+    .conic-section-2 {
+        padding-right: 30px;
+    }
+
+    .ctx-pictures-wrapper {
+        display: grid;
+        grid-template-rows: 300px 300px !important;
+    }
+
+
+    .ctx-additive-pics {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: 1fr 1fr !important;
+    }
+}
+
+
+/*
+BLOG
+*/
+//for small devices
+@media only screen and (max-width: 425px) {
+body {
+    border: 1px solid #000;
+}
+
+    .title-content {
+        margin: 0 20px;
+
+        .content-y {
+            .text-content {
+                margin: auto;
+                padding: 0;
+                max-width: 425px !important;
+            }
+        }
+
+        .picture-content {
+            max-width: 400px !important;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
+    .blog-trends {
+        .trend-article {
+            @include V.flex-grid();
+
+            .trend-picture {
+                width: 100%;
+                img {
+                    margin: auto;
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .trend-text {
+                width: 100%;
+            }
+        }
+    }
+
+    //article section
+    .main-article-content {
+        .article-grid {
+            width: 100%;
+            padding: 0 !important;
+            flex-direction: column;
+        }
+
+        .article-card {
+            justify-content: start !important;
+            width: 80% !important;
+        }
+    }
+
+    //blog-section-3
+    .blog-section-3 {
+        .prime-article{
+            .prime-text {
+                width: 90%;
+            }
+        }
+    }
+
+    //article-topics
+    .article-topics-section {
+        .topics-main-container {
+            .topic-header-title {
+                padding: 0 20px;
+
+                span {
+                    font-size: 20pt;
+                }
+            }
+
+            .topic-header-navigator {
+                display: none;
+            }
+
+            .topic-section-navigator {
+                .section-card-content  {
+                    h2 {
+                        width: 100%;
+                        padding: 0 0 0 20px;
+
+                    }
+
+                    .content-card-layouts {
+                        overflow-x: scroll;
+                        display: grid !important;
+                        grid-template-columns: 100% 100% 100% 100%;
+                        grid-auto-rows: 1fr;
+
+                        .card {
+                            width: 100% !important;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    //carosell slider
+    //should have animation
+    .article-section2-content {
+        .sec2-master-content {
+            display: grid;
+            grid-template-columns: 40% 40% 40% 40% 40%;
+            grid-template-rows: 1fr;
+            overflow-x: scroll;
+
+            .ms-x-1 {
+                max-width: fit-content;
+                margin: 0 30px;
+                width: fit-content;
+            }
+        }
+    }
+}
+
+
+/*
+ACADEMICS
+*/
+@media only screen and (max-width: 425px) {
+    .xb-component-wrapper {
+        .xb-split-view {
+            max-width: 100%;
+            margin: 0 10px !important;
+        }
+    }
+}

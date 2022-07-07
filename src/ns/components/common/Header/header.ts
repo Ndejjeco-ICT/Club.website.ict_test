@@ -1,7 +1,6 @@
 import { IWebComponents } from "ns/typings/schw";
 import { addDisposableEventListener } from "ns/common/domListener";
 import { WebMainInstance } from "ns/components/root/root";
-import { IMediaScrollPositions, MediaScreenManagerControl } from "ns/base/MediaQueries/mediaQueries";
 import { LinksManagerSystem } from "ns/dom/links/linksManager";
 import { MainRoutes } from "ns/base/Router/Router"
 
@@ -45,9 +44,7 @@ Template_.innerHTML = `
 <div class="wx-component-header-section" role="heading">
     <div class="wx-header-component-area">
         <div class="wx-badge-wrapper">
-            <div id="badge-icon">
-                
-            </div>
+            <div id="badge-icon"></div>
             <div class="badge-title">Ndejje Senior Secondary School</div>
         </div>
 
@@ -56,16 +53,16 @@ Template_.innerHTML = `
                 <div class="main-navigation-bar">
                     <ul class="navigation-items">
                         <li id="Home-nav-control">
-                            <a class="active-link" href-"#">Home</a>
+                            <a class="active-link" href="#Home">Home</a>
                         </li>
                         <li id="blog-nav-control">
-                            <a href-"#">Blog</a>
+                            <a href="#Blog" >Blog</a>
                         </li>
                         <li id="about-nav-control">
-                            <a href-"#">About us</a>
+                            <a href="#Aboutus">About us</a>
                         </li>
                         <li id="academics-nav-control">
-                            <a href-"#">Academics</a>
+                            <a href="#Academics">Academics</a>
                         </li>
                     </ul>
                 </div>
@@ -74,30 +71,23 @@ Template_.innerHTML = `
         <div class="accord-options">
             <div class="control-options">
                 <div class="facebook-link" title="Join us On Facebook">
-                    <i class="fa-brands fa-facebook"></i>
+                    <span class="material-icons">face</span>
                 </div>
 
                 <div class="instagram-link" title="Follow us on Instagram">
-                    <i class="fa-brands fa-instagram"></i>
+                    <div class="cr-icon-wrapper cr-instagram"></div>
                 </div>
 
                 <div class="twitter-link" title="Follow us on Twitter">
-                    <i class="fa-brands fa-twitter"></i>
+                    <div class="cr-icon-wrapper cr-twitter"></div>
                 </div>
                 <div class="theme-manager" title="Change theme">
                     <i class="fa-solid fa-lightbulb"></i>
                 </div>
         </div>
     </div>
-   
 </div>
-
-
-
-
-
 </div>
-
 
 `
 
@@ -142,7 +132,7 @@ export class HeaderComponent extends HTMLElement implements IWebComponents {
     }
     initializeHeaderComponent() {
         this.attachNeccessaryElementHandles();
-        this.attachEventListenersToElements();
+        this.attachEventListenersToElements();6
         this._attachSocialLinkksSystem();
         this._navigationRouteListenerSubscriber()
     }
@@ -164,6 +154,8 @@ export class HeaderComponent extends HTMLElement implements IWebComponents {
     };
 
     attachEventListenersToElements() {
+        
+        
         if (this._badgeIcon && this._homeNavControl && this._blogNavControl && this._aboutNavControl && this._academicsNavControl) {
             addDisposableEventListener(this._badgeIcon, "click", _navigateToBasePage)
             addDisposableEventListener(this._homeNavControl, "click", _navigateToBasePage);

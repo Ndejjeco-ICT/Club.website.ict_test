@@ -1,0 +1,132 @@
+@use "../../common/Variables/Variables.scss" as V;
+
+ns-x-staffview {
+    display: block;
+    height: fit-content;
+}
+
+ns-x-staffview .xb-staffview {
+    width: 100%;
+    height: 1500px;
+}
+
+ns-x-staffview .xb-staffview {
+    font-family: V.$ns-common-font;
+
+    .xb-wrapper {
+        background-color: #e4e4e4;
+
+    }
+
+    .tr-title-area-wrapper {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0px;
+        background-color: black;
+        height: 150px;
+        .tr-title-container {
+            color: #fff;
+            font-size: 45pt;
+        }
+    }
+
+    .tr-container-elements {
+        width: 100%;
+        height: auto;
+
+        .tr-container-wrapper {
+            display: grid;
+            grid-template-rows: 1fr 3fr;
+
+            .tr-view-1 {
+                background-color: black;
+                opacity: 0;
+                transform: translateY(50px);
+                width: 100%;
+
+                .tr-view-1-wrapper {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+
+                    .cl-view-1 {
+
+                        height: 500px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .cl-picture-container {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 280px;
+                            width: 280px;
+                            border: 1px solid #323232;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .cl-view-2 {
+                        height: 500px;
+
+                        .cl-content-text-holder {
+                            margin: 70px 30px 30px 30px;
+                            .ty-1 {
+                                color: #fff;
+                                font-size: 35pt;
+                            }
+                            .ty-2 {
+                                color: rgba(221, 221, 221, 0.836);
+                                margin-top: 20px;
+                                font-size: 16pt;
+                            }
+                            .ty-3 {
+                                color: rgba(138, 136, 136, 0.795);
+                                margin-top: 20px;
+                                font-size: 14pt;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .tr-view-2 {
+                height: fit-content;
+                width: 100%;
+                background-color: #e4e4e4;
+                .tr-content {
+                    margin-top: 100px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .tr-content-wrapper {
+                        .tr-members-wrapper {
+                            display: grid;
+                            grid-template-columns: auto auto auto auto;
+                            column-gap: 50px;
+                            row-gap: 50px;
+                        }
+                    }
+                }
+
+                .tr-content-2 {
+                    height: 100px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    .selective-btn {
+                        margin-right: 50px;
+                        @include V.common_btn();
+                    }
+                }
+            }
+        }
+    }
+}

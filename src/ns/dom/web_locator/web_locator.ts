@@ -3,6 +3,10 @@ import { WebMainInstance } from "ns/components/root/root";
 import {createInstance} from "ns/base/instanceCreators/instanceCreators"
 
 
+/**
+ * The Weblocator helps to update the Window title evenly as navigation occurs...
+ */
+
 const RouteTitleLayouts = {
 
     "Home-view" : {

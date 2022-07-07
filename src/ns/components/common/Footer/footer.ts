@@ -5,6 +5,10 @@ import { _navigateToBasePage } from "ns/components/common/Header/header";
 import { LinksManagerSystem } from "ns/dom/links/linksManager";
 
 
+/**
+ * The common footer of all hashed Pages that loads synchrously to the page workflow.
+ */
+
 
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
@@ -63,9 +67,10 @@ Template_.innerHTML = `
 export class FooterComponent extends HTMLElement implements IWebComponents {
 
     //accordiaon options
-    private _facebook_link: HTMLDivElement | null = null;
-    private _instagram_link: HTMLDivElement | null = null;
-    private _twitter_link: HTMLDivElement | null = null;
+    private facebookSourceLinkBtn: HTMLDivElement | null = null;
+    private instagramSourceLinkBtn: HTMLDivElement | null = null;
+    private twitterSourceLinkBtn: HTMLDivElement | null = null;
+
     constructor() {
         super();
         this.appendChild(Template_.content.cloneNode(true))
@@ -73,37 +78,41 @@ export class FooterComponent extends HTMLElement implements IWebComponents {
     connectedCallback() {
         this.initializeComponent()
     };
+    /**
+     * Initialize  the component once.
+     */
     initializeComponent(){
-        this.__createComponentAttachment();
-        this._attachSocialLinkksSystem()
-
+        this.attachComponentDOMELements();
+        this.addDisposableEventListenerMechanismToIcons()
 
         /**
-         * Did load everything
+         * The Lifecyle Line.. The Principle Line. for the footer.
+         * Called when the whole website has been restored.
          */
-
         LifeCycleEvents.phase = Lifecycle.Restored;
     }
-    __createComponentAttachment(){
-        this._facebook_link = this.querySelector(".facebook-link");
-        this._instagram_link = this.querySelector(".instagram-link");
-        this._twitter_link = this.querySelector(".twitter-link");
+    /**
+     * Attach DOM Elements.
+     */
+    attachComponentDOMELements(){
+        this.facebookSourceLinkBtn = this.querySelector(".facebook-link");
+        this.instagramSourceLinkBtn = this.querySelector(".instagram-link");
+        this.twitterSourceLinkBtn = this.querySelector(".twitter-link");
     }
-    _attachSocialLinkksSystem() {
-        if (this._facebook_link && this._instagram_link && this._twitter_link) {
-            //click event listeners
-            addDisposableEventListener(this._facebook_link, "click", this.__linkFaceBook.bind(this));
-            addDisposableEventListener(this._instagram_link, "click", this.__linkInstagram.bind(this));
-            addDisposableEventListener(this._twitter_link, "click", this.__linkTwitter.bind(this));
+    addDisposableEventListenerMechanismToIcons() {
+        if (this.facebookSourceLinkBtn && this.instagramSourceLinkBtn && this.twitterSourceLinkBtn) {
+            addDisposableEventListener(this.facebookSourceLinkBtn, "click", this.navigateResourceLocationToFacebook.bind(this));
+            addDisposableEventListener(this.instagramSourceLinkBtn, "click", this.navigateResourceLocationToInstagram.bind(this));
+            addDisposableEventListener(this.twitterSourceLinkBtn, "click", this.navigateResourceLocationToTwitter.bind(this));
         }
     };
-    __linkFaceBook() {
+    navigateResourceLocationToFacebook() {
         LinksManagerSystem.LinkToFaceBook()
     }
-    __linkInstagram() {
+    navigateResourceLocationToInstagram() {
         LinksManagerSystem.LinkToInstagram();
     }
-    __linkTwitter() {
+    navigateResourceLocationToTwitter() {
         LinksManagerSystem.LinkToTwitter()
     }
 

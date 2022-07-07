@@ -13,7 +13,11 @@ const _WebPackConfiguration = {
         extensions: [".ts", ".js"],
         alias: {
             ns: path.resolve(__dirname, "src/ns"),
-            "@design" : path.resolve(__dirname,"src/ns/design")
+            "@design_Home" : path.resolve(__dirname,"src/ns/design/browser/sass/home.view.style"),
+            "@design_About" : path.resolve(__dirname,"src/ns/design/browser/sass/aboutus.view.style"),
+            "@design_Common" : path.resolve(__dirname,"src/ns/design/browser/sass/common"),
+            "@design_Blog" : path.resolve(__dirname,"src/ns/design/browser/sass/blog.view.style"),
+            "@design_Academics" : path.resolve(__dirname,"src/ns/design/browser/sass/academics.view.style")
             
         }
     },
