@@ -15,8 +15,12 @@
 
         .trend-picture {
             img {
+                background-image: url('../design/Imgs/john-towner-JgOeRuGD_Y4-unsplash.jpg');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
                 max-width: 100%;
-                width: 40%;
+                width: 100%;
                 height: 400px;
             }
         }

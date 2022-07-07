@@ -16,6 +16,14 @@ ns-x-titleholder .title-content {
         font-weight: 300;
         margin-bottom: 30px;
     }
+    .tr-line {
+        background-color: black;
+        height: 4px;
+        opacity: 0;
+        width: 20px;
+        border: 1px solid #000;
+    }
+
     .content-y {
         @include V.flex-grid();
         line-height: 60px;
