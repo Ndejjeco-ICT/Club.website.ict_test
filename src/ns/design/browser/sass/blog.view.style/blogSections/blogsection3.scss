@@ -1,0 +1,19 @@
+@use "../../common/Variables/Variables.scss" as V;
+
+.blog-section-3 {
+    margin: 100px 0 100px 0;
+
+    .prime-article {
+        .prime-text {
+            text-align: center;
+            width: 60%;
+            margin: auto;
+            h2 {
+                font-size: 30pt;
+            }
+            p {
+                font-size: 20pt;
+            }
+        }
+    }
+}

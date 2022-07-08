@@ -1,0 +1,62 @@
+@font-face {
+    font-family: We;
+    src: url("../../../fonts/Montserrat-VariableFont_wght.ttf") format("woff");
+}
+
+
+
+
+
+$ns-layout-color : #146bdc;
+$ns-common-font :We;
+$ns-title-font-size: 40pt;
+$ns-subtitle-font-size : 17pt;
+
+
+//common colors
+$ns-subtitle-color : #0000008f;
+
+/**
+     Common Mixins
+**/
+
+@mixin common_btn {
+    @include button();
+    @include center();
+    background-color: $ns-layout-color;
+    border: 1px solid $ns-layout-color;
+    font-weight: 350;
+    color: #fff;
+    transition: all .5s;
+    &:hover{
+        color: #000;
+        background-color: unset;
+    }
+}
+
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin button {
+    height: 50px;
+    width: 160px;
+    border-radius: 10px;
+}
+
+@mixin flex-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

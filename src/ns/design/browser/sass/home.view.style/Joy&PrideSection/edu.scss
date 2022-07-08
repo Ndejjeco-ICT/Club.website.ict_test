@@ -1,0 +1,78 @@
+@use "../../common/Variables/Variables.scss" as V;
+
+
+
+ns-x-edu {
+    display: block;
+    font-family:V.$ns-common-font;
+}
+
+ns-x-edu .ponaco-component-edu {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 100px 0px 100px 0px;
+    .sudo-elements{
+        .ser{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #000;
+            z-index: -1;
+        }
+        .ser1{
+            top: 0px;
+            left: 300px;
+            background-color: #000;
+        }
+        .ser2 {
+            left: 300px;
+            background-color: #3b8af3;
+        }
+        .ser3{
+            top: 10px;
+            right: 20px;
+            background-color: #3b8af3;
+        }
+        .ser4{
+            bottom: 20px;
+            right: 40px;
+            background-color: #000;
+        }
+        .ser5{
+            top: 80px;
+            right: 300px;
+            background-color: #3b8af3;
+
+        }
+        .ser6 {
+            bottom: 20px;
+            left: 900px;
+            background-color: rgba(0, 0, 0, 0.336);
+        }
+    }
+
+}
+
+.ponaco-component-edu .wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    .info {
+        transition: all .5s;
+        padding: 20px 20px 20px 20px;
+        font-size: 65pt;
+        border: 5px solid black;
+        .ctr{
+            font-weight: bold;
+            .cl{
+                font-size: 100pt;
+            }
+        }
+    }
+}

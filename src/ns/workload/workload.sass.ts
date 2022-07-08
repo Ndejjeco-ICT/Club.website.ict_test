@@ -2,63 +2,50 @@
  * Webpack Sass Build File
  */
 
-import "@design/Global.scss";
+import "@design_Common/Variables/Global.scss";
+
+
 
 //Common Components
-import "@design/Header.scss";
-import "@design/Footer.scss";
-import "@design/Enrollbtn.scss";
+import "@design_Common/Header/Header.scss";
+import "@design_Common/Footer/Footer.scss";
+import "@design_Common/Enrollbtn/Enrollbtn.scss";
+import "@design_Common/screen/Animations.scss";
+import "@design_Common/screen/codicon.scss";
+import "@design_Common/screen/material_.scss";
+import "@design_Common/dialogHost/dialogHost.scss";
 
 
-//View Components
-import "@design/Banner.scss"
-import "@design/Pride.scss"
-import "@design/Goals.scss";
-import "@design/Insights.scss"
-import "@design/Quote.scss"
-import "@design/Faq.scss"
-import "@design/reviews.scss"
-import "@design/mission.scss";
-import "@design/corevalues.scss";
-import "@design/history.scss";
+
+//Home View Components
+import "@design_Home/BannerSection/Banner.scss"
+import "@design_Home/Pains&GainsSection/Pride.scss"
+import "@design_Home/EffectiveStudentsSection/Goals.scss";
+import "@design_Home/InsightNdejjeSection/Insights.scss"
+import "@design_Home/HeadMasterSection/Quote.scss"
+import "@design_Home/StudentThoughtsSection/reviews.scss"
+import "@design_Home/MissionSection/mission.scss";
+import "@design_Home/Joy&PrideSection/edu.scss"
 
 
-//detached components
-import "@design/overflowNav.scss"
-
-//mediaQueries
-import "@design/viewHomeMediaQueries.scss"
-import "@design/edu.scss"
 
 
-import "@design/WelcomeNote.scss";
-import  "@design/Glance.scss"
-import "@design/Xgoal.scss"
-import "@design/StaffView.main.scss";
-import "@design/StaffView.main.scss";
-import "@design/StaffView.Member.scss"
-import "@design/StaffView.dialog.scss"
-import "@design/dialogHost.scss"
-import "@design/VidInterview.scss"
 
-//Academics
+//About view component styles
+import "@design_About/welcomeNoteSection/WelcomeNote.scss";
+import "@design_About/GlanceSection/Glance.scss"
+import "@design_About/VisionSection/Xgoal.scss"
+import "@design_About/StaffViewSection/StaffView.main.scss";
+import "@design_About/StaffViewSection/StaffView.main.scss";
+import "@design_About/StaffViewSection/StaffView.Member.scss"
+import "@design_About/StaffViewSection/StaffView.dialog.scss"
+import "@design_About/StudentsVideoSection/VidInterview.scss"
+import "@design_About/CoreValuesSection/corevalues.scss";
+import "@design_About/HistorySection/history.scss";
 
-import "@design/academicsQuote.scss";
-import "@design/academicsWelcomeNote.scss";
-import "@design/studentslife.scss";
-import "@design/life&Culture.scss";
-import "@design/cultureImageComponent.scss";
-import "@design/academicsAwards.scss";
-import "@design/academicsAwardsItem.scss";
-import "@design/academicsCommunity.scss";
-import "@design/voices.scss";
-import "@design/uniformDesign.scss";
-import "@design/academicsNews.scss";
-import "@design/academicsNewsItem.scss";
-import "@design/academicsDosQuote.scss"
 
-import "@design/Animations.scss"
 
+<<<<<<< HEAD
 //Blog view
 import "@design/titleholder.scss";
 import "@design/blogtrends.scss";
@@ -67,7 +54,30 @@ import "@design/blogsection2.scss";
 import "@design/blogsection3.scss";
 import "@design/articletopics.scss";
 import "@design/caroselslider.scss";
+=======
+//Academics view component styles
+import "@design_Academics/WelcomeNoteSection/WelcomeBanner.scss";
+import "@design_Academics/StudentLifeSection/studentslife.scss";
+import "@design_Academics/Life&CultureSection/life&Culture.scss";
+import "@design_Academics/Life&CultureSection/cultureImageComponent.scss";
+import "@design_Academics/AwardsSection/AwardsSection.scss";
+import "@design_Academics/AwardsSection/AwardsItem.scss";
+import "@design_Academics/CommunitySection/academicsCommunity.scss";
+import "@design_Academics/VideoVoicesSection/voices.scss";
+import "@design_Academics/UniformDesignSection/uniformDesign.scss";
+import "@design_Academics/NewsItemSection/academicsNews.scss";
+import "@design_Academics/NewsItemSection/academicsNewsItem.scss";
+import "@design_Academics/DOSQuoteSection/academicsDosQuote.scss"
 
-//media queries
-//should be last file
-import "@design/mediaqueries.scss"
+
+//Blog view component styles
+import "@design_Blog/titleHolderSection/titleholder.scss"
+import "@design_Blog/blogSections/blogtrends.scss";
+import "@design_Blog/articleSection/articlesection.scss";
+import "@design_Blog/blogSections/blogsection2.scss";
+import "@design_Blog/blogSections/blogsection3.scss";
+import "@design_Blog/articleSection/articletopics.scss";
+import "@design_Blog/carosel-sliderSection/caroselslider.scss";
+
+>>>>>>> f75d944f414d7c0c888af61ee47fcfc1f28e8567
+

@@ -1,0 +1,28 @@
+/*
+ Central icon Implementation
+*/
+
+
+.cr-facebook{
+    content: url("../../../../icons/logo-facebook.svg");
+}
+.cr-instagram::before {
+    content: url("../../../../icons/logo-instagram.svg");
+}
+.cr-twitter::before {
+    content: url("../../../../icons/logo-twitter.svg");
+}
+
+
+.cr-pause::before {
+    content: url('../../../../icons/pause-circle-outline.svg');
+}
+
+.cr-alert::before {
+    content: url('../../../../icons/alert-circle-outline.svg');
+}
+
+
+
+
+

@@ -5,8 +5,15 @@
 			"type": "npm",
 			"script": "webpack-main-bundle",
 			"problemMatcher": [],
-			"label": "Webpack-Bundle Operation",
+			"label": "Bundle ::WEBPACK-FILES::",
 			"detail": "webpack --config webpack.config.js"
+		},
+		{
+			"type": "npm",
+			"script": "webpack-server",
+			"problemMatcher": [],
+			"label": "Launch ::WEBPACK-SERVER::",
+			"detail": "webpack-dev-server --config webpack.config.js"
 		}
 	]
 }

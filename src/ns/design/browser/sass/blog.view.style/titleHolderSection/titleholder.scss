@@ -1,0 +1,56 @@
+@use "../../common/Variables/Variables.scss" as V;
+
+ns-x-titleholder {
+    display: block;
+}
+
+ns-x-titleholder .main-blog-component-section {
+    padding-top: 100px;
+    margin-bottom: 30px;
+    border: 1px solid red;
+    font: V.$ns-common-font;
+
+    .main-blog-container {
+        .title-holder {
+            @include V.flex-grid();
+            line-height: 100px;
+
+            .txt-1 {
+                padding-right: 40px;
+                font-size: 90pt;
+            }
+            .txt-2 {
+                padding-right: 20px;
+                font-size: 50pt;
+            }
+<<<<<<< HEAD:src/ns/design/titleholder.scss
+            .txt-3 {
+                font-size: 25pt;
+=======
+            .img-selector {
+                background-image: url("../../../Imgs/aziz-acharki-gXndgCS-CGo-unsplash.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .img1 {
+                width: 200px;
+                height: 250px;
+                z-index: -1;
+            }
+            .img2 {
+                height: 300px;
+                width: 300px;
+                z-index: 1;
+            }
+            .img3 {
+                width: 200px;
+                height: 250px;
+                bottom: 30px;
+                right: 30px;
+                z-index: -1;
+>>>>>>> f75d944f414d7c0c888af61ee47fcfc1f28e8567:src/ns/design/browser/sass/blog.view.style/titleHolderSection/titleholder.scss
+            }
+        }
+    }
+}

@@ -2,14 +2,31 @@ import { MediaScreenManagerControl, IMediaScrollPositions } from "ns/base/MediaQ
 
 
 interface IViewLinkerCallback {
+
+    /**
+     * Callback Function called when Element Position is striking....
+     */
     inset: Function;
+    /**
+     * Callback Function called when Element Position is not striking....
+     */
     outset: Function;
 }
 
 interface IViewLinker {
 
+    /**
+     * Currrent selected Element.
+     */
     element: HTMLElement;
+
+    /**
+     * The Catch Position to strike on
+     */
     linkPosition: number
+    /**
+     * Callback Functions to be called during striking and not striking
+     */
     LinkerCallbacks: IViewLinkerCallback
 }
 
@@ -20,7 +37,6 @@ export class ViewLinker {
     private _linkPosition: number;
     private _viewLinkerInset: Function;
     private _viewLinkerOutset: Function;
-    private _didDoInitialCheck: boolean = false;
 
     private _didSetInset: boolean;
     private _didSetOutSet: boolean;
@@ -44,6 +60,11 @@ export class ViewLinker {
         }, 50)
     }
 
+
+    /**
+     * Calculate Screen Position and invoke the inset callback
+     * @returns 
+     */
     private async _updateElementRevealHeight() {
         return new Promise<void>((c, e) => {
             let _currentWindowHeight = window.innerHeight;
