@@ -45,16 +45,6 @@ import "@design_About/HistorySection/history.scss";
 
 
 
-<<<<<<< HEAD
-//Blog view
-import "@design/titleholder.scss";
-import "@design/blogtrends.scss";
-import "@design/articlesection.scss";
-import "@design/blogsection2.scss";
-import "@design/blogsection3.scss";
-import "@design/articletopics.scss";
-import "@design/caroselslider.scss";
-=======
 //Academics view component styles
 import "@design_Academics/WelcomeNoteSection/WelcomeBanner.scss";
 import "@design_Academics/StudentLifeSection/studentslife.scss";
@@ -79,5 +69,4 @@ import "@design_Blog/blogSections/blogsection3.scss";
 import "@design_Blog/articleSection/articletopics.scss";
 import "@design_Blog/carosel-sliderSection/caroselslider.scss";
 
->>>>>>> f75d944f414d7c0c888af61ee47fcfc1f28e8567
 
