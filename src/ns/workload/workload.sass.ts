@@ -62,11 +62,10 @@ import "@design_Academics/DOSQuoteSection/academicsDosQuote.scss"
 
 //Blog view component styles
 import "@design_Blog/titleHolderSection/titleholder.scss"
-import "@design_Blog/blogSections/blogtrends.scss";
+import "@design_Blog/blogtrends/blogtrends.scss";
 import "@design_Blog/articleSection/articlesection.scss";
-import "@design_Blog/blogSections/blogsection2.scss";
 import "@design_Blog/blogSections/blogsection3.scss";
-import "@design_Blog/articleSection/articletopics.scss";
-import "@design_Blog/carosel-sliderSection/caroselslider.scss";
+import "@design_Blog/carosell slider/carosellslider.scss";
+import "@design_Blog/blogSections/blogsection2.scss";
 
 

@@ -3,14 +3,23 @@ import {IWebComponents} from "ns/typings/schw";
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
 <div class="main-blog-component-section">
-<div class="main-blog-container">
-    <div class="title-holder">
+<div class="section-blog-container">
+    <div class="content-text">
         <div class="txt-1">WELCOME...</div>
-        <div class="txt-2"><em>To the ndejjean blog</em></div>
-        <div class="txt-3">where we write stories that inspire</div>
+        <div class="txt-2"><em>to the Ndejjean blog</em></div>
+        <div class="txt-3">Stories, articles, news all in one place</div>
+        <div class="abt-btn"><button>Read our articles</button></div>
     </div>
-</main-blog-container>
-</main-blog-component-section>
+
+
+</div>
+
+<div class="title-pic-section">
+    <div class="title-pic1"><img src="#" alt="" class="image-1"></div>
+    <div class="title-pic2"><img src="#" alt="" class="image-2"></div>
+    <div class="title-pic1"><img src="#" alt="" class="image-1"></div>
+</div>
+</div>
 `
 
 export class Titleholder extends HTMLElement implements IWebComponents {

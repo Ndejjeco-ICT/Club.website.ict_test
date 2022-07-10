@@ -1,39 +1,90 @@
 @use "../../common/Variables/Variables.scss" as V;
 
-.main-article-content {
-    margin-top: 40px;
+.article-topics-section {
+    margin: 150px 0 50px 0;
 
-    .article-content-title {
-        text-align: center;
-        font-size: 35pt;
-        margin-bottom: 30px;
-    }
+    .topics-main-container {
+        .topic-header-title {
+            text-align: center;
 
-    .article-grid {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 0 8em;
+            font-size: 40pt;
 
-        .article-card {
-            max-width: 100%;
-            width: 30%;
-            border: 1px solid blue;
-            height: 2fr;
-            padding: 20px;
-
-            .card-picture {
-                img {
-                    width: 100%;
-                    height: 250px;
-                }
+            span {
+                font-size: 30pt;
             }
-            .card-text {
-                p {
-                    font-size: 15pt;
+        }
+
+        .topic-header-navigator {
+            border: 1px solid #000;
+            margin: auto;
+            padding: 0 15%;
+            @include V.flex-box();
+
+            .nav-1 {
+                font-size: 25pt;
+            }
+        }
+
+
+
+        .topic-section-navigator {
+            margin-top: 30px;
+
+            h2 {
+                font-size: 25pt;
+                margin: 10px;
+            }
+
+            .section-card-content {
+                h2 {
+                    padding-left: 100px;
+                    font-size: 25pt;
+                }
+
+                .content-card-layouts {
+                    @include V.flex-box();
+
+                    .card {
+                        max-width: 100%;
+                        width: 100%;
+                        margin: auto;
+                        padding: 30px 30px;
+
+                        .info-nav-control {
+                            border: 1px solid red;
+                            width: fit-content;
+                            font-size: 10pt;
+                        }
+
+                        img {
+                            box-shadow: 4px 4px 5px #383838;
+                            max-width: 100%;
+                            border: solid 1px #000;
+                            width: 100%;
+                            height: 300px;
+                            margin-bottom: 10px;
+                        }
+
+                        p {
+                            max-width: 100%;
+                            font-size: 20pt;
+                        }
+
+                        .x-counter {
+                            border: 1px solid red;
+                            width: fit-content;
+                            font-size: 10pt;
+                        }
+
+                        .nav-reader {
+                            font-size: 15pt;
+                            padding: 5px 0;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
                 }
             }
         }

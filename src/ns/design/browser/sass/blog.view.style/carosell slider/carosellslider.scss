@@ -1,0 +1,21 @@
+@use "../../common/Variables/Variables.scss" as V;
+
+.article-section2-main-content {
+    background-color: #000;
+    color: #a0a0a0;
+
+    .sec2-master-main-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .ms-x-1 {
+            padding: 20px;
+            margin: 30px 30px;
+            width: 100px;
+            height: 50px;
+        }
+    }
+}

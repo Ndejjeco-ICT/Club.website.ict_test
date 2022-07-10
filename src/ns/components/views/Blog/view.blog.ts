@@ -8,10 +8,10 @@ export class BlogView extends HTMLElement implements IWebComponents {
         <ns-x-titleholder></ns-x-titleholder>
         <ns-x-blogtrends></ns-x-blogtrends>
         <ns-x-articlesection></ns-x-articlesection>
-        <ns-x-blogsection2></ns-x-blogsection2>
         <ns-x-blogsection3></ns-x-blogsection3>
         <ns-x-articletopics></ns-x-articletopics>
         <ns-x-caroselslider></ns-x-caroselslider>
+        <ns-x-blogsection2></ns-x-blogsection2>
         `
     }
 

@@ -2,57 +2,153 @@ import {IWebComponents} from "ns/typings/schw";
 
 const Template_ = document.createElement("template");
 Template_.innerHTML = `
-<div class="main-article-content">
-<div class="article-content-title">
-FEATURED TOPICS
-</div>
-<div class="article-grid">
-    <div class="article-card article-1">
-        <div class="card-picture">
-            <img src="#" alt="">
-        </div>
-        <div class="card-text">
-            <p>Lorem ipsum, dolor sittem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, dolor quae quia ea sunt quibusdam pariatur iure quaerat, sequi incidunt eaque vel molestiae quam perspiciatis possimus eius? Libero, cupiditate laudantium? neque ab.</p>
-        </div>
+<div class="article-topics-section">
+<div class="topics-main-container">
+    <div class="topic-header-title">TOPICS - <span>A range of high class articles</span></div>
+    <div class="topic-header-navigator">
+        <div class="nav-1">trending</div>
+        <div class="nav-1">trending</div>
+        <div class="nav-1">trending</div>
+        <div class="nav-1">trending</div>
     </div>
-    <div class="article-card article-1">
-        <div class="card-picture">
-            <img src="#" alt="">
+
+    <div class="topic-section-navigator">
+        <div class="section-card-content">
+            <h2>Trending</h2>
+            <div class="content-card-layouts">
+                <div class="card">
+                    <img src="#" class="img-card" alt="">
+                    <div class="info-nav-control">03/02/2020</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
+                        quidem obcaecati officia ducimus odit,
+                        et
+                    </p>
+                    <div class="x-counter">3 likes</div>
+                    <div class="nav-reader">Read article</div>
+                </div>
+                <div class="card">
+                    <img src="#" class="img-card" alt="">
+                    <div class="info-nav-control">03/02/2020</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
+                        quidem obcaecati officia ducimus odit,
+                        et
+                    </p>
+                    <div class="x-counter">3 likes</div>
+                    <div class="nav-reader">Read article</div>
+                </div>
+                <div class="card card-a">
+                    <img src="#" class="img-card" alt="">
+                    <div class="info-nav-control">03/02/2020</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
+                        quidem obcaecati officia ducimus odit,
+                        et
+                    </p>
+                    <div class="x-counter">3 likes</div>
+                    <div class="nav-reader">Read article</div>
+                </div>
+                <div class="card card-a">
+                    <img src="#" class="img-card" alt="">
+                    <div class="info-nav-control">03/02/2020</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
+                        quidem obcaecati officia ducimus odit,
+                        et
+                    </p>
+                    <div class="x-counter">3 likes</div>
+                    <div class="nav-reader">Read article</div>
+                </div>
+
+            </div>
         </div>
-        <div class="card-text">
-            <p>Lorem ipsum, dolor sittem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, dolor quae quia ea sunt quibusdam pariatur iure quaerat, sequi incidunt eaque vel molestiae quam perspiciatis possimus eius? Libero, cupiditate laudantium? neque ab.</p>
+        <div class="section-card-content">
+            <h2>LATEST</h2>
+            <div class="content-card-layouts">
+                <div class="card">
+                    <img src="#" class="img-card" alt="">
+                    <div class="info-nav-control">03/02/2020</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
+                        quidem obcaecati officia ducimus odit,
+                        et
+                    </p>
+                    <div class="x-counter">3 likes</div>
+                    <div class="nav-reader">Read article</div>
+                </div>
+                <div class="card">
+                    <img src="#" class="img-card" alt="">
+                    <div class="info-nav-control">03/02/2020</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
+                        quidem obcaecati officia ducimus odit,
+                        et
+                    </p>
+                    <div class="x-counter">3 likes</div>
+                    <div class="nav-reader">Read article</div>
+                </div>
+                <div class="card">
+                    <img src="#" class="img-card" alt="">
+                    <div class="info-nav-control">03/02/2020</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
+                        quidem obcaecati officia ducimus odit,
+                        et
+                    </p>
+                    <div class="x-counter">3 likes</div>
+                    <div class="nav-reader">Read article</div>
+                </div>
+                <div class="card">
+                    <img src="#" class="img-card" alt="">
+                    <div class="info-nav-control">03/02/2020</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
+                        quidem obcaecati officia ducimus odit,
+                        et
+                    </p>
+                    <div class="x-counter">3 likes</div>
+                    <div class="nav-reader">Read article</div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="article-card article-1">
-        <div class="card-picture">
-            <img src="#" alt="">
-        </div>
-        <div class="card-text">
-            <p>Lorem ipsum, dolor sittem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, dolor quae quia ea sunt quibusdam pariatur iure quaerat, sequi incidunt eaque vel molestiae quam perspiciatis possimus eius? Libero, cupiditate laudantium? neque ab.</p>
-        </div>
-    </div>
-    <div class="article-card article-1">
-        <div class="card-picture">
-            <img src="#" alt="">
-        </div>
-        <div class="card-text">
-            <p>Lorem ipsum, dolor sittem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, dolor quae quia ea sunt quibusdam pariatur iure quaerat, sequi incidunt eaque vel molestiae quam perspiciatis possimus eius? Libero, cupiditate laudantium? neque ab.</p>
-        </div>
-    </div>
-    <div class="article-card article-1">
-        <div class="card-picture">
-            <img src="#" alt="">
-        </div>
-        <div class="card-text">
-            <p>Lorem ipsum, dolor sittem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, dolor quae quia ea sunt quibusdam pariatur iure quaerat, sequi incidunt eaque vel molestiae quam perspiciatis possimus eius? Libero, cupiditate laudantium? neque ab.</p>
-        </div>
-    </div>
-    <div class="article-card article-1">
-        <div class="card-picture">
-            <img src="#" alt="">
-        </div>
-        <div class="card-text">
-            <p>Lorem ipsum, dolor sittem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, dolor quae quia ea sunt quibusdam pariatur iure quaerat, sequi incidunt eaque vel molestiae quam perspiciatis possimus eius? Libero, cupiditate laudantium? neque ab.</p>
+
+        <div class="section-card-content">
+            <h2>LATEST</h2>
+            <div class="content-card-layouts">
+                <div class="card">
+                    <img src="#" class="img-card" alt="">
+                    <div class="info-nav-control">03/02/2020</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
+                        quidem obcaecati officia ducimus odit,
+                        et
+                    </p>
+                    <div class="x-counter">3 likes</div>
+                    <div class="nav-reader">Read article</div>
+                </div>
+                <div class="card">
+                    <img src="#" class="img-card" alt="">
+                    <div class="info-nav-control">03/02/2020</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
+                        quidem obcaecati officia ducimus odit,
+                        et
+                    </p>
+                    <div class="x-counter">3 likes</div>
+                    <div class="nav-reader">Read article</div>
+                </div>
+                <div class="card">
+                    <img src="#" class="img-card" alt="">
+                    <div class="info-nav-control">03/02/2020</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
+                        quidem obcaecati officia ducimus odit,
+                        et
+                    </p>
+                    <div class="x-counter">3 likes</div>
+                    <div class="nav-reader">Read article</div>
+                </div>
+                <div class="card">
+                    <img src="#" class="img-card" alt="">
+                    <div class="info-nav-control">03/02/2020</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
+                        quidem obcaecati officia ducimus odit,
+                        et
+                    </p>
+                    <div class="x-counter">3 likes</div>
+                    <div class="nav-reader">Read article</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

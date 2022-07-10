@@ -1,50 +1,79 @@
 @use "../../common/Variables/Variables.scss" as V;
 
-ns-x-titleholder {
-    display: block;
-}
+//title section
+.main-blog-component-section {
+    height: 800px;
+    // background-image: url('#');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    // background: linear-gradient(0deg, black 20% ,grey 5%);
 
-ns-x-titleholder .main-blog-component-section {
-    padding-top: 100px;
     margin-bottom: 30px;
-    border: 1px solid red;
-    font: V.$ns-common-font;
+    padding-bottom: 50px;
 
-    .main-blog-container {
-        .title-holder {
-            @include V.flex-grid();
-            line-height: 100px;
+    .section-blog-container {
+        .content-text {
+            padding: 60px 0 20px 0;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            align-items: center;
 
             .txt-1 {
-                padding-right: 40px;
-                font-size: 90pt;
+                font-size: 70pt;
             }
+
             .txt-2 {
-                padding-right: 20px;
-                font-size: 50pt;
+                padding-left: 20px;
+                font-size: 45pt;
             }
-            .img-selector {
-                background-image: url("../../../Imgs/aziz-acharki-gXndgCS-CGo-unsplash.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: contain;
+
+            .txt-3 {
+                font-size: 35pt;
             }
-            .img1 {
-                width: 200px;
+
+            .abt-btn {
+                padding: 20px 0 0 0;
+
+                button {
+                    width: 200px;
+                    height: 50px;
+                }
+            }
+
+        }
+
+
+    }
+
+    .title-pic-section {
+        margin: 30px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .title-pic2 {
+            position: relative;
+            border: solid 1px green;
+
+            img {
+                width: 350px;
                 height: 250px;
-                z-index: -1;
             }
-            .img2 {
-                height: 300px;
-                width: 300px;
-                z-index: 1;
-            }
-            .img3 {
-                width: 200px;
-                height: 250px;
-                bottom: 30px;
-                right: 30px;
-                z-index: -1;
+        }
+
+        .title-pic1 {
+            position: relative;
+            border: solid 1px yellow;
+
+            img {
+                max-width: 100%;
+                width: 250px;
+                height: 150px;
             }
         }
     }
