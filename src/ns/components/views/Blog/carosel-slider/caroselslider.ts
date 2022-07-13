@@ -7,8 +7,14 @@ Template_.innerHTML = `
     <div class="ms-x-1"><img src="#" class="ms-img" alt=""> writers club</div>
     <div class="ms-x-1"><img src="#" class="ms-img" alt=""> ict club</div>
     <div class="ms-x-1"><img src="#" class="ms-img" alt=""> interact club</div>
-    <div class="ms-x-1"><img src="#" class="ms-img" alt=""> interact club</div>
-    <div class="ms-x-1"><img src="#" class="ms-img" alt=""> interact club</div>
+    <div class="ms-x-1"><img src="#" class="ms-img" alt=""> Geography club</div>
+    <div class="ms-x-1"><img src="#" class="ms-img" alt=""> International Inspiration club</div>
+    <div class="ms-x-1"><img src="#" class="ms-img" alt=""> Physics club</div>
+    <div class="ms-x-1"><img src="#" class="ms-img" alt=""> Math club</div>
+    <div class="ms-x-1"><img src="#" class="ms-img" alt=""> Chess club</div>
+    <div class="ms-x-1"><img src="#" class="ms-img" alt=""> Chess club</div>
+    <div class="ms-x-1"><img src="#" class="ms-img" alt=""> Chess club</div>
+    <div class="ms-x-1"><img src="#" class="ms-img" alt=""> Chess club</div>
 </div>
 </div>
 `;

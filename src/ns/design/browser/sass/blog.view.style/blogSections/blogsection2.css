@@ -1,0 +1,31 @@
+@use "../../common/Variables/Variables.scss" as V;
+.text-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 300px;
+}
+
+.text-wrapper .info {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  padding: 20px 20px 20px 20px;
+  font-size: 65pt;
+  border: 5px solid black;
+}
+
+.text-wrapper .info .ctr {
+  font-weight: bold;
+}
+
+.text-wrapper .info .ctr .cl {
+  font-size: 100pt;
+}
+/*# sourceMappingURL=blogsection2.css.map */

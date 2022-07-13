@@ -1,0 +1,43 @@
+@use "../../common/Variables/Variables.scss" as V;
+.prime-article-section {
+  margin: 70px;
+}
+
+.prime-article-section .prime-article {
+  width: 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.prime-article-section .prime-article .prime-img {
+  margin: 0 30px;
+}
+
+.prime-article-section .prime-article .prime-img img {
+  max-width: 100%;
+  width: 600px;
+  height: 600px;
+}
+
+.prime-article-section .prime-article .prime-text {
+  margin-left: 30px;
+  width: 800px;
+  padding: 20px;
+}
+
+.prime-article-section .prime-article .prime-text h2 {
+  font-size: 30pt;
+}
+
+.prime-article-section .prime-article .prime-text p {
+  font-size: 25pt;
+}
+/*# sourceMappingURL=blogsection3.css.map */

@@ -15,9 +15,9 @@ Template_.innerHTML = `
 </div>
 
 <div class="title-pic-section">
-    <div class="title-pic1"><img src="#" alt="" class="image-1"></div>
-    <div class="title-pic2"><img src="#" alt="" class="image-2"></div>
-    <div class="title-pic1"><img src="#" alt="" class="image-1"></div>
+    <div class="title-pic1"></div>
+    <div class="title-pic2"></div>
+    <div class="title-pic3"></div>
 </div>
 </div>
 `

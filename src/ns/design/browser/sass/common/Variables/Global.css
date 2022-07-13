@@ -1,0 +1,47 @@
+/**
+    Common Style In All Should Be Added Globally
+**/
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+ns-root {
+  width: 100%;
+}
+
+ns-root #main-content {
+  width: inherit;
+  height: inherit;
+}
+
+ns-root #main-content #basic-page {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+ns-root #main-content #basic-page [ns-route=active] {
+  display: block;
+}
+
+ns-root #main-content #basic-page [ns-route=inactive] {
+  display: none;
+}
+/*# sourceMappingURL=Global.css.map */

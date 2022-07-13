@@ -53,16 +53,16 @@ Template_.innerHTML = `
                 <div class="main-navigation-bar">
                     <ul class="navigation-items">
                         <li id="Home-nav-control">
-                            <a class="active-link" href="#Home">Home</a>
+                            <a class="active-link" href="#home">Home</a>
                         </li>
                         <li id="blog-nav-control">
-                            <a href="#Blog" >Blog</a>
+                            <a href="#blog" >Blog</a>
                         </li>
                         <li id="about-nav-control">
-                            <a href="#Aboutus">About us</a>
+                            <a href="#about">About us</a>
                         </li>
                         <li id="academics-nav-control">
-                            <a href="#Academics">Academics</a>
+                            <a href="#academics">Academics</a>
                         </li>
                     </ul>
                 </div>

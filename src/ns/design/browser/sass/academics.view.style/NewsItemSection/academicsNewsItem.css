@@ -1,0 +1,42 @@
+ns-x-newsitem {
+  display: block;
+}
+
+ns-x-newsitem .xb-news-item-component {
+  width: 600px;
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+ns-x-newsitem .xb-news-item-component .xb-holder-wrapper {
+  margin: 50px 0px 50px 0px;
+  width: 320px;
+  height: 500px;
+  position: relative;
+}
+
+ns-x-newsitem .xb-news-item-component .xb-holder-wrapper > div {
+  position: absolute;
+}
+
+ns-x-newsitem .xb-news-item-component .xb-holder-wrapper .xb-picture-holder-container {
+  width: inherit;
+  height: inherit;
+  background-color: purple;
+}
+
+ns-x-newsitem .xb-news-item-component .xb-holder-wrapper .xb-content-holder {
+  bottom: 0px;
+  width: inherit;
+  height: 150px;
+  background-color: green;
+}
+/*# sourceMappingURL=academicsNewsItem.css.map */

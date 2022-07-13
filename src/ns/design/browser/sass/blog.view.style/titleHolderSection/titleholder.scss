@@ -2,19 +2,26 @@
 
 //title section
 .main-blog-component-section {
-    height: 800px;
-    // background-image: url('#');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    // background: linear-gradient(0deg, black 20% ,grey 5%);
+    padding-top: 90px;
+    height: 900px;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-attachment: fixed;
 
-    margin-bottom: 30px;
+    //real
+    background-image: linear-gradient(to top, #00000079, #00000070), url('../../../Imgs/new/keagan-henman-e6BkcrbCvzs-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    margin-bottom: 50px;
     padding-bottom: 50px;
 
     .section-blog-container {
         .content-text {
+            // margin-left: 40px;
+            // width: 700px;
+            color: #dfd3d3;
             padding: 60px 0 20px 0;
             max-width: 100%;
             display: flex;
@@ -32,15 +39,28 @@
             }
 
             .txt-3 {
+                padding: 10px 0 0 35px ;
                 font-size: 35pt;
             }
 
             .abt-btn {
-                padding: 20px 0 0 0;
+                padding: 40px 0 0 40px;
 
                 button {
-                    width: 200px;
-                    height: 50px;
+                    @include V.button();
+                    border: 1px solid #fff;
+                    color: #dfd3d3;
+                    background-color: transparent;
+
+                    &:hover {
+                        background-color: #dfd3d3;
+                        color: #000;
+                        width: 200px;
+                        transition: width .1s;
+                        transform: translateX(25px);
+                        transform: translateX(-10px);
+                        transition: 0.5s ease-in-out;
+                    }
                 }
             }
 
@@ -58,9 +78,14 @@
 
         .title-pic2 {
             position: relative;
-            border: solid 1px green;
+            z-index: 2;
 
             img {
+                background: url('../../../Imgs/new/mlop.JPG');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                box-shadow: 5px 3px 5px #000;
                 width: 350px;
                 height: 250px;
             }
@@ -69,8 +94,33 @@
         .title-pic1 {
             position: relative;
             border: solid 1px yellow;
+            left: 30px;
+            z-index: 1;
 
             img {
+                background: url('../../../Imgs/new/clo.JPG');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                box-shadow: 5px 3px 5px #000;
+                max-width: 100%;
+                width: 250px;
+                height: 150px;
+            }
+        }
+
+        .title-pic3 {
+            position: relative;
+            border: solid 1px yellow;
+            right: 30px;
+            z-index: 1;
+
+            img {
+                background: url('../../../Imgs/new/cloq.JPG');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                box-shadow: 5px 3px 5px #000;
                 max-width: 100%;
                 width: 250px;
                 height: 150px;

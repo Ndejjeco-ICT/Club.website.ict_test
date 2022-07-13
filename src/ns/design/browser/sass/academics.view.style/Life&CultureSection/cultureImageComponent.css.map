@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,WAAW,CAAC;EACR,OAAO,EAAE,KAAK;EACd,gBAAgB,EAAE,yDAAyD;EAC3E,eAAe,EAAE,OAAO;EACxB,iBAAiB,EAAE,SAAS;CAC/B;;AAED,AAAA,WAAW,CAAC,uBAAuB,CAAC;EAGhC,MAAM,EAAE,SAAS;EACjB,MAAM,EAAE,GAAG;CACd",
+    "sources": [
+        "cultureImageComponent.scss"
+    ],
+    "names": [],
+    "file": "cultureImageComponent.css"
+}

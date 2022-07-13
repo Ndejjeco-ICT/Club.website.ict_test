@@ -1,0 +1,12 @@
+ns-x-gimage {
+  display: block;
+  background-image: url("../../../Imgs/colin-watts-LzzR7_jVpZI-unsplash.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+ns-x-gimage .xb-sub-image-component {
+  border: 1px solid;
+  margin: 0px;
+}
+/*# sourceMappingURL=cultureImageComponent.css.map */
