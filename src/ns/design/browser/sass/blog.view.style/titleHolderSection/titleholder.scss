@@ -56,10 +56,10 @@
                         background-color: #dfd3d3;
                         color: #000;
                         width: 200px;
-                        transition: width .1s;
+                        transition: width 1s;
                         transform: translateX(25px);
                         transform: translateX(-10px);
-                        transition: 0.5s ease-in-out;
+                        transition: 50ms ease-in-out;
                     }
                 }
             }
