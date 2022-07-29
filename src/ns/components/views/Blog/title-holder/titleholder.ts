@@ -8,17 +8,8 @@ Template_.innerHTML = `
         <div class="txt-1">WELCOME...</div>
         <div class="txt-2"><em>to the Ndejjean blog</em></div>
         <div class="txt-3">Stories, articles, news all in one place</div>
-        <div class="abt-btn"><button>Read our articles</button></div>
+        <div class="abt-btn"><button><a href="#trending">Read our articles</a></button></div>
     </div>
-
-
-</div>
-
-<div class="title-pic-section">
-    <div class="title-pic1"></div>
-    <div class="title-pic2"></div>
-    <div class="title-pic3"></div>
-</div>
 </div>
 `
 

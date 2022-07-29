@@ -14,11 +14,11 @@ Template_.innerHTML = `
 
     <div class="topic-section-navigator">
         <div class="section-card-content">
-            <h2>TRENDING</h2>
+            <h2 id="trending">TRENDING</h2>
             <div class="content-card-layouts">
                 <div class="card">
-                    <img src="#" class="img-card" alt="">
-                    <div class="info-nav-control">03/02/2020</div>
+                <div class="image-container"></div>
+                    <div class="info-nav-control"><img src="#" class="img-card" alt="">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
                         et
@@ -27,7 +27,7 @@ Template_.innerHTML = `
                     <div class="nav-reader">Read article</div>
                 </div>
                 <div class="card">
-                    <img src="#" class="img-card" alt="">
+                <div class="image-container"></div>
                     <div class="info-nav-control">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
@@ -37,7 +37,7 @@ Template_.innerHTML = `
                     <div class="nav-reader">Read article</div>
                 </div>
                 <div class="card card-a">
-                    <img src="#" class="img-card" alt="">
+                <div class="image-container"></div>
                     <div class="info-nav-control">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
@@ -47,7 +47,7 @@ Template_.innerHTML = `
                     <div class="nav-reader">Read article</div>
                 </div>
                 <div class="card card-a">
-                    <img src="#" class="img-card" alt="">
+                <div class="image-container"></div>
                     <div class="info-nav-control">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
@@ -63,7 +63,7 @@ Template_.innerHTML = `
             <h2>LATEST</h2>
             <div class="content-card-layouts">
                 <div class="card">
-                    <img src="#" class="img-card" alt="">
+                <div class="image-container"></div>
                     <div class="info-nav-control">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
@@ -73,7 +73,7 @@ Template_.innerHTML = `
                     <div class="nav-reader">Read article</div>
                 </div>
                 <div class="card">
-                    <img src="#" class="img-card" alt="">
+                <div class="image-container"></div>
                     <div class="info-nav-control">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
@@ -83,7 +83,7 @@ Template_.innerHTML = `
                     <div class="nav-reader">Read article</div>
                 </div>
                 <div class="card">
-                    <img src="#" class="img-card" alt="">
+                <div class="image-container"></div>
                     <div class="info-nav-control">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
@@ -93,7 +93,7 @@ Template_.innerHTML = `
                     <div class="nav-reader">Read article</div>
                 </div>
                 <div class="card">
-                    <img src="#" class="img-card" alt="">
+                <div class="image-container"></div>
                     <div class="info-nav-control">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
@@ -108,7 +108,7 @@ Template_.innerHTML = `
             <h2>NEWS</h2>
             <div class="content-card-layouts">
                 <div class="card">
-                    <img src="#" class="img-card" alt="">
+                <div class="image-container"></div>
                     <div class="info-nav-control">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
@@ -118,7 +118,7 @@ Template_.innerHTML = `
                     <div class="nav-reader">Read article</div>
                 </div>
                 <div class="card">
-                    <img src="#" class="img-card" alt="">
+                <div class="image-container"></div>
                     <div class="info-nav-control">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
@@ -128,7 +128,7 @@ Template_.innerHTML = `
                     <div class="nav-reader">Read article</div>
                 </div>
                 <div class="card">
-                    <img src="#" class="img-card" alt="">
+                <div class="image-container"></div>
                     <div class="info-nav-control">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
@@ -138,7 +138,7 @@ Template_.innerHTML = `
                     <div class="nav-reader">Read article</div>
                 </div>
                 <div class="card">
-                    <img src="#" class="img-card" alt="">
+                <div class="image-container"></div>
                     <div class="info-nav-control">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
@@ -153,7 +153,7 @@ Template_.innerHTML = `
             <h2>CAMPUS 101</h2>
             <div class="content-card-layouts">
                 <div class="card">
-                    <img src="#" class="img-card" alt="">
+                <div class="image-container"></div>
                     <div class="info-nav-control">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
@@ -163,7 +163,7 @@ Template_.innerHTML = `
                     <div class="nav-reader">Read article</div>
                 </div>
                 <div class="card">
-                    <img src="#" class="img-card" alt="">
+                <div class="image-container"></div>
                     <div class="info-nav-control">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
@@ -173,7 +173,7 @@ Template_.innerHTML = `
                     <div class="nav-reader">Read article</div>
                 </div>
                 <div class="card">
-                    <img src="#" class="img-card" alt="">
+                <div class="image-container"></div>
                     <div class="info-nav-control">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
@@ -183,7 +183,7 @@ Template_.innerHTML = `
                     <div class="nav-reader">Read article</div>
                 </div>
                 <div class="card">
-                    <img src="#" class="img-card" alt="">
+                <div class="image-container"></div>
                     <div class="info-nav-control">03/02/2020</div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti modi
                         quidem obcaecati officia ducimus odit,
